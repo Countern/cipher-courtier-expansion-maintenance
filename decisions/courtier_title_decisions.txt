@@ -7,24 +7,28 @@ title_decisions = {
 		}
 		potential = {
 			tier = COUNT
-			not = { higher_tier_than = DUKE }
+			NOT = { higher_tier_than = DUKE }
 		}
 		allow = {
-			FROM = { liege = { owns = ROOT } }
-			location = { has_empty_holding = yes }
-			FROM = { wealth = 700 }
-			custom_tooltip = {
-				text = CONSTRUCT_WARNING
-				NOT = { has_character_flag = constructing_courtier }
+			FROM = {
+				liege = { has_landed_title = ROOT } # owns = ROOT
+				wealth = 700
+				custom_tooltip = {
+					text = CONSTRUCT_WARNING
+					NOT = { has_character_flag = constructing_courtier }
+				}
+				is_landed = no
 			}
-			is_landed = no
+			location = { has_empty_holding = yes }
 		}
 		effect = {
-			FROM = { wealth = -700 }
 			location = { save_event_target_as = province_chosen }
-			FROM = { character_event = { id = moving_events.10 } }
-			FROM = { character_event = { id = moving_events.11 days = 150 } }
-			FROM = { character_event = { id = moving_events.9 days = 365 } }
+			FROM = {
+				wealth = -700
+				character_event = { id = moving_events.10 }
+				character_event = { id = moving_events.11 days = 150 }
+				character_event = { id = moving_events.9 days = 365 }
+			}
 		}
 	}
 }

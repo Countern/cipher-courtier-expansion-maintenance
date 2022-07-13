@@ -132,7 +132,7 @@ character_event = {
 	#return for better options
 	option = {
 		name = "EVTOPTOtheroptions"
-		character_event = { id = recruit_event.1 tooltip = ReturnTOPICK }
+		narrative_event = { id = recruit_event.1 tooltip = ReturnTOPICK }
 	}
 }
 
@@ -225,7 +225,7 @@ character_event = {
 	#return for better options
 	option = {
 		name = "EVTOPTOtheroptions"
-		character_event = { id = recruit_event.1 tooltip = ReturnTOPICK }
+		narrative_event = { id = recruit_event.1 tooltip = ReturnTOPICK }
 	}
 }
 
@@ -320,7 +320,7 @@ character_event = {
 	#return for better options
 	option = {
 		name = "EVTOPTOtheroptions"
-		character_event = { id = recruit_event.1 tooltip = ReturnTOPICK }
+		narrative_event = { id = recruit_event.1 tooltip = ReturnTOPICK }
 	}
 }
 
@@ -332,9 +332,6 @@ narrative_event = {
 	desc = "EVTDESrecruit_event.5"
 	picture = "GFX_find_army"
 	is_triggered_only = yes
-
-	trigger = {
-	}
 	
 	#Local Bandits
 	option = {
@@ -458,7 +455,7 @@ character_event = {
 	#return for better options
 	option = {
 		name = "EVTOPTOtheroptions"
-		character_event = { id = recruit_event.5 tooltip = ReturnTOPICK }
+		narrative_event = { id = recruit_event.5 tooltip = ReturnTOPICK }
 	}
 }
 
@@ -551,7 +548,7 @@ character_event = {
 	#return for better options
 	option = {
 		name = "EVTOPTOtheroptions"
-		character_event = { id = recruit_event.5 tooltip = ReturnTOPICK }
+		narrative_event = { id = recruit_event.5 tooltip = ReturnTOPICK }
 	}
 }
 
@@ -561,9 +558,6 @@ character_event = {
 	desc = "EVTDESrecruit_event.8"
 	picture = "GFX_evt_council"
 	is_triggered_only = yes
-
-	trigger = {
-	}
 	
 	immediate = {
 		if = {
@@ -646,6 +640,6 @@ character_event = {
 	#return for better options
 	option = {
 		name = "EVTOPTOtheroptions"
-		character_event = { id = recruit_event.5 tooltip = ReturnTOPICK }
+		narrative_event = { id = recruit_event.5 tooltip = ReturnTOPICK }
 	}
 }

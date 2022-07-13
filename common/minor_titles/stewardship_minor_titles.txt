@@ -43,7 +43,7 @@ title_leathermaker = {
 	
 
 	allowed_to_grant = {
-		OR= {
+		OR = {
 			primary_title = {
 				has_title_flag = The_lonely_title
 			}
@@ -75,7 +75,7 @@ title_trader = {
 	}
 	
 	allowed_to_grant = {
-		OR= {
+		OR = {
 			primary_title = {
 				has_title_flag = The_lonely_title
 			}

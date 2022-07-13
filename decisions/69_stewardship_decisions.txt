@@ -34,7 +34,7 @@ targetted_decisions = {
 	
 	sell_material = {
 		filter = realm
-		ai_traget_filter = none
+		ai_target_filter = none
 	
 		third_party_filter = artifacts
 		ai_third_party_filter = artifacts

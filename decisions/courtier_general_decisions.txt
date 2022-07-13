@@ -13,8 +13,8 @@ targetted_decisions = {
 		}
 		allow = {
 			liege = { distance = { who = ROOT value < 200 } }
-			FROM = { not = { trait = on_journey } }
-			FROM = { not = { is_incapable = yes } }
+			FROM = { NOT = { trait = on_journey } }
+			FROM = { NOT = { is_incapable = yes } }
 			age = 14
 			FROM = { learning = 4 }
 			FROM = { wealth = 4 }

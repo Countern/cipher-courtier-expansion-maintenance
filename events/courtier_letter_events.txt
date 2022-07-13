@@ -21,10 +21,10 @@ character_event = {
 		name = "EVTOPTBcourtierletter.1"
 		character_event = { id = courtierletter_event.3 }
 	}
-	option = {
-		name = "EVTOPTCcourtierletter.1"
-		character_event = { id = courtierletter_event.4 }
-	}
+	#option = { # courtierletter_event.4 doesn't exist
+	#	name = "EVTOPTCcourtierletter.1"
+	#	letter_event = { id = courtierletter_event.4 }
+	#}
 	option = {
 		name = "EVTOPTDcourtierletter.1"
 		clr_character_flag = Sent_letter
@@ -94,15 +94,15 @@ character_event = {
 					factor = 2 trait = socializer
 				}
 				modifier = {
-					factor = 2 is_friend = yes
+					factor = 2 is_friend = event_target:letter_person #yes
 				}
 				modifier = {
 					factor = 0.5 religion_group = pagan
 				}
-				character_event = { id = courtierletter_event.5 tooltip = LETTERWORKING months = 2 }
+				letter_event = { id = courtierletter_event.5 tooltip = LETTERWORKING months = 2 }
 			}
 			10 = {
-				character_event = { id = courtierletter_event.11 tooltip = LETTERFAIL months = 2 }
+				letter_event = { id = courtierletter_event.11 tooltip = LETTERFAIL months = 2 }
 			}
 		}
 		if = {
@@ -163,15 +163,15 @@ character_event = {
 					factor = 1.5 trait = socializer
 				}
 				modifier = {
-					factor = 2 is_friend = yes
+					factor = 2 is_friend = event_target:letter_person #yes
 				}
 				modifier = {
 					factor = 0.5 religion_group = pagan
 				}
-				character_event = { id = courtierletter_event.6 tooltip = LETTERWORKING months = 2 } 
+				letter_event = { id = courtierletter_event.6 tooltip = LETTERWORKING months = 2 } 
 			}
 			40 = {
-				character_event = { id = courtierletter_event.11 tooltip = LETTERFAIL months = 2 }
+				letter_event = { id = courtierletter_event.11 tooltip = LETTERFAIL months = 2 }
 			}
 		}
 		if = {
@@ -185,7 +185,7 @@ character_event = {
 		trigger = { diplomacy = 20 NOT = { event_target:letter_person = { has_opinion_modifier = { who = ROOT  modifier = sent_diplo_letter } } } }
 		tooltip_info = diplomacy
 		name = "EVTOPTCcourtierletter.2"
-		character_event = { id = courtierletter_event.7 tooltip = LETTERWORKING months = 2 }
+		letter_event = { id = courtierletter_event.7 tooltip = LETTERWORKING months = 2 }
 	}
 		
 	#Send a letter to a person of same religion
@@ -193,7 +193,7 @@ character_event = {
 		trigger = {
 			event_target:letter_person = { religion = ROOT }
 		}
-		tooltip_info = religion
+		tooltip_info = learning #religion
 		name = "EVTOPTDcourtierletter.2"
 		random_list = {
 			60 = {
@@ -252,12 +252,12 @@ character_event = {
 					factor = 1.5 trait = socializer
 				}
 				modifier = {
-					factor = 2 is_friend = yes
+					factor = 2 is_friend = event_target:letter_person #yes
 				}
-				character_event = { id = courtierletter_event.8 tooltip = LETTERWORKING months = 2 }
+				letter_event = { id = courtierletter_event.8 tooltip = LETTERWORKING months = 2 }
 			}
 			30 = {
-				character_event = { id = courtierletter_event.11 tooltip = LETTERFAIL months = 2 }			
+				letter_event = { id = courtierletter_event.11 tooltip = LETTERFAIL months = 2 }			
 			}
 		}
 		if = {
@@ -270,7 +270,7 @@ character_event = {
 		trigger = {
 			NOT = { event_target:letter_person = { religion = ROOT } }
 		}
-		tooltip_info = religion
+		tooltip_info = learning #religion
 		name = "EVTOPTEcourtierletter.2"
 		random_list = {
 			60 = {
@@ -332,12 +332,12 @@ character_event = {
 					factor = 1.5 trait = socializer
 				}
 				modifier = {
-					factor = 2 is_friend = yes
+					factor = 2 is_friend = event_target:letter_person #yes
 				}
-				character_event = { id = courtierletter_event.9 tooltip = LETTERWORKING months = 2 }
+				letter_event = { id = courtierletter_event.9 tooltip = LETTERWORKING months = 2 }
 			}
 			30 = {
-				character_event = { id = courtierletter_event.12 tooltip = LETTERFAIL months = 2 }			
+				letter_event = { id = courtierletter_event.12 tooltip = LETTERFAIL months = 2 }			
 			}
 		}
 		if = {
@@ -381,10 +381,10 @@ character_event = {
 				modifier = {
 					factor = 0.5 event_target:letter_person = { opinion = { who = ROOT value = 70 } }
 				}
-				character_event = { id = courtierletter_event.10 tooltip = LETTERWORKING months = 2 }
+				letter_event = { id = courtierletter_event.10 tooltip = LETTERWORKING months = 2 }
 			}
 			30 = {
-				character_event = { id = courtierletter_event.13 tooltip = LETTERFAIL months = 2 }	
+				letter_event = { id = courtierletter_event.13 tooltip = LETTERFAIL months = 2 }	
 			}
 		}
 		if = {
@@ -450,7 +450,7 @@ letter_event = {
 			remove_trait = cynical
 		}
 		event_target:letter_person = {
-			random = { chance = 20 add_trait = zelous }
+			random = { chance = 20 add_trait = zealous }
 			opinion = { modifier = zelous_letter who = ROOT years = 6 } 
 		}
 	}
@@ -490,7 +490,7 @@ letter_event = {
 		trigger = {
 			event_target:letter_person = { opinion = { who = ROOT value = 60 } }
 		}
-		tooltip_info = opinion
+		tooltip_info = diplomacy #opinion
 		name = "EVTOPTBcourtierletter.10"
 		event_target:letter_person = { 
 			add_friend = ROOT
@@ -620,15 +620,15 @@ character_event = {
 					factor = 1.5 event_target:letter_person = { has_focus = focus_family  }
 				}
 				modifier = {
-					factor = 2 is_friend = yes
+					factor = 2 is_friend = event_target:letter_person #yes
 				}
 				modifier = {
 					factor = 1.5 religion_group = pagan
 				}
-				character_event = { id = courtierletter_event.14 tooltip = LETTEREXTINS months = 2 }
+				letter_event = { id = courtierletter_event.14 tooltip = LETTEREXTINS months = 2 }
 			}
 			50 = {
-				character_event = { id = courtierletter_event.18 tooltip = LETTERFAIL months = 2 }
+				letter_event = { id = courtierletter_event.18 tooltip = LETTERFAIL months = 2 }
 			}
 		}
 		if = {
@@ -700,15 +700,15 @@ character_event = {
 					factor = 1.5 event_target:letter_person = { has_focus = focus_family  }
 				}
 				modifier = {
-					factor = 2 is_friend = yes
+					factor = 2 is_friend = event_target:letter_person #yes
 				}
 				modifier = {
 					factor = 1.5 religion_group = pagan
 				}
-				character_event = { id = courtierletter_event.15 tooltip = LETTERWORKING months = 2 } 
+				letter_event = { id = courtierletter_event.15 tooltip = LETTERWORKING months = 2 } 
 			}
 			50 = {
-				character_event = { id = courtierletter_event.19 tooltip = LETTERFAIL months = 2 }
+				letter_event = { id = courtierletter_event.19 tooltip = LETTERFAIL months = 2 }
 			}
 		}
 		if = {
@@ -777,15 +777,15 @@ character_event = {
 					factor = 1.5 event_target:letter_person = { has_focus = focus_family  }
 				}
 				modifier = {
-					factor = 2 is_friend = yes
+					factor = 2 is_friend = event_target:letter_person #yes
 				}
 				modifier = {
 					factor = 1.5 religion_group = pagan
 				}
-				character_event = { id = courtierletter_event.16 tooltip = LETTERWORKING months = 2 }
+				letter_event = { id = courtierletter_event.16 tooltip = LETTERWORKING months = 2 }
 			}
 			30 = {
-				character_event = { id = courtierletter_event.19 tooltip = LETTERFAIL months = 2 }			
+				letter_event = { id = courtierletter_event.19 tooltip = LETTERFAIL months = 2 }			
 			}
 		}
 		if = {
@@ -824,13 +824,13 @@ character_event = {
 					factor = 0.5 event_target:letter_person = { higher_tier_than = DUKE }
 				}
 				modifier = {
-					factor = 2 event_target:letter_person = { tier = craven }
+					factor = 2 event_target:letter_person = { trait = craven }
 				}
 				modifier = {
-					factor = 0.5 event_target:letter_person = { tier = brave }
+					factor = 0.5 event_target:letter_person = { trait = brave }
 				}
 				modifier = {
-					factor = 0.4 event_target:letter_person = { tier = ambitious }
+					factor = 0.4 event_target:letter_person = { trait = ambitious }
 				}
 				modifier = {
 					factor = 0.4 event_target:letter_person = { higher_tier_than = KING }
@@ -872,15 +872,15 @@ character_event = {
 					factor = 1.5 event_target:letter_person = { has_focus = focus_family  }
 				}
 				modifier = {
-					factor = 2 is_friend = yes
+					factor = 2 is_friend = event_target:letter_person #yes
 				}
 				modifier = {
 					factor = 1.5 religion_group = pagan
 				}
-				character_event = { id = courtierletter_event.17 tooltip = LETTERWORKING months = 2 }
+				letter_event = { id = courtierletter_event.17 tooltip = LETTERWORKING months = 2 }
 			}
 			30 = {
-				character_event = { id = courtierletter_event.19 tooltip = LETTERFAIL months = 2 }			
+				letter_event = { id = courtierletter_event.19 tooltip = LETTERFAIL months = 2 }			
 			}
 		}
 		if = {
@@ -894,9 +894,9 @@ character_event = {
 			NOT = { is_rival = event_target:letter_person }
 			event_target:letter_person = { NOT = { opinion = { who = ROOT value = -50 } } }
 		}
-		tooltip_info = rival
+		tooltip_info = martial #rival
 		name = "EVTOPTEcourtierletter.3"
-		character_event = { id = courtierletter_event.18 tooltip = LETTERWORKING months = 2 }
+		letter_event = { id = courtierletter_event.18 tooltip = LETTERWORKING months = 2 }
 	}
 }
 
@@ -981,7 +981,7 @@ letter_event = {
 	option = {
 		name = "EVTOPTAcourtierletter.18"
 		event_target:letter_person = { 
-			is_rival = ROOT
+			add_rival = ROOT
 		}
 	}
 }

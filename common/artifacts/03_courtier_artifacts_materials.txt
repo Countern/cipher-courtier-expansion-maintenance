@@ -25,28 +25,28 @@ court_bundle_wood = {
 
 #Exotic
 court_spices = {
-	monthly_prestige = 0.01
+	monthly_character_prestige = 0.01
 	quality = 3
 	flags = { material spices exotic }
 	picture = "GFX_spices"
 }
 
 court_jade = {
-	monthly_prestige = 0.01
+	monthly_character_prestige = 0.01
 	quality = 3
 	flags = { material jade exotic }
 	picture = "GFX_jade"
 }
 
 court_silk_thread = {
-	monthly_prestige = 0.01
+	monthly_character_prestige = 0.01
 	quality = 3
 	flags = { material silk_thread exotic }
 	picture = "GFX_silk_thead"
 }
 
 court_gold = {
-	monthly_prestige = 0.01
+	monthly_character_prestige = 0.01
 	quality = 3
 	flags = { material gold exotic }
 	picture = "GFX_gold"

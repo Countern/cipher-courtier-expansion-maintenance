@@ -6,8 +6,8 @@ character_event = {
 	desc = "EVTDEScourtiercountry_events.1"
 	picture = "GFX_diseased_province"
 	is_triggered_only = yes
-	trigger = {
-	}
+	#trigger = {
+	#}
 	
 	immediate = {
 		clr_character_flag = country_side_plague
@@ -27,12 +27,15 @@ character_event = {
 				trait = kind	
 			}
 		}
-		tooltip_info = charitable
-		tooltip_info = kind
 		wealth = -40
-		liege = { owes_favor_to = ROOT }
-		liege = { opinion = { modifier = extremely_grateful who = ROOT years = 20 } }
-		character_event = { id = courtiercountry_events.3 days = 10 tooltip = SUCESSTREATMENT  }
+		liege = {
+			if = {
+				limit = { has_dlc = "Conclave" }
+				add_favor = ROOT
+			}
+			opinion = { modifier = extremely_grateful who = ROOT years = 20 }
+		}
+		narrative_event = { id = courtiercountry_events.3 days = 10 tooltip = SUCESSTREATMENT  }
 	}
 	
 	option = {
@@ -42,16 +45,16 @@ character_event = {
 		}
 		tooltip_info = diligent
 		random_list = {
-			80 = { character_event = { id = courtiercountry_events.3 days = 10 tooltip = SUCESSTREATMENT } }
-			20 = { character_event = { id = courtiercountry_events.2 days = 10 tooltip = FAILTREATMENT } }
+			80 = { narrative_event = { id = courtiercountry_events.3 days = 10 tooltip = SUCESSTREATMENT } }
+			20 = { narrative_event = { id = courtiercountry_events.2 days = 10 tooltip = FAILTREATMENT } }
 		}
 	}
 	
 	option = {
 		name = "EVTOPTCcourtiercountry_events.1"
 		random_list = {
-			50 = { character_event = { id = courtiercountry_events.3 days = 10 tooltip = SUCESSTREATMENT  } }
-			50 = { character_event = { id = courtiercountry_events.2 days = 10 tooltip = FAILTREATMENT } }
+			50 = { narrative_event = { id = courtiercountry_events.3 days = 10 tooltip = SUCESSTREATMENT  } }
+			50 = { narrative_event = { id = courtiercountry_events.2 days = 10 tooltip = FAILTREATMENT } }
 		}
 	}
 	
@@ -163,11 +166,6 @@ character_event = {
 	desc = "EVTDEScourtiercountry_events.6"
 	picture = "GFX_quarry_picture"
 	is_triggered_only = yes
-	trigger = {
-	}
-	
-	immediate = {
-	}
 
 	option = {
 		name = "EVTOPTAcourtiercountry_events.6"
@@ -201,7 +199,7 @@ character_event = {
 	
 	option = {
 		name = "EVTOPTCcourtiercountry_events.6"
-		wealth -15
+		wealth = -15
 		character_event = { id = courtiercountry_events.7 }
 	}
 	option = {
@@ -230,7 +228,7 @@ character_event = {
 	
 	option = {
 		name = "EVTOPTAcourtiercountry_events.7"
-		add_artifact = iron_ingot
+		add_artifact = court_iron_ingot
 		wealth = -5
 		character_event = { id = courtiercountry_events.101 }
 	}
@@ -240,7 +238,7 @@ character_event = {
 		trigger = {
 			wealth = 25
 		}
-		add_artifact = iron_ingot
+		add_artifact = court_iron_ingot
 		wealth = -25
 		create_character = {
 		  random_traits = yes
@@ -257,7 +255,7 @@ character_event = {
 		  }
 		  health = 6
 		  fertility = 1
-		  trait = tougth_soldier
+		  trait = tough_soldier
 		  trait = brawny
 		}
 		character_event = { id = courtiercountry_events.101 }
@@ -284,43 +282,37 @@ character_event = {
 	is_triggered_only = yes
 	hide_window = yes
 	
-	trigger = {
-	}
-	
 	immediate = {
-		hidden_tooltip = {
-				if = {
-					limit = { check_variable = { which = journey_count value = 1 } }
-					subtract_variable = { which = journey_count value = 1 }
-					random_list = {
-						40 = {
-							trigger = {
-								OR = {
-									had_character_flag = { flag = country_side_plague days = 273750 }
-									NOT = { has_character_flag = country_side_plague }
-								}	
-							}
-							character_event = { id = courtiercountry_events.1 months = 3 } 
+		if = {
+			limit = { check_variable = { which = journey_count value = 1 } }
+			subtract_variable = { which = journey_count value = 1 }
+			random_list = {
+				40 = {
+					trigger = {
+						OR = {
+							had_character_flag = { flag = country_side_plague days = 273750 }
+							NOT = { has_character_flag = country_side_plague }
 						}
-						40 = {
-							trigger = {
-								OR = {
-									had_character_flag = { flag = quarry_country_side days = 273750 }
-									NOT = { has_character_flag = quarry_country_side }
-								}
-							character_event = { id = courtiercountry_events.4 months = 3 } 
+					}
+					character_event = { id = courtiercountry_events.1 months = 3 }
+				}
+				40 = {
+					trigger = {
+						OR = {
+							had_character_flag = { flag = quarry_country_side days = 273750 }
+							NOT = { has_character_flag = quarry_country_side }
 						}
-					 }
+					}
+					character_event = { id = courtiercountry_events.4 months = 3 }
 				}
-				else = {
-					character_event = { id = courtiercountry_events.100 days = 10 }
-				}
+			}
 		}
+		else = { narrative_event = { id = courtiercountry_events.100 days = 10 } }
 	}
-	
-	option = {
-		name = "EVTOPTAcourtiercountry_events.101"
-	}
+		
+	#option = {
+	#	name = "EVTOPTAcourtiercountry_events.101"
+	#}
 }
 
 #Journey END
@@ -332,12 +324,6 @@ narrative_event = {
 	
 	border = GFX_event_narrative_frame_diplomacy
 	is_triggered_only = yes
-	
-	trigger = {
-	}
-	
-	immediate = {
-	}
 	
 	option = {
 		name = "EVTOPTAcourtiercountry_events.100"

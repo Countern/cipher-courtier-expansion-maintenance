@@ -17,7 +17,7 @@ narrative_event = {
 			set_title_flag = take_collins_seat
 		}
 		primary_title = { save_event_target_as = Primary_title }
-		IF = {
+		if = {
 			limit = { independent = no }
 			liege = {
 				save_event_target_as = new_liege
@@ -26,7 +26,7 @@ narrative_event = {
 		else = {
 			top_liege = {
 				any_neighbor_independent_ruler = {
-					preferred_limit = {
+					limit = {
 						higher_tier_than = COUNT 
 					}
 					save_event_target_as = new_liege
@@ -38,10 +38,10 @@ narrative_event = {
 	option = {
 		name = "EVTOPTAlalad_events.100"
 		any_demesne_title = {
-			if = { 
-				is_landless_type_title = no
+			if = {
+				limit = { is_landless_type_title = no }
+				grant_title = event_target:chancellor_in_power
 			}
-			grant_title = event_target:chancellor_in_power
 		}
 		create_title = {
 			tier = COUNT
@@ -66,7 +66,7 @@ narrative_event = {
 			}	
 		}
 		any_demesne_title = {
-			IF = {
+			if = {
 				limit = { is_landless_type_title = yes }
 				holder_scope = { set_defacto_liege = event_target:new_liege }
 				gender_succ = true_cognatic
@@ -144,11 +144,10 @@ character_event = {
 	trigger = {
 		is_landed = no
 		ai = no
-		not = { has_character_modifier = homeless }
+		NOT = { has_character_modifier = homeless }
 	}
 	
-	option = {
-		name = "EVTOPTBhomeless_event.1"
+	immediate = {
 		add_character_modifier = {
   			modifier = homeless
  			duration = -1
@@ -186,7 +185,7 @@ character_event = {
 			set_character_flag = diplomacy_courtier
 			set_variable = { which = job_amt value = 0 }
 			set_variable = { which = money_gained value = 0 }
-			export_to_variable { which = job_amt value = diplomacy }
+			export_to_variable = { which = job_amt value = diplomacy }
 			while = {
 				limit = {
 					check_variable = {
@@ -229,7 +228,7 @@ character_event = {
 			set_character_flag = martial_courtier
 			set_variable = { which = job_amt value = 0 }
 			set_variable = { which = money_gained value = 0 }
-			export_to_variable { which = job_amt value = martial }
+			export_to_variable = { which = job_amt value = martial }
 			while = {
 				limit = {
 					check_variable = {
@@ -272,7 +271,7 @@ character_event = {
 			set_character_flag = learning_courtier		
 			set_variable = { which = job_amt value = 0 }
 			set_variable = { which = money_gained value = 0 }
-			export_to_variable { which = job_amt value = learning }
+			export_to_variable = { which = job_amt value = learning }
 			while = {
 				limit = {
 					check_variable = {
@@ -332,7 +331,7 @@ character_event = {
 			set_character_flag = stewardship_courtier
 			set_variable = { which = job_amt value = 0 }
 			set_variable = { which = money_gained value = 0 }
-			export_to_variable { which = job_amt value = stewardship }
+			export_to_variable = { which = job_amt value = stewardship }
 			while = {
 				limit = {
 					check_variable = {
@@ -375,7 +374,7 @@ character_event = {
 			set_character_flag = intrigue_courtier
 			set_variable = { which = job_amt value = 0 }
 			set_variable = { which = money_gained value = 0 }
-			export_to_variable { which = job_amt value = intrigue }
+			export_to_variable = { which = job_amt value = intrigue }
 			while = {
 				limit = {
 					check_variable = {

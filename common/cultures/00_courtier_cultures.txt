@@ -16,8 +16,10 @@ undefined = {
 		# Þ 222 þ 254 Ð 208 ð 240 æ
 		
 		male_names = {
+			Alton Quinton Butler Elford Langward Linn Kirkley Free Langworth Colley Newcomb
 		}
 		female_names = {
+			Laura Nola Ola Suzanne Geneva Zona Angelinay Savannah Adelle Johanna Angie
 		}
 		
 		dukes_called_kings = yes
@@ -41,3 +43,5 @@ undefined = {
 		allow_looting = yes
 		seafarer = yes
 	}
+
+}

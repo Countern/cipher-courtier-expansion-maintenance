@@ -1,8 +1,0 @@
-Prestige hit when broke
-Correct government type when landed
-Create new character for liege
-Cause courtiers to switch liege instead of dying
-Job expansion
-Job events
-Ask liege to grant barony
-Make wages check more consistently

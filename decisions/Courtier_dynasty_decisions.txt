@@ -3,7 +3,7 @@ targetted_decisions = {
 		filter = self
 		potential = {
 			ai = no		
-			not = { has_character_flag = founded_cadet_house }
+			NOT = { has_character_flag = founded_cadet_house }
 		}
 		allow = {
 			prestige = 500

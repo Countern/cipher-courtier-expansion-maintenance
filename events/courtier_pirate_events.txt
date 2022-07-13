@@ -11,9 +11,8 @@ character_event = {
 		is_adult = yes
 		NOT = { dynasty = none }
 	}
-	option = {
-		name = EVTOPTpiratecourtierev.1
-		remove_trait = pirate_courtier 
+	immediate = {
+		remove_trait = pirate_courtier
 	}	
 }
 
@@ -28,8 +27,7 @@ character_event = {
 		is_adult = yes
 		NOT = { dynasty = none }
 	}
-	option = {
-		name = EVTOPTpiratecourtierev.2
-		add_trait = pirate_courtier 
-	}	
+	immediate = {
+		add_trait = pirate_courtier
+	}
 }

@@ -1,5 +1,4 @@
 namespace = foresthunting_events
-namespace = foresthunting_events
 
 #Bandit Attack
 character_event = {
@@ -24,7 +23,12 @@ character_event = {
 		}
 		tooltip_info = martial
 		random = { chance = 20 add_trait = wounded }
-		liege = { owes_favor_to = ROOT }
+		liege = {
+			if = {
+				limit = { has_dlc = "Conclave" }
+				add_favor = ROOT
+			}
+		}
 	}
 	
 	option = {
@@ -85,7 +89,7 @@ character_event = {
 	}
 	
 	option = {
-		name = "EVTOPTAforesthunting_events.2"
+		name = "EVTOPTBforesthunting_events.2"
 		add_trait = shy
 	}
 
@@ -229,10 +233,10 @@ character_event = {
 					has_minor_title = no
 					is_priest = no
 				}
-				prefered_limit = {
+				preferred_limit = {
 					is_rival = ROOT
 				}
-				prefered_limit = {
+				preferred_limit = {
 					NOT = { opinion = { who = ROOT value = 0 } }
 				}
 				save_event_target_as = chosen_victim
@@ -251,7 +255,7 @@ character_event = {
 		name = "EVTOPTCforesthunting_events.6"
 		event_target:chosen_victim = {
 			remove_rival = ROOT
-			reverse_opinion = { modifier = saved_life_thankful years = 10 }
+			reverse_opinion = { modifier = saved_life_thankful who = ROOT years = 10 }
 		}
 	}
 	
@@ -319,9 +323,6 @@ character_event = {
 	is_triggered_only = yes
 	hide_window = yes
 	
-	trigger = {
-	}
-	
 	immediate = {
 		hidden_tooltip = {
 				if = {
@@ -348,10 +349,8 @@ character_event = {
 						}
 						40 = {
 							trigger = {
-								AND = {
-									had_character_flag = { flag = mighty_beast_event days = 1825 }
-									NOT = { has_character_flag = mighty_beast_event }
-								}		
+								had_character_flag = { flag = mighty_beast_event days = 1825 }
+								NOT = { has_character_flag = mighty_beast_event }
 							}
 							character_event = { id = foresthunting_events.3 months = 3 }
 						}
@@ -392,6 +391,7 @@ character_event = {
 						}
 						40 = { 
 							trigger = {
+								# Audax Validator "." Ignore_1002
 								OR = {
 									NOT = { has_character_flag = saint_spotted_event }
 								}
@@ -401,14 +401,14 @@ character_event = {
 					}
 				}
 				else = {
-					character_event = { id = foresthunting_events.100 days = 10 }
+					narrative_event = { id = foresthunting_events.100 days = 10 }
 				}
 		}
 	}
 	
-	option = {
-		name = "EVTOPTAforesthunting_events.101"
-	}
+	#option = {
+	#	name = "EVTOPTAforesthunting_events.101"
+	#}
 }
 
 #Journey END
@@ -443,12 +443,6 @@ narrative_event = {
 	
 	border = GFX_event_narrative_frame_diplomacy
 	is_triggered_only = yes
-	
-	trigger = {
-	}
-	
-	immediate = {
-	}
 	
 	option = {
 		name ="EVTOPTAforesthunting_events.102"

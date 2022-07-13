@@ -17,7 +17,7 @@ decisions = {
 			age = 15
 		}
 		effect = {
-			character_event = { id = recruit_event.1 }
+			narrative_event = { id = recruit_event.1 }
 		}
 	}
 	
@@ -65,7 +65,7 @@ decisions = {
 			age = 15
 		}
 		effect = {
-			character_event = { id = recruit_event.5 }
+			narrative_event = { id = recruit_event.5 }
 		}
 	}
 }

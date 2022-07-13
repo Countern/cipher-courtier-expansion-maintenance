@@ -102,7 +102,7 @@ unjust_conquest_courtier = { # New7
 			limit = {
 				holder_scope = {
 					tier = COUNT
-					NOT = { num_of_COUNT_titles = 2 }
+					NOT = { num_of_count_titles = 2 }
 					lower_tier_than = ROOT
 				}
 			}
@@ -117,7 +117,7 @@ unjust_conquest_courtier = { # New7
 				holder_scope = {
 					OR = {
 						higher_tier_than = COUNT
-						num_of_COUNT_titles = 2
+						num_of_count_titles = 2
 						NOT = { lower_tier_than = ROOT }
 					}
 				}

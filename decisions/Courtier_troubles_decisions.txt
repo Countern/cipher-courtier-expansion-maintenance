@@ -1,7 +1,7 @@
 title_decisions = {
 	solve_trouble = {
 		potential = {
-			tier = county
+			tier = COUNT
 			FROM = { has_character_modifier = homeless }
 		}
 		from_potential = {
@@ -22,16 +22,16 @@ title_decisions = {
 				text = A_Random_Encounter
 				FROM = {
 					random_list = {
-						100 = { character_event = { id = troublesevents.1 } }
-						100 = { character_event = { id = troublesevents.2 } }
-						100 = { character_event = { id = troublesevents.3 } }
-						100 = { character_event = { id = troublesevents.4 } }
-						100 = { character_event = { id = troublesevents.10 } }
-						100 = { character_event = { id = troublesevents.11 } }
-						100 = { character_event = { id = troublesevents.12 } }
-						100 = { character_event = { id = troublesevents.13 } }
-						100 = { character_event = { id = troublesevents.13 } }
-						100 = { character_event = { id = troublesevents.20 } }
+						100 = { long_character_event = { id = troublesevents.1 } }
+						100 = { long_character_event = { id = troublesevents.2 } }
+						100 = { long_character_event = { id = troublesevents.3 } }
+						100 = { long_character_event = { id = troublesevents.4 } }
+						100 = { long_character_event = { id = troublesevents.10 } }
+						100 = { long_character_event = { id = troublesevents.11 } }
+						100 = { long_character_event = { id = troublesevents.12 } }
+						100 = { long_character_event = { id = troublesevents.13 } }
+						100 = { long_character_event = { id = troublesevents.13 } }
+						100 = { long_character_event = { id = troublesevents.20 } }
 					}
 				}
 			}

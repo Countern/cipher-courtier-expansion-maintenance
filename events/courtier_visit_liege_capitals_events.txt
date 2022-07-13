@@ -243,7 +243,7 @@ character_event = {
 		tooltip_info = depressed
 		name = "EVTOPTBliegecap_events.6"
 		wealth = -1
-		lose_trait = depressed
+		remove_trait = depressed
 	}
 	
 	option = {
@@ -332,10 +332,8 @@ character_event = {
 						}
 						40 = {
 							trigger = {
-								AND = {
-									NOT = { religion = taoist }
-									NOT = { has_character_flag = taoist_capital_event }
-								}		
+								NOT = { religion = taoist }
+								NOT = { has_character_flag = taoist_capital_event }	
 							}
 							character_event = { id = liegecap_events.3 months = 3 }
 						}
@@ -378,14 +376,14 @@ character_event = {
 					}
 				}
 				else = {
-					character_event = { id = liegecap_events.100 days = 10 }
+					narrative_event = { id = liegecap_events.100 days = 10 }
 				}
 		}
 	}
 	
-	option = {
-		name = "EVTOPTAliegecap_events.2"
-	}
+	#option = {
+	#	name = "EVTOPTAliegecap_events.2"
+	#}
 }
 
 #Journey END

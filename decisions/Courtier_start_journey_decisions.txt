@@ -13,7 +13,7 @@ decisions = {
 		allow = {
 			custom_tooltip = {
 				text = HASNTVISITEDCAPITAL 
-				or = {
+				OR = {
 					had_character_flag = { flag = visited_capital_decision days = 3650 }
 					NOT = { has_character_flag = visited_capital_decision }
 				}	
@@ -23,7 +23,7 @@ decisions = {
 			add_trait = on_journey
 			clr_character_flag = visited_capital_decision
 			set_character_flag = visited_capital_decision
-			character_event = { id = liegecap_events.102 }
+			narrative_event = { id = liegecap_events.102 }
 		}
 	}
 	
@@ -32,15 +32,12 @@ decisions = {
 		is_high_prio = yes
 		potential = {
 			NOT = { religion = jain }
-			custom_tooltip = { 
-				text = ForestNearby
-				liege = {
-					any_realm_province = {
-						OR = {
-							terrain = forest
-							terrain = plains
-							terrain = hills
-						}
+			liege = {
+				any_realm_province = {
+					OR = {
+						terrain = forest
+						terrain = plains
+						terrain = hills
 					}
 				}
 			}
@@ -54,7 +51,7 @@ decisions = {
 		allow = {
 			custom_tooltip = {
 				text = HASNTVISITEDCAPITAL 
-				or = {
+				OR = {
 					had_character_flag = { flag = hunted_forest_decision days = 3650 }
 					NOT = { has_character_flag = hunted_forest_decision }
 				}	
@@ -64,7 +61,7 @@ decisions = {
 			add_trait = on_journey
 			clr_character_flag = hunted_forest_decision
 			set_character_flag = hunted_forest_decision
-			character_event = { id = foresthunting_events.102 }
+			narrative_event = { id = foresthunting_events.102 }
 		}
 	}
 
@@ -73,15 +70,12 @@ decisions = {
 		is_high_prio = yes
 		potential = {
 			NOT = { religion = jain }
-			custom_tooltip = { 
-				text = ForestNearby
-				liege = {
-					any_realm_province = {
-						OR = {
-							terrain = forest
-							terrain = plains
-							terrain = hills
-						}
+			liege = {
+				any_realm_province = {
+					OR = {
+						terrain = forest
+						terrain = plains
+						terrain = hills
 					}
 				}
 			}
@@ -95,7 +89,7 @@ decisions = {
 		allow = {
 			custom_tooltip = {
 				text = HASNTVISITEDCAPITAL 
-				or = {
+				OR = {
 					had_character_flag = { flag = traveled_realm_decision days = 8650 }
 					NOT = { has_character_flag = traveled_realm_decision }
 				}	
@@ -105,7 +99,7 @@ decisions = {
 			add_trait = on_journey
 			clr_character_flag = traveled_realm_decision
 			set_character_flag = traveled_realm_decision
-			character_event = { id = courtiercountry_events.102 }
+			narrative_event = { id = courtiercountry_events.102 }
 		}
 	}
 

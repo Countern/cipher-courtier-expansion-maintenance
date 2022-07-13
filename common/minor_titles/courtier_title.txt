@@ -6,8 +6,8 @@ title_courtier = {
 
 
     allowed_to_hold = {
-        is_AI = no
-        has_landed_title = d_COLLINS_SEAT
+        ai = no
+		has_landed_title = c_COLLINS_SEAT
     }
 
 }

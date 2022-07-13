@@ -9,7 +9,7 @@ targetted_decisions = {
 		}
 		allow = {
 			show_only_failed_conditions = yes
-			FROM = { Prestige = 30 }
+			FROM = { prestige = 30 }
 			custom_tooltip = {
 				text = HOLDFAVORADVANTAGE
 				FROM = { holds_favor_on = ROOT }
@@ -19,9 +19,9 @@ targetted_decisions = {
 		}
 		effect = {
 			prestige = -400
-			custom_tooltip = { Text = PARTONEASKLAND }
+			custom_tooltip = { text = PARTONEASKLAND }
 			custom_tooltip = {
-				Text = PARTTWOASKLAND 
+				text = PARTTWOASKLAND
 				random_list = {
 					5 = {
 						modifier = {
@@ -34,7 +34,7 @@ targetted_decisions = {
 						}
 						modifier = {
 						  factor = 1.5
-						  FROM = { opinion = { who = ROOT value 50 } }
+						  FROM = { opinion = { who = ROOT value = 50 } }
 						}
 						modifier = {
 						  factor = 2
@@ -43,10 +43,6 @@ targetted_decisions = {
 						modifier = {
 						  factor  = 2
 						  FROM = { wealth = 500 }
-						}
-						modifier = {
-						  factor = 4
-						  FROM = { prestige = 2000 }
 						}
 						modifier = {
 						  factor = 4

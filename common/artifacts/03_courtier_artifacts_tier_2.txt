@@ -7,8 +7,8 @@ court_long_sword = {
 	picture = "GFX_long_sword"
 	combat_rating = 20
 	light_infantry_offensive = 0.1
-	heavy-_infantry_offensive = 0.2
-	monthly_prestige = 0.1
+	heavy_infantry_offensive = 0.2
+	monthly_character_prestige = 0.1
 	slot = weapon 
 }
 
@@ -20,8 +20,9 @@ court_winged_spear = {
 	}
 	picture = "GFX_winged_spear"
 	combat_rating = 15
-	pikemen_defensive_offensive = 0.2
-	ligth_cavalry_defensive = 0.1
+	pikemen_defensive = 0.2
+	pikemen_offensive = 0.2
+	light_cavalry_defensive = 0.1
 	slot = weapon 
 }
 
@@ -47,6 +48,6 @@ court_chain_armor = {
 	combat_rating = 10
 	light_infantry_defensive = 0.1
 	heavy_infantry_defensive = 0.1
-	monthly_prestige = 0.15
+	monthly_character_prestige = 0.15
 	slot = torso
 }

@@ -188,9 +188,6 @@ character_event = {
 	is_triggered_only = yes
 	hide_window = yes
 	
-	trigger = {
-	}
-	
 	immediate = {
 		hidden_tooltip = {
 				if = {
@@ -198,16 +195,16 @@ character_event = {
 					subtract_variable = { which = journey_count value = 1 }
 					random_list = {
 						50 = {
-							character_event = { id = moving_events.4 months = 2 }						
+							narrative_event = { id = moving_events.4 months = 2 }						
 						}
 						50 = {
-							character_event = { id = moving_events.5 months = 2 }						
+							narrative_event = { id = moving_events.5 months = 2 }						
 						}
 						50 = {
-							character_event = { id = moving_events.6 months = 2 }						
+							narrative_event = { id = moving_events.6 months = 2 }						
 						}
 						100 = {
-							character_event = { id = moving_events.7 months = 2 }						
+							narrative_event = { id = moving_events.7 months = 2 }						
 						}
 					}
 				}
@@ -222,7 +219,7 @@ character_event = {
 							  factor = 40
 							  event_target:newLiege = { opinion = { who = ROOT value = 50 } }			
 							}
-							character_event = { id = moving_events.1 months = 1 }
+							narrative_event = { id = moving_events.1 months = 1 }
 						}
 						40 = {
 							modifier = {
@@ -234,7 +231,7 @@ character_event = {
 							  event_target:newLiege = { opinion = { who = ROOT value = -30 } }		
 							  event_target:newLiege = { NOT = { opinion = { who = ROOT value = 50 } } }		
 							}		
-							character_event = { id = moving_events.2 months = 1 }
+							narrative_event = { id = moving_events.2 months = 1 }
 						
 						}
 						10 = {
@@ -250,16 +247,16 @@ character_event = {
 							  factor = 20
 							  event_target:newLiege = { NOT = { opinion = { who = ROOT value = -30 } } }
 							}
-							character_event = { id = moving_events.3 months = 1 }
+							narrative_event = { id = moving_events.3 months = 1 }
 						}
 					}
 				}
 		}
 	}
 	
-	option = {
-		name = "EVTOPTAmoving_events.101"
-	}
+	#option = {
+	#	name = "EVTOPTAmoving_events.101"
+	#}
 }
 
 
@@ -390,12 +387,7 @@ character_event = {
 	id = moving_events.9
 	hide_window = yes
 	is_triggered_only = yes
-	trigger = {
-	}
 	immediate = {
-	}
-	option = {
-		name = "EVTOPTAmoving_events.9"
 		clr_character_flag = constructing_courtier
 	}
 }
@@ -422,9 +414,6 @@ character_event = {
 	desc = "EVTDESmoving_events.11"
 	picture = "GFX_arrival_court"
 	is_triggered_only = yes
-	
-	immediate = {
-	}
 	
 	option = {
 		name = "EVTOPTAmoving_events.11"

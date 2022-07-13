@@ -67,23 +67,23 @@ character_event = {
 			#Search which type of start you run
 			if = {
 				limit = { has_character_flag = diplomacy_courtier }
-				export_to_variable { which = job_amt value = diplomacy }
+				export_to_variable = { which = job_amt value = diplomacy }
 			}
 			if = {
 				limit = { has_character_flag = martial_courtier }
-				export_to_variable { which = job_amt value = martial }
+				export_to_variable = { which = job_amt value = martial }
 			}
 			if = {
 				limit = { has_character_flag = stewardship_courtier }
-				export_to_variable { which = job_amt value = stewardship }
+				export_to_variable = { which = job_amt value = stewardship }
 			}
 			if = {
 				limit = { has_character_flag = intrigue_courtier }
-				export_to_variable { which = job_amt value = intrigue }
+				export_to_variable = { which = job_amt value = intrigue }
 			}
 			if = {
 				limit = { has_character_flag = learning_courtier }
-				export_to_variable { which = job_amt value = learning }
+				export_to_variable = { which = job_amt value = learning }
 			}
 			#Calculate new valuee
 			while = {
@@ -115,7 +115,6 @@ character_event = {
 
 character_event = {
 	id = court_prom.2
-	desc = "EVTDEScourt_prom.2"
 	only_playable = yes
 	hide_window = yes
 	is_triggered_only = yes
@@ -125,10 +124,6 @@ character_event = {
 	}
 	
 	immediate = {
-	}
-	
-	option = {
-		name = "EVTOPTAcourt_prom.2"
 		ROOT = {
 			export_to_variable = { which = myvardip value = diplomacy }
 			export_to_variable = { which = myvarste value = stewardship }
@@ -142,7 +137,6 @@ character_event = {
 
 character_event = {
 	id = court_prom.3
-	desc = "EVTDEScourt_prom.3"
 	only_playable = yes
 	hide_window = yes
 	is_triggered_only = yes
@@ -152,10 +146,6 @@ character_event = {
 	}
 	
 	immediate = {
-	}
-	
-	option = {
-		name = "EVTOPTAcourt_prom.3"
 		random_province = {
 			limit = {
 				is_land = no

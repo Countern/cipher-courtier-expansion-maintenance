@@ -30,7 +30,7 @@ character_event = { #Gaining event from target
 			60 = { add_artifact = court_bundle_wood }
 			5 = { add_artifact = court_spices }
 			5 = { add_artifact = court_jade }
-			5 = { add_artifact = court_silk_thead }
+			5 = { add_artifact = court_silk_thread }
 			5 = { add_artifact = court_gold }
 		}
 		random = { 
@@ -69,7 +69,7 @@ character_event = { #Gaining event from target
 					  }
 					  china_offmap_tribute_decisions_enabled_trigger = yes
 					}
-					add_artifact = court_silk_thead 
+					add_artifact = court_silk_thread 
 				}
 				5 = { 
 					modifier = {
@@ -99,7 +99,7 @@ character_event = { #Trader job European sand
 			}
 		}
 		trait = merchant_trait
-		independant = no
+		independent = no
 		NOT = { has_game_rule = { name = courtier_overhaul_mod value = overhaul_mode } }
 	}
 	
@@ -145,7 +145,7 @@ character_event = { #Trader job European sand
 				}
 			}
 		}
-		tooltip_info = dynasty_member
+		#tooltip_info = dynasty_member
 		event_target:trader_storyhearer = {
 			opinion = { modifier = swayed who = ROOT years = 5 }
 		}
@@ -174,7 +174,7 @@ character_event = { #Foreigner in india
 	trigger = {
 		liege = { capital_scope = { region = world_india } }
 		trait = merchant_trait
-		independant = no
+		independent = no
 		NOT = { culture_group = indo_aryan_group }
 		NOT = { has_game_rule = { name = courtier_overhaul_mod value = overhaul_mode } }
 	}
@@ -199,7 +199,7 @@ character_event = { #Foreigner in india
 	option = {#literature
 		name = "EVTOPTIONCtrader_events.3"
 		change_learning = 1
-		random = { change = 10 add_trait = erudite }
+		random = { chance = 10 add_trait = erudite }
 	}
 	
 	option = {#nothing
@@ -236,9 +236,9 @@ character_event = { #Mali Hajj
 	
 	option = {
 		trigger = {
-			religion_group = muslim_group
+			religion_group = muslim
 		}
-		tooltip_info = religion
+		tooltip_info = learning
 		name = "EVTOPTIONBtrader_events.4"
 		piety = 50
 		add_artifact = court_gold
@@ -262,6 +262,7 @@ character_event = { #Muslims in euroope
 	
 	trigger = {
 		trait = merchant_trait
+		# Audax Validator "." Ignore_1002
 		OR = {
 			liege = { capital_scope = { region = world_europe } }
 		}
@@ -270,9 +271,6 @@ character_event = { #Muslims in euroope
 			religion_group = jewish_group
 		}
 		NOT = { has_game_rule = { name = courtier_overhaul_mod value = overhaul_mode } }
-	}
-	
-	immediate = {
 	}
 	
 	option = {
@@ -329,7 +327,7 @@ character_event = { #Gaining event from target
 			60 = { add_artifact = court_bundle_wood }
 			2 = { add_artifact = court_spices }
 			2 = { add_artifact = court_jade }
-			2 = { add_artifact = court_silk_thead }
+			2 = { add_artifact = court_silk_thread }
 			2 = { add_artifact = court_gold }
 		}
 		random = { 
@@ -368,7 +366,7 @@ character_event = { #Gaining event from target
 					  }
 					  china_offmap_tribute_decisions_enabled_trigger = yes
 					}
-					add_artifact = court_silk_thead 
+					add_artifact = court_silk_thread 
 				}
 				2 = { 
 					modifier = {
@@ -385,76 +383,75 @@ character_event = { #Gaining event from target
 
 character_event = { #Gaining event from target
 	id = trader_events.7
-	title = "EVTTITLEtrader_events.7"
-	desc = "EVTDEStrader_events.7"
-	picture = "GFX_evt_armory"
+	#title = "EVTTITLEtrader_events.7"
+	#desc = "EVTDEStrader_events.7"
+	#picture = "GFX_evt_armory"
 	hide_window = yes
 	is_triggered_only = yes
 	
 	trigger = {
 		ai = yes
-		or = {
+		OR = {
 			has_minor_title = title_trader	
 			trait = merchant_trait
 		}
 	}
 	
-	option = {
-		name = "EVTOPTIONAtrader_events.7"
+	immediate = {
 		random_list = {
 			50 = { 
 				modifier = {
 					factor = 0
-					NOT ={ has_artifact = court_iron_ingot }
+					NOT = { has_artifact = court_iron_ingot }
 				}
 				destroy_artifact = court_iron_ingot 
 			}
 			50 = { 
 				modifier = {
 					factor = 0
-					NOT ={ has_artifact = court_crafting_thread }
+					NOT = { has_artifact = court_crafting_thread }
 				}
 				destroy_artifact = court_crafting_thread 
 			}
 			50 = { 
 				modifier = {
 					factor = 0
-					NOT ={ has_artifact = court_assorted_leather }
+					NOT = { has_artifact = court_assorted_leather }
 				}
 				destroy_artifact = court_assorted_leather 
 			}
 			50 = {
 				modifier = {
 					factor = 0
-					NOT ={ has_artifact = court_bundle_wood }
+					NOT = { has_artifact = court_bundle_wood }
 				}
 				destroy_artifact = court_bundle_wood 
 			}
 			50 = { 
 				modifier = {
 					factor = 0
-					NOT ={ has_artifact = court_spices }
+					NOT = { has_artifact = court_spices }
 				}
 				destroy_artifact = court_spices 
 			}
 			50 = { 
 				modifier = {
 					factor = 0
-					NOT ={ has_artifact = court_jade }
+					NOT = { has_artifact = court_jade }
 				}
 				destroy_artifact = court_jade 
 			}
 			50 = { 
 				modifier = {
 					factor = 0
-					NOT ={ has_artifact = court_silk_thead }
+					NOT = { has_artifact = court_silk_thread }
 				}
-				destroy_artifact = court_silk_thead
+				destroy_artifact = court_silk_thread
 			}
 			50 = {
 				modifier = {
 					factor = 0
-					NOT ={ has_artifact = court_gold }
+					NOT = { has_artifact = court_gold }
 				}
 				destroy_artifact = court_gold 
 			}

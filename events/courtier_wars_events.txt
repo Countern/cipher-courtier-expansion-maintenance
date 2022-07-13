@@ -20,20 +20,20 @@ character_event = {
 	
 	option = {
 		name = "EVTOPTAcourtierwar_events.2"
-		text = YouWilBePaid
+		custom_tooltip = { text = YouWilBePaid }
 	}
 }
 
 #Reward for battle won
 character_event = {
 	id = courtierwar_events.2
-	is_ruler = yes
 	desc = "EVTDESCcourtierwar_events.2"
 	picture = "GFX_evt_gift"
 	portrait = from
 	is_triggered_only = yes
 	
 	trigger = {
+		is_ruler = yes
 		any_vassal = {
 			has_character_modifier = homeless
 			trait = martial_trait
@@ -98,25 +98,18 @@ character_event = {
 #Reward for battle won SMALL
 character_event = {
 	id = courtierwar_events.4
-	desc = "EVTDESCcourtierwar_events.4"
-	picture = "GFX_evt_gift"
-	portrait = event_target:warring_contractor
 	is_triggered_only = yes
 	hide_window = yes
 	
 	trigger = {
 		OR = {
-			father = { AND = { has_trait = pirate_courtier is_ruler = yes } }
-			mother = { AND = { has_trait = pirate_courtier is_ruler = yes } }
+			father = { trait = pirate_courtier is_ruler = yes }
+			mother = { trait = pirate_courtier is_ruler = yes }
 			AND = { is_ruler = yes culture = pirate }
 		}
 	}
 	
 	immediate = { 	
-	}
-	
-	option = {
-		name = "EVTOPTAcourtierwar_events.4"
 		add_trait = pirate_courtier
 	}
 }
