@@ -43,14 +43,18 @@ narrative_event = {
 				grant_title = event_target:chancellor_in_power
 			}
 		}
-		create_title = {
-			tier = COUNT
-			landless = yes
-			name = "COLLINS_SEAT"
-			holder = ROOT
-			culture = ROOT
-			ruler = "LANDLESS_TITLE"
-			ruler_female = "LANDLESS_TITLE_FEMALE"
+		event_target:new_liege = {
+			capital_scope = {
+				create_title = {
+					tier = COUNT
+					landless = yes
+					name = "COLLINS_SEAT"
+					holder = ROOT
+					culture = ROOT
+					ruler = "LANDLESS_TITLE"
+					ruler_female = "LANDLESS_TITLE_FEMALE"
+				}
+			}
 		}
 		clear_wealth = yes
 		wealth = 50
