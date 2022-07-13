@@ -1,0 +1,351 @@
+
+targetted_decisions = {
+	
+	summon_blacksmith = {
+		filter = court
+		ai_target_filter = none
+
+		from_potential = {
+			ai = no
+			has_character_modifier = homeless
+		}
+		
+		potential = {
+			has_minor_title = title_blacksmith
+		}
+		
+		allow = {
+			FROM = {
+				has_regent = no
+			}
+		}
+		
+		effect = {
+			ROOT = { save_event_target_as = blacksmith } 
+			FROM = {
+				character_event = { 
+					id = crafty_crafting.1
+				}
+			}
+		}
+	}
+	
+	
+	
+	sell_material = {
+		filter = realm
+		ai_traget_filter = none
+	
+		third_party_filter = artifacts
+		ai_third_party_filter = artifacts
+		third_party = FROM
+	
+		show_third_party_potential = yes #Set to show third party requirements in the tooltip. Defaults to no.
+		
+		third_party_potential = {
+			# show_only_failed_conditions = yes
+			FROMFROM = {
+				has_artifact_flag = material
+			}
+		}
+		
+		third_party_allow = {
+			always = yes
+		}
+		
+		from_potential = {
+			ai = no
+			has_character_modifier = homeless
+		}
+		
+		potential = {
+			has_minor_title = title_trader
+		}
+		
+		allow = {
+			FROM = {
+				has_regent = no
+				any_artifact = {
+					has_artifact_flag = material
+				}
+			}
+		}
+		
+		effect = {
+			#Selling Spice
+			if = {
+				limit = {
+					FROMFROM = {
+						has_artifact_flag = spices
+					}
+					top_liege = {
+						capital_scope = {
+							region = world_india
+						}
+					}
+				}
+				
+				FROM = { wealth = 15 }
+				FROMFROM = { transfer_artifact = { from = FROM to = ROOT } }
+			}
+			if = {
+				limit = {
+					OR = {
+						AND = {
+							FROMFROM = {
+								has_artifact_flag = spices
+							}
+							top_liege = {
+								capital_scope = {
+									NOT = {
+										region = world_india
+										region = world_europe
+									}
+								}
+							}
+						}
+						has_game_rule = { name = courtier_overhaul_mod value = overhaul_mode }
+					}
+				}
+				FROM = { wealth = 30 }
+				FROMFROM = { transfer_artifact = { from = FROM to = ROOT } }
+			}
+			if = {
+				limit = {
+					FROMFROM = {
+						has_artifact_flag = spices
+					}
+					top_liege = {
+						capital_scope = {
+							region = world_europe
+						}
+					}
+				}
+				FROM = { wealth = 50 }
+				FROMFROM = { transfer_artifact = { from = FROM to = ROOT } }
+			}
+			
+			#Selling Gold
+			if = {
+				limit = {
+					FROMFROM = {
+						has_artifact_flag = gold
+					}
+					top_liege = {
+						capital_scope = {
+							region = world_africa
+						}
+					}
+				}
+				FROM = { wealth = 15 }
+				FROMFROM = { transfer_artifact = { from = FROM to = ROOT } }
+			}
+			if = {
+				limit = {
+					OR = {
+						AND = {
+							FROMFROM = {
+								has_artifact_flag = gold
+							}
+							top_liege = {
+								capital_scope = {
+									NOT = {
+										region = world_africa
+									}
+								}
+							}
+							NOT = { ROOT = { wealth = 200 } }
+						}
+						has_game_rule = { name = courtier_overhaul_mod value = overhaul_mode }
+					}
+				}
+				FROM = { wealth = 30 }
+				FROMFROM = { transfer_artifact = { from = FROM to = ROOT } }
+			}
+			if = {
+				limit = { 
+					FROMFROM = {
+						has_artifact_flag = gold
+					}
+					top_liege = {
+						capital_scope = {
+							NOT = {
+								region = world_africa
+							}
+						}
+					}
+					ROOT = { wealth = 200 }
+				}
+				FROM = { wealth = 50 }
+				FROMFROM = { transfer_artifact = { from = FROM to = ROOT } }
+			}
+			
+			#Selling Silk Thread
+			if = {
+				limit = {
+					FROMFROM = {
+						has_artifact_flag = silk_thread
+					}
+					top_liege = {
+						capital_scope = {
+							OR = {
+								region = world_asia_minor
+								region = world_steppe
+							}
+						}
+						china_offmap_tribute_decisions_enabled_trigger = yes
+					}
+				}
+				FROM = { wealth = 25 }
+				FROMFROM = { transfer_artifact = { from = FROM to = ROOT } }
+			}
+			if = {
+				limit = {
+					OR = {
+						AND = {
+							FROMFROM = {
+								has_artifact_flag = silk_thread
+							}
+							top_liege = {
+								capital_scope = {
+									NOT = {
+										region = world_asia_minor
+										region = world_steppe
+									}
+								}
+								china_offmap_tribute_decisions_enabled_trigger = yes
+							}
+						}
+						has_game_rule = { name = courtier_overhaul_mod value = overhaul_mode }
+					}
+					
+				}
+				FROM = { wealth = 50 }
+				FROMFROM = { transfer_artifact = { from = FROM to = ROOT } }
+			}
+			if = {
+				limit = { 
+					FROMFROM = {
+						has_artifact_flag = silk_thread
+					}
+					top_liege = {
+						capital_scope = {
+							NOT = {
+								region = world_asia_minor
+								region = world_steppe
+							}
+						}
+						china_offmap_tribute_decisions_enabled_trigger = no
+					}
+				}
+				FROM = { wealth = 75 }
+				FROMFROM = { transfer_artifact = { from = FROM to = ROOT } }
+			}
+			
+			
+			
+			
+			#Selling Jade
+			if = {
+				limit = {
+					FROMFROM = {
+						has_artifact_flag = jade
+					}
+					top_liege = {
+						capital_scope = {
+							OR = {
+								region = world_asia_minor
+								region = world_steppe
+							}
+						}
+						china_offmap_tribute_decisions_enabled_trigger = yes
+					}
+				}
+				FROM = { wealth = 20 }
+				FROMFROM = { transfer_artifact = { from = FROM to = ROOT } }
+			}
+			if = {
+				limit = {
+					OR = {
+						AND = {
+							FROMFROM = {
+								has_artifact_flag = jade
+							}
+							top_liege = {
+								capital_scope = {
+									NOT = {
+										region = world_asia_minor
+										region = world_steppe
+									}
+								}
+								china_offmap_tribute_decisions_enabled_trigger = yes
+							}
+						}
+						has_game_rule = { name = courtier_overhaul_mod value = overhaul_mode }
+					}
+				}
+				FROM = { wealth = 30 }
+				FROMFROM = { transfer_artifact = { from = FROM to = ROOT } }
+			}
+			if = {
+				limit = { 
+					FROMFROM = {
+						has_artifact_flag = jade
+					}
+					top_liege = {
+						capital_scope = {
+							NOT = {
+								region = world_asia_minor
+								region = world_steppe
+							}
+						}
+						china_offmap_tribute_decisions_enabled_trigger = no
+					}
+				}
+				FROM = { wealth = 60 }
+				FROMFROM = { transfer_artifact = { from = FROM to = ROOT } }
+			}			
+			
+			
+			
+			
+			#Selling Material
+			if = {
+				limit = {
+					FROMFROM = {
+						NOT = { has_artifact_flag = exotic }
+					}
+					NOT = { num_of_artifacts = 3 }
+					trait = experienced_merchant
+				}
+				FROM = { wealth = 20 }
+				FROMFROM = { transfer_artifact = { from = FROM to = ROOT } }
+			}
+			if = {
+				limit = {
+					FROMFROM = {
+						NOT = { has_artifact_flag = exotic }
+					}
+					NOT = { num_of_artifacts = 3 }
+					NOT = { trait = experienced_merchant }
+				}
+				FROM = { wealth = 10 }
+				FROMFROM = { transfer_artifact = { from = FROM to = ROOT } }
+			}
+			if = {
+				limit = { 
+					FROMFROM = {
+						NOT = { has_artifact_flag = exotic }
+					}
+					num_of_artifacts = 3
+				}
+				FROM = { wealth = 5 }
+				FROMFROM = { transfer_artifact = { from = FROM to = ROOT } }
+			}				
+		}	
+			
+				
+	}	
+	
+
+}

@@ -1,0 +1,493 @@
+namespace = lalad_events
+#Mod initiation
+
+#NEW INITIALAZATION OF COURTIER GAME!!!!!
+narrative_event = {
+	id = lalad_events.1000
+	desc = "EVTDESClalad_events.100"
+	title = "EVTTITLlalad_events.100"
+	picture = "GFX_evt_siege"
+	is_triggered_only = yes
+	immediate = {
+		if = { 
+			 limit = { is_nomadic = yes }
+			 set_government_type = tribal_government 
+		}
+		any_demesne_title = {
+			set_title_flag = take_collins_seat
+		}
+		primary_title = { save_event_target_as = Primary_title }
+		IF = {
+			limit = { independent = no }
+			liege = {
+				save_event_target_as = new_liege
+			}
+		}
+		else = {
+			top_liege = {
+				any_neighbor_independent_ruler = {
+					preferred_limit = {
+						higher_tier_than = COUNT 
+					}
+					save_event_target_as = new_liege
+				}
+			}
+		}
+		job_chancellor = { save_event_target_as = chancellor_in_power }
+	}
+	option = {
+		name = "EVTOPTAlalad_events.100"
+		any_demesne_title = {
+			if = { 
+				is_landless_type_title = no
+			}
+			grant_title = event_target:chancellor_in_power
+		}
+		create_title = {
+			tier = COUNT
+			landless = yes
+			name = "COLLINS_SEAT"
+			holder = ROOT
+			culture = ROOT
+			ruler = "LANDLESS_TITLE"
+			ruler_female = "LANDLESS_TITLE_FEMALE"
+		}
+		clear_wealth = yes
+		wealth = 50
+		add_character_modifier = {
+  			modifier = homeless
+ 			duration = -1
+		}
+		any_dynasty_member = {
+			limit = { is_landed = no }
+			add_character_modifier = {
+				modifier = homeless
+				duration = -1
+			}	
+		}
+		any_demesne_title = {
+			IF = {
+				limit = { is_landless_type_title = yes }
+				holder_scope = { set_defacto_liege = event_target:new_liege }
+				gender_succ = true_cognatic
+				succession = { base_type = feudal_elective voting_rules = courtier_election } 
+				set_title_flag = The_lonely_title
+				set_coa = event_target:Primary_title
+				set_title_flag = landless_adventurer
+			}
+		}
+		character_event = { id = lalad_events.1001 }
+	}
+	option = {
+		name = "EVTOPTBlalad_events.100"
+	}
+}
+
+
+#TO kill or not to kill
+character_event = {
+	id = lalad_events.1001
+	desc = "EVTDESChomeless_event.1"
+	picture = "GFX_evt_siege"
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTBhomeless_event.1"
+		hidden_tooltip = {
+			any_character = {
+				limit = { 
+					NOT = { dynasty = ROOT } 
+					NOT= { opinion = { who = ROOT value = 0 } }
+					is_landed = no
+					liege = { character = ROOT }
+				} 
+				move_character = event_target:chancellor_in_power
+			}
+		}
+	}
+	option = {
+		name = "EVTOPTAhomeless_event.1"
+		any_dynasty_member = {
+			limit = { 
+				is_landed = no
+				ai = yes
+			}
+			death = { death_reason = death_execution }
+		}
+		hidden_tooltip = {
+			ROOT = {
+				any_character = {
+					limit = { liege = { character = ROOT } }
+					move_character = event_target:chancellor_in_power
+				}
+			}
+		}
+	}
+	option = {
+		name = "EVTOPTChomeless_event.1"
+			ROOT = {
+				any_character = {
+					limit = { liege = { character = ROOT } }
+					move_character = event_target:chancellor_in_power
+				}
+			}
+	}
+
+}
+
+#TO kill or not to kill
+character_event = {
+	id = lalad_events.1045
+	is_triggered_only = yes
+	hide_window = yes
+	
+	trigger = {
+		is_landed = no
+		ai = no
+		not = { has_character_modifier = homeless }
+	}
+	
+	option = {
+		name = "EVTOPTBhomeless_event.1"
+		add_character_modifier = {
+  			modifier = homeless
+ 			duration = -1
+		}
+	}
+}
+
+#####
+#Jobs
+#####
+
+namespace = homeless_event
+
+
+character_event = {
+	id = homeless_event.18
+	desc = "EVTDESChomeless_event.18"
+	picture = "GFX_evt_bribe_declined_ze"
+	is_triggered_only = yes
+	
+	
+	#Diplomat Route
+	option = {
+		name = "EVTOPTAhomeless_event.18"
+		tooltip_info = diplomacy
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 0.01
+				NOT = { diplomacy = 10 }
+			}
+		}
+		add_trait = bureaucrat_trait
+		hidden_tooltip = {
+			set_character_flag = diplomacy_courtier
+			set_variable = { which = job_amt value = 0 }
+			set_variable = { which = money_gained value = 0 }
+			export_to_variable { which = job_amt value = diplomacy }
+			while = {
+				limit = {
+					check_variable = {
+						which = job_amt
+						value = 1
+					}
+				}
+				subtract_variable = {
+					which = job_amt
+					value = 1
+				}
+				add_character_modifier = {
+					modifier = job_gain
+					duration = -1
+					stacking = yes
+				}
+				change_variable = {
+					which = money_gained
+					value = 1
+				}
+			}
+		}
+		custom_tooltip = { text = NEWSALARYDIP }
+	}
+	
+	
+	#Martial Route
+	option = {
+		name = "EVTOPTBhomeless_event.18"
+		tooltip_info = martial
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 0.01
+				NOT = { martial = 10 }
+			}
+		}
+		add_trait = martial_trait
+		hidden_tooltip = {
+			set_character_flag = martial_courtier
+			set_variable = { which = job_amt value = 0 }
+			set_variable = { which = money_gained value = 0 }
+			export_to_variable { which = job_amt value = martial }
+			while = {
+				limit = {
+					check_variable = {
+						which = job_amt
+						value = 1
+					}
+				}
+				subtract_variable = {
+					which = job_amt
+					value = 1
+				}
+				add_character_modifier = {
+					modifier = job_gain
+					duration = -1
+					stacking = yes
+				}
+				change_variable = {
+					which = money_gained
+					value = 1
+				}
+			}
+		}
+		custom_tooltip = { text = NEWSALARYMAR }
+	}
+	
+	
+	#Learning Route
+	option = {
+		name = "EVTOPTChomeless_event.18"
+		tooltip_info = learning
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 0.01
+				NOT = { learning = 10 }
+			}
+		}
+		add_trait = scholar_trait
+		hidden_tooltip = {
+			set_character_flag = learning_courtier		
+			set_variable = { which = job_amt value = 0 }
+			set_variable = { which = money_gained value = 0 }
+			export_to_variable { which = job_amt value = learning }
+			while = {
+				limit = {
+					check_variable = {
+						which = job_amt
+						value = 1
+					}
+				}
+				subtract_variable = {
+					which = job_amt
+					value = 1
+				}
+				add_character_modifier = {
+					modifier = job_gain
+					duration = -1
+					stacking = yes
+				}
+				change_variable = {
+					which = money_gained
+					value = 1
+				}
+			}
+		}
+		custom_tooltip = { text = NEWSALARYLEA }
+	}
+	
+	
+	#Next Page
+	option = {
+		name = "EVTOPTDhomeless_event.18"
+		ai_chance = {
+			factor = 8
+		}
+		character_event = { id = homeless_event.19 }
+	}
+}
+
+character_event = {
+	id = homeless_event.19
+	desc = "EVTDESChomeless_event.19"
+	picture = "GFX_evt_bribe_declined_ze"
+	is_triggered_only = yes
+	
+	
+	#Stwardship Route
+	option = {
+		name = "EVTOPTAhomeless_event.19"
+		tooltip_info = stewardship
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 0.01
+				NOT = { stewardship = 10 }
+			}
+		}
+		add_trait = merchant_trait
+		hidden_tooltip = {
+			set_character_flag = stewardship_courtier
+			set_variable = { which = job_amt value = 0 }
+			set_variable = { which = money_gained value = 0 }
+			export_to_variable { which = job_amt value = stewardship }
+			while = {
+				limit = {
+					check_variable = {
+						which = job_amt
+						value = 1
+					}
+				}
+				subtract_variable = {
+					which = job_amt
+					value = 1
+				}
+				add_character_modifier = {
+					modifier = job_gain
+					duration = -1
+					stacking = yes
+				}
+				change_variable = {
+					which = money_gained
+					value = 1
+				}
+			}
+		}
+		custom_tooltip = { text = NEWSALARYSTE }
+	}
+	
+	
+	#Intrigue Route
+	option = {
+		name = "EVTOPTBhomeless_event.19"
+		tooltip_info = intrigue
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 0.01
+				NOT = { intrigue = 10 }
+			}
+		}
+		add_trait = spy_trait
+		hidden_tooltip = {
+			set_character_flag = intrigue_courtier
+			set_variable = { which = job_amt value = 0 }
+			set_variable = { which = money_gained value = 0 }
+			export_to_variable { which = job_amt value = intrigue }
+			while = {
+				limit = {
+					check_variable = {
+						which = job_amt
+						value = 1
+					}
+				}
+				subtract_variable = {
+					which = job_amt
+					value = 1
+				}
+				add_character_modifier = {
+					modifier = job_gain
+					duration = -1
+					stacking = yes
+				}
+				change_variable = {
+					which = money_gained
+					value = 1
+				}
+			}
+		}
+		custom_tooltip = { text = NEWSALARYINT }
+	}
+	
+	
+	#Other list again
+	option = {
+		name = "EVTOPTChomeless_event.19"
+		character_event = { id = homeless_event.18 }
+	}
+	
+	
+	#Stop search
+	option = {
+		name = "EVTOPTDhomeless_event.19"
+		clr_character_flag = has_job
+	}
+
+
+}
+
+#Marriage events
+character_event = {
+	id = homeless_event.16
+	desc = "EVTDESChomeless_event.16"
+	picture = "GFX_evt_Marriage"
+	is_triggered_only = yes
+	trigger = {
+		ROOT = { 
+			ai = yes 
+			NOT = { is_friend = new_character }
+		}
+		FROM = {
+			NOT = { dynasty = none }
+			NOT = { trait = bastard }
+		}
+		new_character = { has_character_modifier = homeless }
+	}
+	option = {
+		name = "EVTOPTAhomeless_event.15"
+		from = { save_event_target_as = spouse_divorced }
+		root = { save_event_target_as = parent_liege }
+		new_character = { character_event = { id = homeless_event.17 } }
+	}
+}
+
+character_event = {
+	id = homeless_event.17
+	desc = "EVTDESChomeless_event.17"
+	picture = "GFX_evt_Marriage"
+	is_triggered_only = yes
+	option = {
+		name = "EVTOPTAhomeless_event.17"
+		event_target:spouse_divorced = { character_event = { id = homeless_event.20 } }
+		event_target:spouse_divorced = { remove_spouse = ROOT }
+	}
+	option = {
+		name = "EVTOPTBhomeless_event.17"
+		trigger = {
+			event_target:spouse_divorced = { is_lover = ROOT }
+			event_target:parent_liege = { opinion = { who = ROOT value = 30 } }
+			event_target:parent_liege = { opinion = { who = event_target:spouse_divorced value = 30 } }
+		}
+	}
+	option = {
+		name = "EVTOPTChomeless_event.17"
+		trigger = {
+			event_target:parent_liege = { owes_favor_to = ROOT }
+		}
+	}
+	option = {
+		name = "EVTOPTDhomeless_event.17"
+		trigger = {
+			ROOT = { prestige = 1500 }
+		}
+	}
+	option = {
+		name = "EVTOPTEhomeless_event.17"
+		trigger = {
+			ROOT = { is_friend = event_target:parent_liege }
+		}
+	}
+}
+
+character_event = {
+	id = homeless_event.20
+	desc = "EVTDESChomeless_event.17"
+	picture = "GFX_evt_Marriage"
+	is_triggered_only = yes
+	option = {
+		name = "EVTOPTAhomeless_event.17"
+		set_defacto_liege = FROMFROM
+	}
+}

@@ -1,0 +1,122 @@
+namespace = courtierwar_events
+
+#Reward for war won
+character_event = {
+	id = courtierwar_events.1
+	desc = "EVTDESCcourtierwar_events.2"
+	picture = "GFX_evt_gift"
+	is_triggered_only = yes
+	
+	trigger = {
+		has_character_modifier = homeless
+		trait = martial_trait
+		FROM = {
+			war_with = liege
+		}
+	}
+	
+	immediate = {
+	}
+	
+	option = {
+		name = "EVTOPTAcourtierwar_events.2"
+		text = YouWilBePaid
+	}
+}
+
+#Reward for battle won
+character_event = {
+	id = courtierwar_events.2
+	is_ruler = yes
+	desc = "EVTDESCcourtierwar_events.2"
+	picture = "GFX_evt_gift"
+	portrait = from
+	is_triggered_only = yes
+	
+	trigger = {
+		any_vassal = {
+			has_character_modifier = homeless
+			trait = martial_trait
+			in_command = yes
+			has_minor_title = title_commander
+		}
+	}
+	
+	immediate = { 	
+	}
+	
+	option = {
+		name = "EVTOPTAcourtierwar_events.2"
+		any_vassal = {
+			limit = {
+				has_character_modifier = homeless
+				trait = martial_trait
+				in_command = yes
+				has_minor_title = title_commander
+			}
+			character_event = { id = courtierwar_events.1 }
+			wealth = 2
+		}
+	}
+}
+
+#Reward for battle won SMALL
+character_event = {
+	id = courtierwar_events.3
+	desc = "EVTDESCcourtierwar_events.3"
+	picture = "GFX_evt_gift"
+	portrait = event_target:warring_contractor
+	is_triggered_only = yes
+	
+	trigger = {
+		any_vassal = {
+			has_character_modifier = homeless
+			trait = martial_trait
+			in_command = yes
+			has_minor_title = title_commander
+		}
+	}
+	
+	immediate = { 	
+	}
+	
+	option = {
+		name = "EVTOPTAcourtierwar_events.2"
+		any_vassal = {
+			limit = {
+				has_character_modifier = homeless
+				trait = martial_trait
+				in_command = yes
+				has_minor_title = title_commander
+			}
+			character_event = { id = courtierwar_events.1 }
+			wealth = 1
+		}
+	}
+}
+
+#Reward for battle won SMALL
+character_event = {
+	id = courtierwar_events.4
+	desc = "EVTDESCcourtierwar_events.4"
+	picture = "GFX_evt_gift"
+	portrait = event_target:warring_contractor
+	is_triggered_only = yes
+	hide_window = yes
+	
+	trigger = {
+		OR = {
+			father = { AND = { has_trait = pirate_courtier is_ruler = yes } }
+			mother = { AND = { has_trait = pirate_courtier is_ruler = yes } }
+			AND = { is_ruler = yes culture = pirate }
+		}
+	}
+	
+	immediate = { 	
+	}
+	
+	option = {
+		name = "EVTOPTAcourtierwar_events.4"
+		add_trait = pirate_courtier
+	}
+}

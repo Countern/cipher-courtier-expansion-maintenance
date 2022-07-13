@@ -1,0 +1,154 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_iron_ingot"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\iron_ingot.dds"
+	}
+	spriteType = {
+		name = "GFX_iron_ingot_small"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\iron_ingot_small.dds"
+	}	
+	
+	spriteType = {
+		name = "GFX_crafting_thread"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\crafting_thread.dds"
+	}
+	spriteType = {
+		name = "GFX_crafting_thread_small"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\crafting_thread_small.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_assorted_leather"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\assorted_leather.dds"
+	}
+	spriteType = {
+		name = "GFX_assorted_leather_small"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\assorted_leather_small.dds"
+	}	
+	
+	spriteType = {
+		name = "GFX_bundle_wood"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\wood_bundle.dds"
+	}
+	spriteType = {
+		name = "GFX_bundle_wood_small"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\wood_bundle_small.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_common_sword"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\common_sword.dds"
+	}
+	spriteType = {
+		name = "GFX_common_sword_small"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\common_sword_small.dds"
+	}		
+	
+	spriteType = {
+		name = "GFX_common_spear"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\common_spear.dds"
+	}
+	spriteType = {
+		name = "GFX_common_spear_small"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\common_spear_small.dds"
+	}	
+	
+	spriteType = {
+		name = "GFX_common_axe"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\common_axe.dds"
+	}
+	spriteType = {
+		name = "GFX_common_axe_small"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\common_axe_small.dds"
+	}		
+
+	spriteType = {
+		name = "GFX_low_quality_gear"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\leather_poor.dds"
+	}
+	spriteType = {
+		name = "GFX_low_quality_gear_small"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\leather_poor_small.dds"
+	}		
+	
+	spriteType = {
+		name = "GFX_gold"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\gold_item.dds"
+	}
+	spriteType = {
+		name = "GFX_gold_small"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\gold_item_small.dds"
+	}	
+	
+	spriteType = {
+		name = "GFX_spices"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\indian_spices.dds"
+	}
+	spriteType = {
+		name = "GFX_spices_small"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\indian_spices_small.dds"
+	}		
+	
+	spriteType = {
+		name = "GFX_silk_thread"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\silk_item.dds"
+	}
+	spriteType = {
+		name = "GFX_silk_thread_small"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\silk_item_small.dds"
+	}	
+	
+	spriteType = {
+		name = "GFX_jade"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\jade_item.dds"
+	}
+	spriteType = {
+		name = "GFX_jade_small"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\jade_item_small.dds"
+	}	
+	
+	spriteType = {
+		name = "GFX_court_long_sword"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\long_sword.dds"
+	}
+	spriteType = {
+		name = "GFX_long_sword_small"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\jade_long_sword.dds"
+	}		
+	
+	spriteType = {
+		name = "GFX_winged_spear"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\winged_spear.dds"
+	}
+	spriteType = {
+		name = "GFX_winged_spear_small"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\winged_spear_small.dds"
+	}		
+	
+	spriteType = {
+		name = "GFX_long_bow"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\long_bow.dds"
+	}
+	spriteType = {
+		name = "GFX_long_bow_small"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\long_bow_small.dds"
+	}		
+	
+	spriteType = {
+		name = "GFX_chain_armor"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\chain_armor.dds"
+	}
+	spriteType = {
+		name = "GFX_chain_armor_small"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\chain_armor_small.dds"
+	}		
+	
+	spriteType = {
+		name = "GFX_corroded_chain_armor"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\corroded_chain_armor.dds"
+	}
+	spriteType = {
+		name = "GFX_corroded_chain_armor_small"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\corroded_chain_armor_small.dds"
+	}	
+}

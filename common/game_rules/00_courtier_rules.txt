@@ -1,0 +1,14 @@
+courtier_overhaul_mod = {
+	name = "COURTIER_OVERHAUL_MOD"
+	group = "RULE_GROUP_COURTIER"
+	option = {
+		name = classic_mode
+		text = "COURTIER_OVERHAUL_MOD_CLASSIC"
+		desc = "COURTIER_OVERHAUL_MOD_CLASSIC_DESC"
+	}
+	option = {
+		name = overhaul_mode
+		text = "COURTIER_OVERHAUL_MOD_OVERHAUL"
+		desc = "COURTIER_OVERHAUL_MOD_OVERHAUL_DESC"
+	}
+}

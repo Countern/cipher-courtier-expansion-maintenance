@@ -1,0 +1,40 @@
+title_decisions = {
+	solve_trouble = {
+		potential = {
+			tier = county
+			FROM = { has_character_modifier = homeless }
+		}
+		from_potential = {
+			
+		}
+		allow = {
+			location = {
+				has_province_modifier = province_troubles
+				FROM = {
+					in_command = yes
+					at_location = PREV
+				}
+			}
+		}
+		effect = {
+			location = { remove_province_modifier = province_troubles }
+			custom_tooltip = {
+				text = A_Random_Encounter
+				FROM = {
+					random_list = {
+						100 = { character_event = { id = troublesevents.1 } }
+						100 = { character_event = { id = troublesevents.2 } }
+						100 = { character_event = { id = troublesevents.3 } }
+						100 = { character_event = { id = troublesevents.4 } }
+						100 = { character_event = { id = troublesevents.10 } }
+						100 = { character_event = { id = troublesevents.11 } }
+						100 = { character_event = { id = troublesevents.12 } }
+						100 = { character_event = { id = troublesevents.13 } }
+						100 = { character_event = { id = troublesevents.13 } }
+						100 = { character_event = { id = troublesevents.20 } }
+					}
+				}
+			}
+		}
+	}
+}

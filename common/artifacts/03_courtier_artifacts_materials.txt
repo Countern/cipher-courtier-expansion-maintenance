@@ -1,0 +1,53 @@
+court_iron_ingot = {
+	quality = 1
+	flags = { material iron }
+	picture = "GFX_iron_ingot"
+}
+
+court_crafting_thread = {
+	quality = 1
+	flags = { material thread }
+	picture = "GFX_crafting_thread"
+}
+
+court_assorted_leather = {
+	quality = 1
+	flags = { material iron }
+	picture = "GFX_assorted_leather"
+}
+
+court_bundle_wood = {
+	quality = 1
+	flags = { material wood }
+	picture = "GFX_bundle_wood"
+}
+
+
+#Exotic
+court_spices = {
+	monthly_prestige = 0.01
+	quality = 3
+	flags = { material spices exotic }
+	picture = "GFX_spices"
+}
+
+court_jade = {
+	monthly_prestige = 0.01
+	quality = 3
+	flags = { material jade exotic }
+	picture = "GFX_jade"
+}
+
+court_silk_thread = {
+	monthly_prestige = 0.01
+	quality = 3
+	flags = { material silk_thread exotic }
+	picture = "GFX_silk_thead"
+}
+
+court_gold = {
+	monthly_prestige = 0.01
+	quality = 3
+	flags = { material gold exotic }
+	picture = "GFX_gold"
+}

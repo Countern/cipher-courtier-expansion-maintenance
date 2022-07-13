@@ -1,0 +1,44 @@
+targetted_decisions = {
+	start_cadet_branch = {
+		filter = self
+		potential = {
+			ai = no		
+			not = { has_character_flag = founded_cadet_house }
+		}
+		allow = {
+			prestige = 500
+			is_landed = yes
+			dynasty_head = {
+				NOT = { character = ROOT }
+			}
+		}
+		effect = {
+			hidden_tooltip = {
+				any_child_even_if_dead = {
+					limit = {
+						dynasty = ROOT
+					}
+					set_character_flag = flipping_faction
+					any_child_even_if_dead = {
+						set_character_flag = flipping_faction
+					}
+				}
+			}
+			dynasty = father_bastard
+			set_character_flag = founded_cadet_house
+			any_child_even_if_dead = {
+				limit = {
+					has_character_flag = flipping_faction
+				}
+				any_child_even_if_dead = {
+					limit = {
+						has_character_flag = flipping_faction
+					}
+					dynasty = ROOT
+				}
+				dynasty = ROOT
+			}
+		}
+	}
+
+}

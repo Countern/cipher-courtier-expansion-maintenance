@@ -1,0 +1,446 @@
+namespace = liegecap_events
+
+#Unexpected Visit
+character_event = {
+	id = liegecap_events.1
+	desc = "EVTDESliegecap_events.1"
+	picture = "GFX_visiting_capital"
+	is_triggered_only = yes
+	
+	trigger = {
+	}
+	
+	immediate = {
+		clr_character_flag = Unexpected_visit
+		set_character_flag = Unexpected_visit
+		character_event = { id = liegecap_events.101 }		
+	}
+	
+	option = {
+		name = "EVTOPTAliegecap_events.1"
+		trigger = { trait = humble }
+		tooltip_info = humble
+		prestige = -20
+		liege = {
+			opinion = { modifier = liege_deligthed who = ROOT years = 15 }
+		}
+	}
+	
+	option = {
+		name = "EVTOPTBliegecap_events.1"
+		liege = {
+			opinion = { modifier = liege_deligthed who = ROOT years = 2 }
+		}
+	}
+	
+	option = {
+		name = "EVTOPTCliegecap_events.1"
+		prestige = 20
+		add_trait = proud
+		liege = {
+			opinion = { modifier = liege_annoyed who = ROOT years = 5 }
+		}
+	}
+}
+
+#+1 Diplomacy event
+character_event = {
+	id = liegecap_events.2
+	desc = "EVTDESliegecap_events.2"
+	picture = "GFX_visiting_capital"
+	is_triggered_only = yes
+	
+	trigger = {
+	}
+	
+	immediate = {
+		clr_character_flag = diplo_courtcapital_event
+		set_character_flag = diplo_courtcapital_event
+		character_event = { id = liegecap_events.101 }
+	}
+	
+	option = {
+		name = "EVTOPTAliegecap_events.2"
+		change_diplomacy = 1
+	}
+
+}
+
+#Laddy with diferent ideas
+character_event = {
+	id = liegecap_events.3
+	desc = "EVTDESliegecap_events.3"
+	picture = "GFX_visiting_capital"
+	is_triggered_only = yes
+	
+	trigger = {
+	}
+	
+	immediate = {
+		clr_character_flag = taoist_capital_event
+		set_character_flag = taoist_capital_event
+		character_event = { id = liegecap_events.101 }
+	}
+	
+	option = {
+		trigger = { trait = cynical }
+		tooltip_info = cynical
+		name = "EVTOPTAliegecap_events.3"
+		remove_trait = cynical
+		set_secret_religion = taoist
+	}
+	
+	option = {
+		trigger = { learning = 10 }
+		tooltip_info = learning
+		name = "EVTOPTBliegecap_events.3"
+		piety = 100
+		change_learning = 1
+		add_trait = zealous
+	}
+	
+	option = {
+		name = "EVTOPTCliegecap_events.3"
+		piety = 10
+		add_trait = sympathy_indian
+	}
+	
+	option = {
+		name = "EVTOPTDliegecap_events.3"
+		piety = 10
+		add_trait = just
+	}
+
+}
+
+#A duel gone wrong
+character_event = {
+	id = liegecap_events.4
+	desc = "EVTDESliegecap_events.4"
+	picture = "GFX_visiting_capital"
+	is_triggered_only = yes
+	
+	trigger = {
+
+	}
+	
+	immediate = {
+		clr_character_flag = rage_duel_event
+		set_character_flag = rage_duel_event
+		character_event = { id = liegecap_events.101 }
+	}
+	
+	#Berserk
+	option = {
+		trigger = {
+			martial = 15
+		}
+		tooltip_info = martial
+		name = "EVTOPTAliegecap_events.4"
+		change_martial = 1
+		add_trait = brave 
+		random = { chance = 40 add_trait = wounded }
+	}
+	
+	option = {
+		trigger = {
+			trait = craven
+		}
+		tooltip_info = craven
+		name = "EVTOPTBliegecap_events.4"
+		change_intrigue = 1
+	}
+	
+	option = {
+		name = "EVTOPTCliegecap_events.4"
+		add_trait = wroth
+		random = { chance = 60 add_trait = severely_injured  }
+	}
+	
+	option = {
+		name = "EVTOPTDliegecap_events.4"
+		random = { chance = 80 add_trait = wounded }
+	}
+}
+
+#A unexpected meeting
+character_event = {
+	id = liegecap_events.5
+	desc = "EVTDESliegecap_events.5"
+	picture = "GFX_visiting_capital"
+	portrait = event_target:chosen_councelour
+	is_triggered_only = yes
+	
+	trigger = {
+	}
+	
+	immediate = {
+		clr_character_flag = unexpected_meeting
+		set_character_flag = unexpected_meeting
+		liege = {
+			random_courtier = {
+				limit = { is_councillor = yes }
+				save_event_target_as = chosen_councelour
+			}
+		}
+		character_event = { id = liegecap_events.101 }
+	}
+	
+	option = {
+		trigger = {
+			trait = gregarious
+		}
+		tooltip_info = gregarious
+		name = "EVTOPTlAliegecap_events.5"
+		reverse_add_favor = event_target:chosen_councelour
+	}
+	
+	option = {
+		trigger = {
+			diplomacy = 10
+		}
+		tooltip_info = diplomacy
+		name = "EVTOPTBliegecap_events.5"
+		add_trait = gregarious
+		event_target:chosen_councelour = { opinion = { modifier = swayed who = ROOT years = 10 } }
+	}
+	
+	option = {
+		name = "EVTOPTCliegecap_events.5"
+		event_target:chosen_councelour = { opinion = { modifier = swayed who = ROOT years = 2 } }
+	}
+	
+	option = {
+		name = "EVTOPTDliegecap_events.5"
+		wealth = 5
+	}
+}
+
+#Its delicious!
+character_event = {
+	id = liegecap_events.6
+	desc = "EVTDESliegecap_events.6"
+	picture = "GFX_visiting_capital"
+	is_triggered_only = yes
+	
+	trigger = {
+	}
+	
+	immediate = {
+		clr_character_flag = content_court_cap_event
+		set_character_flag = content_court_cap_event
+		character_event = { id = liegecap_events.101 }
+	}
+	
+	option = {
+		trigger = { trait = greedy }
+		tooltip_info = greedy
+		name = "EVTOPTAliegecap_events.6"
+		wealth = 5
+	}
+	option = {
+		trigger = { trait = depressed }
+		tooltip_info = depressed
+		name = "EVTOPTBliegecap_events.6"
+		wealth = -1
+		lose_trait = depressed
+	}
+	
+	option = {
+		name = "EVTOPTCliegecap_events.6"
+		wealth = -1
+		add_trait = content
+	}
+	
+}
+
+#A party!
+character_event = {
+	id = liegecap_events.7
+	desc = "EVTDESliegecap_events.7"
+	picture = "GFX_visiting_capital"
+	is_triggered_only = yes
+	
+	trigger = {
+	}
+	
+	immediate = {
+		clr_character_flag = party_court_cap_event
+		set_character_flag = party_court_cap_event
+		character_event = { id = liegecap_events.101 }
+	}
+	
+	option = {
+		name = "EVTOPTAliegecap_events.7"
+		random = { chance = 75 prestige = 20 change_diplomacy = 1 } 
+	}
+	option = {
+		name = "EVTOPTBliegecap_events.7"
+		random = { chance = 75 wealth = 2 change_stewardship = 1 } 
+	}
+	
+	option = {
+		name = "EVTOPTCliegecap_events.7"
+		random = { chance = 75 piety = 50 change_learning = 1 } 
+	}
+	
+	option = {
+		name = "EVTOPTDliegecap_events.7"
+		random = { chance = 75 wealth = 2 change_intrigue = 1  } 
+	}
+	
+}
+
+##############
+#	Journey counter and end
+##############
+
+
+#Journey counter
+character_event = {
+	id = liegecap_events.101
+	
+	is_triggered_only = yes
+	hide_window = yes
+	
+	trigger = {
+	}
+	
+	immediate = {
+		hidden_tooltip = {
+				if = {
+					limit = { check_variable = { which = journey_count value = 1 } }
+					subtract_variable = { which = journey_count value = 1 }
+					random_list = {
+						40 = {
+							trigger = {
+								OR = {
+									had_character_flag = { flag = Unexpected_visit days = 273750 }
+									NOT = { has_character_flag = Unexpected_visit }
+								}	
+							}
+							character_event = { id = liegecap_events.1 months = 3 } 
+						}
+						40 = {
+							trigger = {
+								OR = {
+									had_character_flag = { flag = diplo_courtcapital_event days = 1825 }
+									NOT = { has_character_flag = diplo_courtcapital_event }
+								}		
+							}
+							character_event = { id = liegecap_events.2 months = 3 } 
+						}
+						40 = {
+							trigger = {
+								AND = {
+									NOT = { religion = taoist }
+									NOT = { has_character_flag = taoist_capital_event }
+								}		
+							}
+							character_event = { id = liegecap_events.3 months = 3 }
+						}
+						40 = { 
+							trigger = {
+								OR = {
+									had_character_flag = { flag = rage_duel_event days = 1825 }
+									NOT = { has_character_flag = rage_duel_event }
+								}	
+							}
+							character_event = { id = liegecap_events.4 months = 3 } 
+						}
+						40 = { 
+							trigger = {
+								OR = {
+									had_character_flag = { flag = unexpected_meeting days = 1825 }
+									NOT = { has_character_flag = unexpected_meeting }
+								}
+							}
+							character_event = { id = liegecap_events.5 months = 3 } 
+						}
+						40 = { 
+							trigger = {
+								OR = {
+									had_character_flag = { flag = content_court_cap_event days = 1825 }
+									NOT = { has_character_flag = content_court_cap_event }
+								}
+							}
+							character_event = { id = liegecap_events.6 months = 3 } 
+						}
+						40 = { 
+							trigger = {
+								OR = {
+									had_character_flag = { flag = party_court_cap_event days = 1825 }
+									NOT = { has_character_flag = party_court_cap_event }
+								}
+							}
+							character_event = { id = liegecap_events.7 months = 3 } 
+						}
+					}
+				}
+				else = {
+					character_event = { id = liegecap_events.100 days = 10 }
+				}
+		}
+	}
+	
+	option = {
+		name = "EVTOPTAliegecap_events.2"
+	}
+}
+
+#Journey END
+narrative_event = {
+	id = liegecap_events.100 
+	title = "EVTTITliegecap_events.100"
+	desc = "EVTDESliegecap_events.100"
+	picture = "GFX_visiting_capital"
+	
+	border = GFX_event_narrative_frame_diplomacy
+	is_triggered_only = yes
+	
+	trigger = {
+	}
+	
+	immediate = {
+	}
+	
+	option = {
+		name = "EVTOPTAliegecap_events.100"
+		remove_trait = on_journey
+	}
+}
+
+#Journey START
+narrative_event = {
+	id = liegecap_events.102 
+	title = "EVTTITliegecap_events.102"
+	desc = "EVTDESliegecap_events.102"
+	picture = "GFX_visiting_capital"
+	
+	border = GFX_event_narrative_frame_diplomacy
+	is_triggered_only = yes
+	
+	trigger = {
+	}
+	
+	immediate = {
+	}
+	
+	option = {
+		name ="EVTOPTAliegecap_events.102"
+		hidden_tooltip = {
+			liege = {
+				capital_scope = {
+					save_event_target_as = capitalcity
+				}
+			}
+			set_variable = { which = journey_count value = 2 }
+			random_list = {
+				40 = { character_event = { id = liegecap_events.1 months = 2 } }
+				40 = { character_event = { id = liegecap_events.3 months = 2 } }
+				40 = { character_event = { id = liegecap_events.4 months = 2 } }
+				40 = { character_event = { id = liegecap_events.5 months = 2 } }
+			}
+		}
+	}
+}

@@ -1,0 +1,140 @@
+#CODE;ENGLISH;FRENCH;GERMAN;;SPANISH;;;;;;;;;x
+COLLINS_SEAT;House [Root.GetOnlyDynastyName];Le Maison de [Root.GetOnlyDynastyName];;;;;;;;;;;;x
+raise_adventure_troops;Hire Troops;;;;;;;;;;;;;x
+raise_adventure_troops_desc;Begin gathering troops to your cause.;;;;;;;;;;;;;x
+become_LALAD;Become a Courtier;;;;;;;;;;;;;x
+become_LALAD_desc;Leave your landed titles in someone elses care and travel the world!;;;;;;;;;;;;;x
+flatten_world;Flatten World;;;;;;;;;;;;;x
+flatten_world_desc;Destroy every building in every holding in the world, creating a (relatively) flat playing field.;;;;;;;;;;;;;x
+find_job;Look For a Job;;;;;;;;;;;;;x
+find_job_desc;Seek employment if you're short on gold.;;;;;;;;;;;;;x
+quit_job;Quit Your Job;;;;;;;;;;;;;x
+quit_job_desc;This job is not worth my time!;;;;;;;;;;;;;x
+EVTTITLlalad_events.100;Not every noble held land;;;;;;;;;;;;;x
+EVTDESClalad_events.100;Whether you have been removed from your historical seats through conquest, are an adventurous soul succumbing to wanderlust, or merely a newly ennobled line who has yet to find a land to call your own, the fate of your descendants rests in your hands, and your hands alone.\n\nYou are still able to keep a court, representing your personal household who you will have to pay out of your own pocket. Now strike forth, and see what destiny has in store for you!;;;;;;;;;;;;;x
+EVTOPTAlalad_events.100;One day, epics will be written of my exploits!;;;;;;;;;;;;;x
+EVTOPTBlalad_events.100;On second thought, I'd rather not.;;;;;;;;;;;;;x
+move_court_to;Move Here;;;;;;;;;;;;;x
+move_court_to_desc;The court of [Root.Holder.GetTitledFirstName] seems to be rife with opportunity. I will move there and offer them my service.;;;;;;;;;;;;;x
+EVTDESChomeless_event.1;ou' are now a courtier. To move to the anothers court and find a liege to serve, simply right-click on their title and select the "Move Here" option.;;;;;;;;;;;;;x
+EVTOPTAhomeless_event.1;I'm ready to strike out alone!;;;;;;;;;;;;;x
+EVTOPTBhomeless_event.1;I will bring my family with me!;;;;;;;;;;;;;x
+EVTDESChomeless_event.9;You finally have a reason and the means to begin gathering troops of your own. There are many ways you can go about doing this...;;;;;;;;;;;;;x
+EVTOPTAhomeless_event.9;Persuade local young nobles that following you will bring them glory.;;;;;;;;;;;;;x
+EVTOPTBhomeless_event.9;Impress veteran soldiers to rally them to your cause.;;;;;;;;;;;;;x
+EVTOPTChomeless_event.9;Inspire pious men in the capital to take up arms for you.;;;;;;;;;;;;;x
+EVTOPTDhomeless_event.9;Use less... reputable means to acquire your men.;;;;;;;;;;;;;x
+EVTDESChomeless_event.10;Of course, there are... other options available.;;;;;;;;;;;;;x
+EVTOPTAhomeless_event.10;Pay mercenaries to fight on your behalf.;;;;;;;;;;;;;x
+EVTOPTBhomeless_event.10;Scour the countryside for bandits, brigands and highwaymen desperate to make a little coin.;;;;;;;;;;;;;x
+EVTOPTChomeless_event.10;Who am I kidding, I don't have to stoop to this!;;;;;;;;;;;;;x
+EVTOPTDhomeless_event.10;On second thought, I won't be able to afford any troops in a year.;;;;;;;;;;;;;x
+EVTDESChomeless_event.11;After spending the better part of a year searching for young nobles, you've finally found a group of men who are willing to fight for you.;;;;;;;;;;;;;x
+EVTOPTAhomeless_event.11;Hire a token contingent of noble riders.;;;;;;;;;;;;;x
+EVTOPTBhomeless_event.11;Hire a small contingent of noble riders.;;;;;;;;;;;;;x
+EVTOPTChomeless_event.11;Hire a full contingent of noble riders.;;;;;;;;;;;;;x
+EVTOPTDhomeless_event.11;Hire a large contingent of noble riders.;;;;;;;;;;;;;x
+EVTDESChomeless_event.12;After spending the better part of a year searching for former soldiers, you've finally found a group of men who are willing to fight for you.;;;;;;;;;;;;;x
+EVTOPTAhomeless_event.12;Hire a token troop of veteran soldiers.;;;;;;;;;;;;;x
+EVTOPTBhomeless_event.12;Hire a small troop of veteran soldiers.;;;;;;;;;;;;;x
+EVTOPTChomeless_event.12;Hire a full troop of veteran soldiers.;;;;;;;;;;;;;x
+EVTOPTDhomeless_event.12;Hire a large troop of veteran soldiers.;;;;;;;;;;;;;x
+EVTDESChomeless_event.13;After spending the better part of a year searching for hireable mercenaries, you've finally found a group of men who are willing to fight for you.;;;;;;;;;;;;;x
+EVTOPTAhomeless_event.13;Hire a token company of mercenaries.;;;;;;;;;;;;;x
+EVTOPTBhomeless_event.13;Hire a small company of mercenaries.;;;;;;;;;;;;;x
+EVTOPTChomeless_event.13;Hire a dull company of mercenaries.;;;;;;;;;;;;;x
+EVTOPTDhomeless_event.13;Hire a large company of mercenaries.;;;;;;;;;;;;;x
+EVTDESChomeless_event.14;After spending the better part of a year searching for worthy criminals, you've finally found a group of men who are willing to fight for you.;;;;;;;;;;;;;x
+EVTOPTAhomeless_event.14;Hire a token band of thugs.;;;;;;;;;;;;;x
+EVTOPTBhomeless_event.14;Hire a small band of thugs.;;;;;;;;;;;;;x
+EVTOPTChomeless_event.14;Hire a full band of thugs.;;;;;;;;;;;;;x
+EVTOPTDhomeless_event.14;Hire a large band of thugs.;;;;;;;;;;;;;x
+EVTDESChomeless_event.15;After spending the better part of a year searching for pious warriors, you've finally found a group of men who are willing to fight for you.;;;;;;;;;;;;;x
+EVTOPTAhomeless_event.15;Hire a token assembly of zealots.;;;;;;;;;;;;;x
+EVTOPTBhomeless_event.15;Hire a small assembly of zealots.;;;;;;;;;;;;;x
+EVTOPTChomeless_event.15;Hire a full assembly of zealots.;;;;;;;;;;;;;x
+EVTOPTDhomeless_event.15;Hire a large assembly of zealots.;;;;;;;;;;;;;x
+EVTDESChomeless_event.17;It seems [From.GetTitledFirstName] has reconsidered the marriage! As a courtier, you are fit to only marry lowborns or bastards without any trouble. If you wish to marry landed nobility, you must either be highly prestigious, be friends with the liege, or in love with your fiancée.;;;;;;;;;;;;;x
+EVTOPTAhomeless_event.17;Damn!;;;;;;;;;;;;;x
+EVTDESChomeless_event.18;I have many skills that can be used to earn coin. It's time to find a job.;;;;;;;;;;;;;x
+EVTOPTAhomeless_event.18;Work as a diplomat for my liege, using my great oratory skills to impress others.;;;;;;;;;;;;;x
+EVTOPTBhomeless_event.18;Work in my liege's military, rising through the ranks as a soldier.;;;;;;;;;;;;;x
+EVTOPTChomeless_event.18;Work as a priest, doing holy work in exchange for donations from the commoners.;;;;;;;;;;;;;x
+EVTOPTDhomeless_event.18;Use less reputable means to acquire some gold.;;;;;;;;;;;;;x
+EVTDESChomeless_event.19;Of course, there are other options available.;;;;;;;;;;;;;x
+EVTOPTAhomeless_event.19;Work as a trader, utilising supply and demand to your advantage.;;;;;;;;;;;;;x
+EVTOPTBhomeless_event.19;Work as a criminal, liberating those more fortunate than you of their assets.;;;;;;;;;;;;;x
+EVTOPTChomeless_event.19;I don't have to stoop to this!;;;;;;;;;;;;;x
+EVTOPTDhomeless_event.19;On second thought, I have enough money as is.;;;;;;;;;;;;;x
+homeless;Courtier;;;;;;;;;;;;;x
+homeless_desc;You are a common courtier.;;;;;;;;;;;;;x
+wages;Wages;;;;;;;;;;;;;x
+wages_desc;The monthly cost of running your household, evaluated yearly.;;;;;;;;;;;;;x
+job_gain;Income;;;;;;;;;;;;;x
+job_gain_desc;The monthly payout of your job.;;;;;;;;;;;;;x
+LANDLESS_TITLE;Sir;;;;;;;;;;;;;x
+LANDLESS_TITLE_FEMALE;Lady;;;;;;;;;;;;;x
+title_courtier;Courtier;;;;;;;;;;;;;x
+title_courtier_desc;This character spends their days at court.;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;
+#Unused strings;;;;;;;;;;;;;;
+EVTDESClalad_events.101;My liege has decide to set out on adventure, leaving me in charge of his holdings.;;;;;;;;;;;;;x
+EVTOPTAlalad_events.101;Hurry back.;;;;;;;;;;;;;x
+EVTDESClalad_events.102;Now that I've seen some of what the world has to offer, I feel it's time to return home. I miss my throne room.;;;;;;;;;;;;;x
+EVTOPTAlalad_events.102;There's no place like home.;;;;;;;;;;;;;x
+EVTDESClalad_events.0;While gathering supplies, some of your men return with chest of gold. "The local lord has sent you a gift, my [Root.GetTitle].";;;;;;;;;;;;;x
+EVTOPTAlalad_events.0;Send word of your appreciation.;;;;;;;;;;;;;x
+EVTDESClalad_events.10;The lord of this region is a rich one, I can think of better ways of spending that wealth, so I've come up with a couple of plans to extract gold from him.;;;;;;;;;;;;;x
+EVTOPTAlalad_events.10;Enact a plan.;;;;;;;;;;;;;x
+EVTOPTBlalad_events.10;I better not..;;;;;;;;;;;;;x
+EVTDESClalad_events.11;Success. I caught his carriage enroute and stripped him of his gold. Some of my host enjoyed it so much they set up a band and will give me a cut of the take in the future.;;;;;;;;;;;;;x
+EVTOPTAlalad_events.11;That went well.;;;;;;;;;;;;;x
+EVTDESClalad_events.12;Success. Just before dawn, my men and I raided the keep and looting all we could find. Moreover, we took some hostages as we withdrew.;;;;;;;;;;;;;x
+EVTOPTAlalad_events.12;That went well.;;;;;;;;;;;;;x
+EVTDESClalad_events.13;Sometime before dawn My men and I manage to slip past the gate and made way to the inner keep. Once inside set on my way to the treasury, but the map is difficult to read. While attempting to decipher it, dawn cracked, the guards awoke, and we were left trapped, to be quickly shackled.;;;;;;;;;;;;;x
+EVTOPTAlalad_events.13;That didn't go well.;;;;;;;;;;;;;x
+EVTDESClalad_events.14;A chest of gold has arrived from my men.;;;;;;;;;;;;;x
+EVTOPTAlalad_events.14;Excellent.;;;;;;;;;;;;;x
+EVTDESClalad_events.20;Criminals run rampant in this region, I think my Adventurers could be of some use to the local government.;;;;;;;;;;;;;x
+EVTOPTAlalad_events.20;Send an offer.;;;;;;;;;;;;;x
+EVTOPTBlalad_events.20;I better not..;;;;;;;;;;;;;x
+EVTDESClalad_events.21;Success. My men rounded up numerous criminals ensuring the region's safety for some time. A chest of gold and formal thanks have arrived from the local lord.;;;;;;;;;;;;;x
+EVTOPTAlalad_events.21;That went well.;;;;;;;;;;;;;x
+EVTDESClalad_events.22;Failure. Not only did we fail to arrest any criminals, it seems they've grown in strength. Needless to say I should avoid the local court for awhile.;;;;;;;;;;;;;x
+EVTOPTAlalad_events.22;*Sneak Away*;;;;;;;;;;;;;x
+EVTDESClalad_events.1001;As your keep sinks from sight of your carriage, [From.GetFirstName] springs from the woods, taking your MenAtArms by surprise. At sword point you are stripped of a large portion of your treasury.;;;;;;;;;;;;;x
+EVTOPTAlalad_events.1001;Damn [From.GetHerHim], I will have [From.GetHerHis] Head!!!;;;;;;;;;;;;;x
+EVTDESClalad_events.1002;[From.GetFirstName] has to broken in, stealing a large part of the treasury and taken hostages.;;;;;;;;;;;;;x
+EVTOPTAlalad_events.1002;That treacherous SNAKE!!!;;;;;;;;;;;;;x
+EVTDESClalad_events.1003;[From.GetFirstName] has attempted to break in, however [From.GetSheHe] has failed and been locked away in the dungeon.;;;;;;;;;;;;;x
+EVTOPTAlalad_events.1003;Very good.;;;;;;;;;;;;;x
+EVTDESClalad_events.2001;[From.GetFirstName] and [From.GetHerHis] band have cleared the region of criminals.;;;;;;;;;;;;;x
+EVTOPTAlalad_events.2001;Send [From.GetFirstName] my gratitude.;;;;;;;;;;;;;x
+EVTDESClalad_events.2002;[From.GetFirstName] has failed spectacularly, the criminals are stronger than ever.;;;;;;;;;;;;;x
+EVTOPTAlalad_events.2002;Damn [From.GetHerHim]!;;;;;;;;;;;;;x
+EVTDESChomeless_event.5;Since I don't have any lands anymore I don't have any income. I must find work so that I can earn some gold. What should me and my court do for a living?;;;;;;;;;;;;;x
+EVTOPTAhomeless_event.5a;Start a business;;;;;;;;;;;;;x
+EVTOPTAhomeless_event.5b;Find jobs suitable for commoners;;;;;;;;;;;;;x
+EVTOPTAhomeless_event.5c;Ask around for suitable jobs at the court;;;;;;;;;;;;;x
+EVTOPTAhomeless_event.5d;Start a band to take other people's gold;;;;;;;;;;;;;x
+EVTOPTAhomeless_event.5e;Find zealots for a holy war;;;;;;;;;;;;;x
+EVTOPTAhomeless_event.5f;Drink my sorrows away;;;;;;;;;;;;;x
+aspiring_business_owner;Aspiring business owner;;;;;;;;;;;;;x
+aspiring_business_owner_desc;This character is trying to run a business.;;;;;;;;;;;;;x
+doing_manual_labor;Doing manual labor;;;;;;;;;;;;;x
+doing_manual_labor_desc;This character is doing tasks not suitable for a noble.;;;;;;;;;;;;;x
+applying_for_court_jobs;Applying for court jobs;;;;;;;;;;;;;x
+applying_for_court_jobs_desc;This character is looking for suitable jobs at the court.;;;;;;;;;;;;;x
+setting_up_a_band;Setting up a band of criminals;;;;;;;;;;;;;x
+setting_up_a_band_desc;This character is looking for amoral men to hire.;;;;;;;;;;;;;x
+finding_zealots;Finding Zealots;;;;;;;;;;;;;x
+finding_zealots_desc;This character is looking for zealots for a holy war against the heathens.;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+NEWSALARYINT;Your new job will now pay you based on your Intrigue! (0.05 * Intrige);;;;;;;;;;;;;x
+NEWSALARYMAR;Your new job will now pay you based on your Martial! (0.05 * Martial);;;;;;;;;;;;;x
+NEWSALARYLEA;Your new job will now pay you based on your Learning! (0.05 * Learning);;;;;;;;;;;;;x
+NEWSALARYDIP;Your new job will now pay you based on your Diplomacy! (0.05 * Diplomacy);;;;;;;;;;;;;x
+NEWSALARYSTE;Your new job will now pay you based on your Stewardship! (0.05 * Stewardship);;;;;;;;;;;;;x
+NEWSALARYPROM;Your salary will be adjusted to your current stats!;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+EVTOPTChomeless_event.1;All of you, leave me!;;;;;;;;;;;;;x

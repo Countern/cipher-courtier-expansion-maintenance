@@ -1,0 +1,178 @@
+decisions = {
+	#Become a Cortier
+	become_LALAD = {
+		is_high_prio = yes
+		potential = {
+			ai = no
+			is_landed = yes
+			prisoner = no
+			is_patrician = no
+		}
+		allow = {
+			is_merchant_republic = no
+			any_courtier = {
+				 has_job_title = job_chancellor 
+			}
+		}
+		effect = {
+			character_event = { id = lalad_events.1000 }
+		}
+	}
+	
+	# flatten_world = {
+		# is_high_prio = yes
+		# potential = {
+			# ai = no
+			# always = yes
+			# NOT = { has_global_flag = world_flat }
+		# }
+		# allow = {
+			# always = yes
+		# }
+		# effect = {
+			# any_title = {
+				# limit = {
+					# tier = BARON
+					# has_holder = yes
+				# }
+				# while = {
+					# limit = { num_of_buildings = 1 }
+					# destroy_random_building = yes
+				# }
+			# }
+			# set_global_flag = world_flat
+		# }
+	# }
+
+	# raise_adventure_troops = {
+		# is_high_prio = yes
+		# potential = {
+			# ai = no
+			# has_character_modifier = homeless
+			# NOT = { has_character_flag = guccimane }
+		# }
+		# allow = {
+			# NOT = { has_character_flag = working_courtier }
+		# }
+		# effect = {
+			# character_event = { id = homeless_event.9 }
+			# set_character_flag = guccimane
+		# }
+	# }
+
+	#Find a job Decision
+	find_job = {
+		is_high_prio = yes
+		potential = {
+		is_adult = yes
+			#ai = no
+			has_character_modifier = homeless
+			NOT = { has_character_flag = has_job }
+		}
+		allow = {
+			NOT = { has_character_flag = working_courtier }
+		}
+		effect = {
+			character_event = { id = homeless_event.18 }
+			set_character_flag = has_job
+		}
+	}
+	
+	#Quit Job Decision
+	quit_job = {
+		is_high_prio = yes
+		potential = {
+			ai = no
+			has_character_modifier = homeless
+			has_character_flag = has_job
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			remove_character_modifiers = { modifier = job_gain amount = 100000 }
+			clr_character_flag = has_job
+		}
+	}
+	
+	
+	#Debug_remove_courtier
+	debug_remove_on_journey = {
+		is_high_prio = no
+		potential = {
+			ai = no
+			has_character_modifier = homeless
+			trait = on_journey
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			remove_trait = on_journey
+		}
+	}
+}
+
+#Move to court decision
+title_decisions = {
+	move_court_to = {
+		filter = all
+		ai_target_filter = owned
+		from_potential = {
+			ai = no
+			is_landed = no
+		}
+		potential = {
+			higher_real_tier_than = COUNT
+			NOT = { trait = on_journey }
+		}
+		allow = {
+			FROM = {
+				OR = {
+					wealth = -15
+					independent = yes
+				}
+			}
+			FROM = { NOT = { trait = on_journey } }
+			custom_tooltip = {
+				text = ALREADYMOVING
+				FROM = {
+				OR = {
+					had_character_flag = { flag = already_moved days = 1820 }
+					NOT = { has_character_flag = already_moved }
+					independent = yes
+				}
+				}
+			}
+			custom_tooltip  = {
+				text = DIPLODISTANCE
+				OR = {
+					FROM = { liege = { distance = { where = ROOT distance < 1500 } } }	
+					FROM = { independent = yes }
+				}
+			}
+		}
+		effect = {
+			FROM = { wealth = -15 }
+			FROM = {
+				clr_character_flag = already_moved
+				set_character_flag = already_moved
+				character_event = { id = moving_events.8 }
+				add_trait = on_journey
+			}
+			hidden_tooltip = { set_variable = { which = journey_count value = 1 } }
+			owner = {
+				save_event_target_as = newLiege
+				FROM = { character_event = { id = moving_events.101 } }
+			}
+				#FROM = {
+				#	set_defacto_liege = ROOT
+				#	set_character_flag = travelled_recently
+				#	give_minor_title = title_courtier
+				#}
+		}
+		revoke_allowed = {
+			always = no
+		}
+	}
+}

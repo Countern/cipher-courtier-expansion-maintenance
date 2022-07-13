@@ -1,0 +1,433 @@
+namespace = moving_events
+
+#Accepted imidiatly as part of the court
+narrative_event  = {
+	id = moving_events.1
+	title = "EVTTITLEmoving_events.1"
+	desc = "EVTDESmoving_events.1"
+	picture = "GFX_arrival_court"
+	is_triggered_only = yes
+	
+	immediate = {
+		remove_character_modifier = modifier_well_recieved_courtier
+		#liege = {
+		#	save_event_target_as = newLiege
+		#}
+	}
+	
+	option = {
+		name = "EVTOPTAmoving_events.1"
+		Root = {
+			set_defacto_liege = event_target:newLiege
+			give_minor_title = title_courtier
+		}
+		add_character_modifier = { name = modifier_well_recieved_courtier duration = -1 }
+		remove_trait = on_journey
+	}
+}
+
+#Needs a test
+narrative_event  = {
+	id = moving_events.2
+	title = "EVTTITLEmoving_events.2"
+	desc = "EVTDESmoving_events.2"
+	picture = "GFX_arrival_court"
+	is_triggered_only = yes
+	
+	trigger = {}
+	
+	immediate = {
+		#liege = {
+		#	save_event_target_as = newLiege
+		#}
+	}
+	
+	option = {
+		name = "EVTOPTDmoving_events.2"
+		trigger = {
+			NOR = {
+				AND = {
+					is_tribal = no
+					event_target:newLiege = { is_tribal = yes }
+				}
+				AND = {
+					is_feudal = no
+					event_target:newLiege = { is_feudal = yes }				
+				}
+			}
+			religion = event_target:newLiege
+		}
+		hidden_tooltip = {
+			remove_character_modifier = modifier_well_recieved_courtier
+		}
+		Root = {
+			set_defacto_liege = event_target:newLiege
+			give_minor_title = title_courtier
+		}
+		primary_title = {
+			succession = { base_type = feudal_elective voting_rules = courtier_election } 
+			gender_succ = true_cognatic
+		}
+		add_trait = wounded
+		remove_trait = on_journey
+	}
+	
+	option = {
+		name = "EVTOPTAmoving_events.2"
+		trigger = {
+			OR = {
+				AND = {
+					is_tribal = no
+					event_target:newLiege = { is_tribal = yes }
+				}
+				AND = {
+					is_feudal = no
+					event_target:newLiege = { is_feudal = yes }	
+				}
+			}
+		}
+		hidden_tooltip = {
+			remove_character_modifier = modifier_well_recieved_courtier
+		}
+		Root = {
+			set_defacto_liege = event_target:newLiege
+		}
+		if = {
+			limit = {
+				event_target:newLiege = { is_tribal = yes }
+			 }	
+			set_government_type = tribal_government
+			primary_title = {
+				#succession = { base_type = feudal_elective voting_rules = courtier_election } 
+				gender_succ = true_cognatic
+			}	
+		}
+		if = {
+			limit = {
+				event_target:newLiege = { is_feudal = yes }
+			 }	
+			set_government_type = feudal_government
+			primary_title = {
+				#succession = { base_type = feudal_elective voting_rules = courtier_election } 
+				gender_succ = true_cognatic
+			}
+		}
+		remove_trait = on_journey
+	}
+	
+	option = {
+		name = "EVTOPTBmoving_events.2"
+		trigger = {
+			NOT = { religion = event_target:newLiege }
+		}
+		hidden_tooltip = {
+			remove_character_modifier = modifier_well_recieved_courtier
+		}
+		Root = {
+			set_defacto_liege = event_target:newLiege
+			give_minor_title = title_courtier
+		}
+		religion = event_target:newLiege
+		primary_title = {
+			succession = { base_type = feudal_elective voting_rules = courtier_election } 
+			gender_succ = true_cognatic
+		}
+		remove_trait = on_journey
+	}
+	
+	option = {
+		name = "EVTOPTEmoving_events.2"
+		hidden_tooltip = {
+			remove_character_modifier = modifier_well_recieved_courtier
+		}
+		Root = {
+			set_defacto_liege = event_target:newLiege
+			give_minor_title = title_courtier
+		}
+		trigger = { wealth = 100 }
+		remove_trait = on_journey
+	}
+
+	option = {
+		name = "EVTOPTCmoving_events.2"
+		remove_trait = on_journey
+	}
+}
+
+#Refused Entirely
+narrative_event  = {
+	id = moving_events.3
+	title = "EVTTITLEmoving_events.3"
+	desc = "EVTDESmoving_events.3"
+	picture = "GFX_arrival_court"
+	is_triggered_only = yes
+	
+	immediate = {
+	}
+	
+	option = {
+		name = "EVTOPTAmoving_events.3"
+		prestige = -250
+		remove_trait = on_journey
+		clr_character_flag = already_moved
+	}
+}
+
+
+#######################
+#
+#   Control Events
+#
+#######################
+
+
+#Journey counter
+character_event = {
+	id = moving_events.101
+	
+	is_triggered_only = yes
+	hide_window = yes
+	
+	trigger = {
+	}
+	
+	immediate = {
+		hidden_tooltip = {
+				if = {
+					limit = { check_variable = { which = journey_count value = 0 } } 
+					subtract_variable = { which = journey_count value = 1 }
+					random_list = {
+						50 = {
+							character_event = { id = moving_events.4 months = 2 }						
+						}
+						50 = {
+							character_event = { id = moving_events.5 months = 2 }						
+						}
+						50 = {
+							character_event = { id = moving_events.6 months = 2 }						
+						}
+						100 = {
+							character_event = { id = moving_events.7 months = 2 }						
+						}
+					}
+				}
+				else = {
+					random_list = {
+						50 = {
+							modifier = {
+							  factor = 10000
+							  event_target:newLiege = { is_friend = ROOT }		
+							}
+							modifier = {
+							  factor = 40
+							  event_target:newLiege = { opinion = { who = ROOT value = 50 } }			
+							}
+							character_event = { id = moving_events.1 months = 1 }
+						}
+						40 = {
+							modifier = {
+							  factor = 0
+							  event_target:newLiege = { is_friend = ROOT }		
+							}
+							modifier = {
+							  factor = 30
+							  event_target:newLiege = { opinion = { who = ROOT value = -30 } }		
+							  event_target:newLiege = { NOT = { opinion = { who = ROOT value = 50 } } }		
+							}		
+							character_event = { id = moving_events.2 months = 1 }
+						
+						}
+						10 = {
+							modifier = {
+							  factor = 0
+							  event_target:newLiege = { is_friend = ROOT }						  
+							}
+							modifier = {
+							  factor = 80
+							  event_target:newLiege = { is_rival = ROOT }						  
+							}
+							modifier = {
+							  factor = 20
+							  event_target:newLiege = { NOT = { opinion = { who = ROOT value = -30 } } }
+							}
+							character_event = { id = moving_events.3 months = 1 }
+						}
+					}
+				}
+		}
+	}
+	
+	option = {
+		name = "EVTOPTAmoving_events.101"
+	}
+}
+
+
+#######################
+#
+#   Travel Events
+#
+#######################
+
+#Hardous journey
+narrative_event  = {
+	id = moving_events.4
+	title = "EVTTITLEmoving_events.4"
+	desc = "EVTDESmoving_events.4"
+	picture = "GFX_traveling_picture"
+	is_triggered_only = yes
+	
+	immediate = {
+		remove_character_modifier = modifier_well_recieved_courtier
+		#liege = {
+		#	save_event_target_as = newLiege
+		#}
+	}
+	
+	option = {
+		name = "EVTOPTAmoving_events.4"
+		add_trait = scarred
+		change_diplomacy = 1
+		change_martial = 1
+		change_learning = 1
+		remove_trait = on_journey
+		character_event = { id = moving_events.101}		
+	}
+}
+
+#Merchant Company
+narrative_event  = {
+	id = moving_events.5
+	title = "EVTTITLEmoving_events.5"
+	desc = "EVTDESmoving_events.5"
+	picture = "GFX_traveling_picture"
+	is_triggered_only = yes
+	
+	immediate = {
+		remove_character_modifier = modifier_well_recieved_courtier
+		#liege = {
+		#	save_event_target_as = newLiege
+		#}
+	}
+	
+	option = {
+		name = "EVTOPTAmoving_events.5"
+		add_trait = ambitious
+		change_stewardship = 2
+		remove_trait = on_journey
+		character_event = { id = moving_events.101}		
+	}
+}
+
+
+#A path of God
+narrative_event  = {
+	id = moving_events.6
+	title = "EVTTITLEmoving_events.6"
+	desc = "EVTDESmoving_events.6"
+	picture = "GFX_traveling_picture"
+	is_triggered_only = yes
+	
+	immediate = {
+		remove_character_modifier = modifier_well_recieved_courtier
+		#liege = {
+		#	save_event_target_as = newLiege
+		#}
+	}
+	
+	option = {
+		name = "EVTOPTAmoving_events.6"
+		add_trait = erudite
+		add_trait = humble
+		change_learning = 2
+		remove_trait = on_journey
+		character_event = { id = moving_events.101}		
+	}
+}
+
+#A simple path
+narrative_event  = {
+	id = moving_events.7
+	title = "EVTTITLEmoving_events.7"
+	desc = "EVTDESmoving_events.7"
+	picture = "GFX_traveling_picture"
+	is_triggered_only = yes
+	
+	immediate = {
+		remove_character_modifier = modifier_well_recieved_courtier
+		#liege = {
+		#	save_event_target_as = newLiege
+		#}
+	}
+	
+	option = {
+		name = "EVTOPTAmoving_events.7"
+		remove_trait = on_journey
+		character_event = { id = moving_events.101}		
+	}
+}
+
+#On the move
+narrative_event  = {
+	id = moving_events.8
+	title = "EVTTITLEmoving_events.8"
+	desc = "EVTDESmoving_events.8"
+	picture = "GFX_traveling_picture"
+	is_triggered_only = yes
+	
+	immediate = {
+		remove_character_modifier = modifier_well_recieved_courtier
+	}
+	
+	option = {
+		name = "EVTOPTAmoving_events.8"	
+	}
+}
+
+	
+#HRemove residence flag
+character_event = {
+	id = moving_events.9
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+	}
+	immediate = {
+	}
+	option = {
+		name = "EVTOPTAmoving_events.9"
+		clr_character_flag = constructing_courtier
+	}
+}
+
+
+#Warning begin
+character_event = {
+	id = moving_events.10
+	desc = "EVTDESmoving_events.10"
+	picture = "GFX_arrival_court"
+	is_triggered_only = yes
+	
+	immediate = {
+	}
+	
+	option = {
+		name = "EVTOPTAmoving_events.10"
+	}
+}
+
+#Warning begin
+character_event = {
+	id = moving_events.11
+	desc = "EVTDESmoving_events.11"
+	picture = "GFX_arrival_court"
+	is_triggered_only = yes
+	
+	immediate = {
+	}
+	
+	option = {
+		name = "EVTOPTAmoving_events.11"
+		event_target:province_chosen = { build_holding = { title = b_newHome type = castle holder = ROOT } }
+	}
+}

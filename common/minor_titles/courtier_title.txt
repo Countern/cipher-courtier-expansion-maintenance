@@ -1,0 +1,13 @@
+title_courtier = {
+    grant_limit = 1
+	show_as_title = yes
+
+    is_unique = no
+
+
+    allowed_to_hold = {
+        is_AI = no
+        has_landed_title = d_COLLINS_SEAT
+    }
+
+}

@@ -1,0 +1,110 @@
+targetted_decisions = {
+	beg_for_land = {
+		potential = {
+			is_liege_of = FROM
+		}
+		from_potential = {
+			has_character_modifier = homeless
+			ai = no
+		}
+		allow = {
+			show_only_failed_conditions = yes
+			FROM = { Prestige = 30 }
+			custom_tooltip = {
+				text = HOLDFAVORADVANTAGE
+				FROM = { holds_favor_on = ROOT }
+			}
+			ROOT = { ai = yes }
+			num_of_count_titles = 2
+		}
+		effect = {
+			prestige = -400
+			custom_tooltip = { Text = PARTONEASKLAND }
+			custom_tooltip = {
+				Text = PARTTWOASKLAND 
+				random_list = {
+					5 = {
+						modifier = {
+						  factor = 0
+						  NOT = { ROOT = { num_of_count_titles = 2 } }
+						}
+						modifier = {
+						  factor = 2
+						  ROOT = { num_of_count_titles = 5 }
+						}
+						modifier = {
+						  factor = 1.5
+						  FROM = { opinion = { who = ROOT value 50 } }
+						}
+						modifier = {
+						  factor = 2
+						  From = { prestige = 1000 }
+						}
+						modifier = {
+						  factor  = 2
+						  FROM = { wealth = 500 }
+						}
+						modifier = {
+						  factor = 4
+						  FROM = { prestige = 2000 }
+						}
+						modifier = {
+						  factor = 4
+						  FROM = { prestige = 2000 }
+						}
+						modifier = {
+						  factor = 2
+						  ROOT = { trait = humble }
+						}
+						modifier = {
+						  factor = 0.2
+						  ROOT = { trait = selfish }
+						}
+						modifier = {
+						  factor = 0
+						  ROOT = { is_rival = FROM }
+						}
+						modifier = {
+						  factor = 5
+						  ROOT = { is_friend = FROM }
+						}
+						modifier = {
+						  factor = 2
+						  FROM = { martial = 15 }
+						}
+						modifier = {
+						  factor = 3
+						  FROM = { diplomacy = 15 }
+						}
+						modifier = {
+						  factor = 2
+						  FROM = { stewardship = 15 }
+						}
+						modifier = {
+						  factor = 2
+						  FROM = { has_minor_title = title_commander }
+						}
+						FROM = { character_event = { id = liege_land_events.3 } }
+					}
+					50 = { FROM = { character_event  = { id = liege_land_events.2 } } }
+					90 = { 
+						modifier = {
+							factor = 0.4
+							FROM = { opinion = { who = FROM value = 20 } }
+						}
+						modifier = {
+						  factor = 2
+						  FROM = { trait = cruel }
+						}
+						modifier = {
+						  factor = 0.3
+						  ROOT = { trait = kind }
+						}						
+						FROM = { character_event  ={ id = liege_land_events.1 } }
+					}
+				}
+			}
+		}
+	}
+
+}

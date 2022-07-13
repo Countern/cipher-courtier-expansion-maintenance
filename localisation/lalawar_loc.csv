@@ -1,0 +1,10 @@
+lalad_join_defender;Join Defender's War;;;;;;;;;;;;;x
+lalad_join_defender_desc;Send an offer to join [Root.GetBestName]'s defense.;;;;;;;;;;;;;x
+lalad_join_defender_named;Send an offer to join [Root.GetBestName]'s defense.;;;;;;;;;;;;;x
+EVTDESClalawar.1;[From.GetBestName] has offered to join me in my defense.;;;;;;;;;;;;;x
+EVTOPTAlalawar.1;Yes.;;;;;;;;;;;;;x
+EVTOPTBlalawar.1;No.;;;;;;;;;;;;;x
+EVTDESClalawar.2;[From.GetBestName] has accepted my offer, we will ride to his defense.;;;;;;;;;;;;;x
+EVTOPTAlalawar.2;To Battle!.;;;;;;;;;;;;;x
+EVTDESClalawar.3;[From.GetBestName] has refused my offer, but has sent his gratitude.;;;;;;;;;;;;;x
+EVTOPTAlalawar.3;What a waste.;;;;;;;;;;;;;x

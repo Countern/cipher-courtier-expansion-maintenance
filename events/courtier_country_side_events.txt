@@ -1,0 +1,371 @@
+namespace = courtiercountry_events
+
+#Countryside poverty
+character_event = {
+	id = courtiercountry_events.1
+	desc = "EVTDEScourtiercountry_events.1"
+	picture = "GFX_diseased_province"
+	is_triggered_only = yes
+	trigger = {
+	}
+	
+	immediate = {
+		clr_character_flag = country_side_plague
+		set_character_flag = country_side_plague
+		liege = {
+			random_realm_province = {
+				save_event_target_as = affected_city
+			}
+		}
+	}
+	
+	option = {
+		name = "EVTOPTAcourtiercountry_events.1"
+		trigger = {
+			OR = {
+				trait = charitable
+				trait = kind	
+			}
+		}
+		tooltip_info = charitable
+		tooltip_info = kind
+		wealth = -40
+		liege = { owes_favor_to = ROOT }
+		liege = { opinion = { modifier = extremely_grateful who = ROOT years = 20 } }
+		character_event = { id = courtiercountry_events.3 days = 10 tooltip = SUCESSTREATMENT  }
+	}
+	
+	option = {
+		name = "EVTOPTBcourtiercountry_events.1"
+		trigger = {
+			trait = diligent
+		}
+		tooltip_info = diligent
+		random_list = {
+			80 = { character_event = { id = courtiercountry_events.3 days = 10 tooltip = SUCESSTREATMENT } }
+			20 = { character_event = { id = courtiercountry_events.2 days = 10 tooltip = FAILTREATMENT } }
+		}
+	}
+	
+	option = {
+		name = "EVTOPTCcourtiercountry_events.1"
+		random_list = {
+			50 = { character_event = { id = courtiercountry_events.3 days = 10 tooltip = SUCESSTREATMENT  } }
+			50 = { character_event = { id = courtiercountry_events.2 days = 10 tooltip = FAILTREATMENT } }
+		}
+	}
+	
+	option = {
+		name = "EVTOPTDcourtiercountry_events.1"
+		add_trait = cruel
+		character_event = { id = courtiercountry_events.101 }
+	}
+}
+
+#Failure Event
+narrative_event = {
+	id = courtiercountry_events.2
+	desc = "EVTDEScourtiercountry_events.2"
+	picture = "GFX_diseased_province"
+	title = "EVTTITcourtiercountry_events.2"
+	is_triggered_only = yes	
+	
+	option = {
+		prestige = -50
+		name = "EVTOPTAcourtiercountry_events.2"
+		character_event = { id = courtiercountry_events.101 }
+	}
+
+}
+
+#Sucess Event
+narrative_event = {
+	id = courtiercountry_events.3
+	title = "EVTTITcourtiercountry_events.3"
+	desc = "EVTDEScourtiercountry_events.3"
+	picture = "GFX_countrySide-succ"
+	is_triggered_only = yes	
+	
+	option = {
+		prestige = 100
+		name = "EVTOPTAcourtiercountry_events.3"
+		add_character_modifier = { name = secondary_gains duration = -1 stacking = yes }
+		add_character_modifier = { name = secondary_gains duration = -1 stacking = yes }
+		add_character_modifier = { name = secondary_gains duration = -1 stacking = yes }
+		character_event = { id = courtiercountry_events.101 }
+	}
+
+}
+
+
+
+#A new Quarry
+character_event = {
+	id = courtiercountry_events.4
+	title = "EVTTITcourtiercountry_events.4"
+	desc = "EVTDEScourtiercountry_events.4"
+	picture = "GFX_quarry_picture"
+	is_triggered_only = yes
+	trigger = {
+	}
+	
+	immediate = {
+		clr_character_flag = quarry_country_side
+		set_character_flag = quarry_country_side
+	}
+
+	option = {
+		name = "EVTOPTAcourtiercountry_events.4"
+		character_event = { id = courtiercountry_events.5 days = 2 }
+	}
+	
+	option = {
+		name = "EVTOPTBcourtiercountry_events.4"
+		character_event = { id = courtiercountry_events.101 }
+	}
+}
+
+#A new Quarry part 2
+character_event = {
+	id = courtiercountry_events.5
+	title = "EVTTITcourtiercountry_events.4"
+	desc = "EVTDEScourtiercountry_events.5"
+	picture = "GFX_quarry_picture"
+	is_triggered_only = yes
+	trigger = {
+	}
+	
+	immediate = {
+	}
+
+	option = {
+		name = "EVTOPTAcourtiercountry_events.5"
+		character_event = { id = courtiercountry_events.6 days = 2 }
+	}
+	
+	option = {
+		name = "EVTOPTBcourtiercountry_events.5"
+	}
+	
+	option = {
+		name = "EVTOPTCcourtiercountry_events.5"
+		trigger = {
+			trait = proud
+		}
+		character_event = { id = courtiercountry_events.101 }
+	}
+}
+
+#A new Quarry part 3
+character_event = {
+	id = courtiercountry_events.6
+	title = "EVTTITcourtiercountry_events.4"
+	desc = "EVTDEScourtiercountry_events.6"
+	picture = "GFX_quarry_picture"
+	is_triggered_only = yes
+	trigger = {
+	}
+	
+	immediate = {
+	}
+
+	option = {
+		name = "EVTOPTAcourtiercountry_events.6"
+		add_character_modifier = { name = mod_quarry_knowledge years = 5 } 
+		character_event = { id = courtiercountry_events.101 }
+	}
+	
+	option = {
+		name = "EVTOPTBcourtiercountry_events.6"
+		create_character = {
+		  random_traits = yes
+		  dynasty = none
+		  religion = liege
+		  culture = liege
+		  female = no
+		  attributes = {
+			martial = 5
+			diplomacy = 5
+			stewardship = 10
+			intrigue = 5
+			learning = 5
+		  }
+		  health = 6
+		  fertility = 1
+		  trait = elusive_shadow
+		  trait = diligent
+		  trait = temperate
+		}
+		character_event = { id = courtiercountry_events.101 }
+	}
+	
+	option = {
+		name = "EVTOPTCcourtiercountry_events.6"
+		wealth -15
+		character_event = { id = courtiercountry_events.7 }
+	}
+	option = {
+		name = "EVTOPTDcourtiercountry_events.6"
+		trigger = {
+			diplomacy = 10
+		}
+		tooltip_info = diplomacy
+		wealth = -15
+		character_event = { id = courtiercountry_events.7 }
+	}
+}
+
+#A new Quarry part blacksmith
+character_event = {
+	id = courtiercountry_events.7
+	title = "EVTTITcourtiercountry_events.4"
+	desc = "EVTDEScourtiercountry_events.7"
+	picture = "GFX_blackmith_picture"
+	is_triggered_only = yes
+	trigger = {
+	}
+	
+	immediate = {
+	}
+	
+	option = {
+		name = "EVTOPTAcourtiercountry_events.7"
+		add_artifact = iron_ingot
+		wealth = -5
+		character_event = { id = courtiercountry_events.101 }
+	}
+	
+	option = {
+		name = "EVTOPTBcourtiercountry_events.7"
+		trigger = {
+			wealth = 25
+		}
+		add_artifact = iron_ingot
+		wealth = -25
+		create_character = {
+		  random_traits = yes
+		  dynasty = none
+		  religion = liege
+		  culture = liege
+		  female = no
+		  attributes = {
+			martial = 15
+			diplomacy = 5
+			stewardship = 5
+			intrigue = 5
+			learning = 5
+		  }
+		  health = 6
+		  fertility = 1
+		  trait = tougth_soldier
+		  trait = brawny
+		}
+		character_event = { id = courtiercountry_events.101 }
+	}
+	option = {
+		name = "EVTOPTCcourtiercountry_events.7"
+		trigger = {
+			wealth = 350
+		}
+		wealth = -350
+		character_event = { id = courtiercountry_events.101 }
+	}
+}
+
+
+##############
+#	Journey counter and end
+##############
+
+
+#Journey counter
+character_event = {
+	id = courtiercountry_events.101
+	is_triggered_only = yes
+	hide_window = yes
+	
+	trigger = {
+	}
+	
+	immediate = {
+		hidden_tooltip = {
+				if = {
+					limit = { check_variable = { which = journey_count value = 1 } }
+					subtract_variable = { which = journey_count value = 1 }
+					random_list = {
+						40 = {
+							trigger = {
+								OR = {
+									had_character_flag = { flag = country_side_plague days = 273750 }
+									NOT = { has_character_flag = country_side_plague }
+								}	
+							}
+							character_event = { id = courtiercountry_events.1 months = 3 } 
+						}
+						40 = {
+							trigger = {
+								OR = {
+									had_character_flag = { flag = quarry_country_side days = 273750 }
+									NOT = { has_character_flag = quarry_country_side }
+								}
+							character_event = { id = courtiercountry_events.4 months = 3 } 
+						}
+					 }
+				}
+				else = {
+					character_event = { id = courtiercountry_events.100 days = 10 }
+				}
+		}
+	}
+	
+	option = {
+		name = "EVTOPTAcourtiercountry_events.101"
+	}
+}
+
+#Journey END
+narrative_event = {
+	id = courtiercountry_events.100 
+	title = "EVTTITcourtiercountry_events.100"
+	desc = "EVTDEScourtiercountry_events.100"
+	picture = "GFX_countrySide"
+	
+	border = GFX_event_narrative_frame_diplomacy
+	is_triggered_only = yes
+	
+	trigger = {
+	}
+	
+	immediate = {
+	}
+	
+	option = {
+		name = "EVTOPTAcourtiercountry_events.100"
+		remove_trait = on_journey
+	}
+}
+
+#Journey START
+narrative_event = {
+	id = courtiercountry_events.102 
+	title = "EVTTITcourtiercountry_events.102"
+	desc = "EVTDEScourtiercountry_events.102"
+	picture = "GFX_countrySide"
+	
+	border = GFX_event_narrative_frame_diplomacy
+	is_triggered_only = yes
+	
+	trigger = {
+	}
+	
+	immediate = {
+	}
+	
+	option = {
+		name ="EVTOPTAcourtiercountry_events.102"
+		hidden_tooltip = {
+			set_variable = { which = journey_count value = 1 }
+			character_event = { id = courtiercountry_events.101 }
+		}
+	}
+}

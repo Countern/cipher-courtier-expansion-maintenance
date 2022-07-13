@@ -1,0 +1,60 @@
+title_decisions = {
+	buy_residence = {
+		from_potential = {
+			has_character_modifier = homeless
+			NOT = { num_of_titles = 4 }
+			ai = no
+		}
+		potential = {
+			tier = COUNT
+			not = { higher_tier_than = DUKE }
+		}
+		allow = {
+			FROM = { liege = { owns = ROOT } }
+			location = { has_empty_holding = yes }
+			FROM = { wealth = 700 }
+			custom_tooltip = {
+				text = CONSTRUCT_WARNING
+				NOT = { has_character_flag = constructing_courtier }
+			}
+			is_landed = no
+		}
+		effect = {
+			FROM = { wealth = -700 }
+			location = { save_event_target_as = province_chosen }
+			FROM = { character_event = { id = moving_events.10 } }
+			FROM = { character_event = { id = moving_events.11 days = 150 } }
+			FROM = { character_event = { id = moving_events.9 days = 365 } }
+		}
+	}
+}
+
+targetted_decisions = {
+	abandon_oath = {
+		from_potential = {
+			independent = no
+			has_character_modifier = homeless
+			NOT = { num_of_count_titles = 2 }
+		}
+		potential = {
+			OR = {
+				character = FROM
+				is_liege_of = FROM
+			}
+		}
+		allow = {
+			
+		}
+		effect = {
+			FROM = { 
+				liege = { opinion = { modifier = betrayed_me who = FROM years = 60 } add_rival = FROM }
+				top_liege = { opinion = { modifier = betrayed_me who = FROM years = 60 } add_rival = FROM }
+				set_defacto_liege = THIS 
+			}
+		}
+	}
+
+
+
+
+}

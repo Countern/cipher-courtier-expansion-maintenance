@@ -1,0 +1,81 @@
+namespace = crafty_crafting
+
+character_event = { #Summon Blacksmith
+	id = crafty_crafting.1
+	desc = "crafty_craftingDESC.1"
+	picture = "GFX_evt_armory"
+	portrait = event_target:blacksmith
+	
+	is_triggered_only = yes
+	
+	option = { #make weapon out of steel
+		name = "crafty_craftingOPTA.1"
+		trigger = {
+			has_artifact = court_iron_ingot
+		}
+		tooltip_info = court_iron_ingot
+		character_event = { id = crafty_crafting.2 }
+	}
+	
+	option = { #make armor out of steel
+		name = "crafty_craftingOPTB.1"
+		trigger = {
+			has_artifact = court_iron_ingot
+		}
+		tooltip_info = court_iron_ingot
+		character_event = { id = crafty_crafting.2 }
+	}
+	
+		option = { #return
+		name = "crafty_craftingOPTC.1"
+	}
+}
+
+character_event = { #Summon Blacksmith
+	id = crafty_crafting.2
+	desc = "crafty_craftingDESC.2"
+	picture = "GFX_evt_armory"
+	portrait = event_target:blacksmith
+	
+	is_triggered_only = yes
+	
+	option = { #make a sword
+		name = "crafty_craftingOPTA.2"
+		trigger = {
+			has_artifact = court_iron_ingot
+		}
+		destroy_artifact = court_iron_ingot
+		wealth = -50
+		random_list = {
+			50 = { add_artifact = court_common_sword } 
+			50 = { add_artifact = court_long_sword }
+		}
+	}
+	
+	option = { #make an axe
+		name = "crafty_craftingOPTB.2"
+		trigger = {
+			has_artifact = court_iron_ingot
+			has_artifact = court_bundle_wood
+		}
+		wealth = -20
+		destroy_artifact = court_bundle_wood
+		destroy_artifact = court_iron_ingot
+		add_artifact = court_common_axe
+	}
+	
+	option = { #make a spear
+		name = "crafty_craftingOPTC.2"
+		trigger = {
+			has_artifact = court_iron_ingot
+			has_artifact = court_bundle_wood
+		}
+		destroy_artifact = court_bundle_wood
+		destroy_artifact = court_iron_ingot
+		wealth = -20
+		random_list = {
+			50 = { add_artifact = court_common_spear } 
+			50 = { add_artifact = court_winged_spear }
+		}
+	}
+}

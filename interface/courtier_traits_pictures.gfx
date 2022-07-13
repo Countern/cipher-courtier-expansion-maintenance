@@ -1,0 +1,66 @@
+spriteTypes = {
+	spriteType = {
+	 name = "GFX_trait_on_journey"
+	 texturefile = "gfx/traits/on_journey.tga"
+	 noOfFrames = 1
+	 norefcount = yes
+	 effectFile = "gfx/FX/buttonstate.lua"
+	}
+	
+	
+	
+	spriteType = {
+	 name = "GFX_trait_bureaucrat_trait"
+	 texturefile = "gfx/traits/bureaucrat_trait.tga"
+	 noOfFrames = 1
+	 norefcount = yes
+	 effectFile = "gfx/FX/buttonstate.lua"
+	}	
+	
+	spriteType = {
+	 name = "GFX_trait_pirate_courtier"
+	 texturefile = "gfx/traits/pirate_lifestyle.tga"
+	 noOfFrames = 1
+	 norefcount = yes
+	 effectFile = "gfx/FX/buttonstate.lua"
+	}
+	
+	spriteType = {
+	 name = "GFX_trait_martial_trait"
+	 texturefile = "gfx/traits/martial_trait.tga"
+	 noOfFrames = 1
+	 norefcount = yes
+	 effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+	 name = "GFX_trait_merchant_trait"
+	 texturefile = "gfx/traits/merchant_trait.tga"
+	 noOfFrames = 1
+	 norefcount = yes
+	 effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+	 name = "GFX_trait_spy_trait"
+	 texturefile = "gfx/traits/spy_trait.tga"
+	 noOfFrames = 1
+	 norefcount = yes
+	 effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+	 name = "GFX_trait_scholar_trait"
+	 texturefile = "gfx/traits/scholar_trait.tga"
+	 noOfFrames = 1
+	 norefcount = yes
+	 effectFile = "gfx/FX/buttonstate.lua"
+	}	
+	
+	spriteType = {
+	 name = "GFX_trait_experienced_merchant"
+	 texturefile = "gfx/traits/traveling_trait.tga"
+	 noOfFrames = 1
+	 norefcount = yes
+	 effectFile = "gfx/FX/buttonstate.lua"
+	}
+	
+	
+}

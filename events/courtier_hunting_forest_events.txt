@@ -1,0 +1,465 @@
+namespace = foresthunting_events
+namespace = foresthunting_events
+
+#Bandit Attack
+character_event = {
+	id = foresthunting_events.1
+	desc = "EVTDESforesthunting_events.1"
+	picture = "GFX_forest_hunting_events"
+	is_triggered_only = yes
+	trigger = {
+	}
+	
+	immediate = {
+		clr_character_flag = bandit_attack_hunting
+		set_character_flag = bandit_attack_hunting
+		character_event = { id = foresthunting_events.101 }
+	}
+	
+	option = {
+		name = "EVTOPTAforesthunting_events.1"
+		trigger = {
+			martial = 15 
+			trait = brave
+		}
+		tooltip_info = martial
+		random = { chance = 20 add_trait = wounded }
+		liege = { owes_favor_to = ROOT }
+	}
+	
+	option = {
+		name = "EVTOPTBforesthunting_events.1"
+		random = { chance = 70 add_trait = severely_injured }
+		random = { chance = 5 add_trait = maimed }
+		add_trait = brave
+	}
+	
+	option = {
+		name = "EVTOPTCforesthunting_events.1"
+		wealth = -15
+		add_trait = craven
+	}
+}
+
+#A new partner
+character_event = {
+	id = foresthunting_events.2
+	desc = "EVTDESforesthunting_events.2"
+	picture = "GFX_forest_hunting_events"
+	is_triggered_only = yes
+	hide_from = yes
+	
+	trigger = {
+	}
+	
+	immediate = {
+		clr_character_flag = HuntingFriend_flag
+		set_character_flag = HuntingFriend_flag
+		character_event = { id = foresthunting_events.101 }
+	}
+	
+	option = {
+		name = "EVTOPTAforesthunting_events.2"
+		create_character = {
+		  random_traits = yes
+		  dynasty = random
+		  religion = ROOT
+		  culture = ROOT
+		  female = no
+		  age = 25
+		  attributes = {
+			martial = 15
+		  }
+		  flag = HUNTERFRIEND
+		  health = 6
+		  fertility = 0.8
+		  trait = brilliant_strategist
+		  trait = legit_bastard
+		  trait = hunter
+		}
+		any_character = {
+			limit = { has_character_flag = HUNTERFRIEND }
+			opinion = { modifier = opinion_loyal_servant who = ROOT years = -1 }
+			clr_character_flag = HUNTERFRIEND
+		}
+	}
+	
+	option = {
+		name = "EVTOPTAforesthunting_events.2"
+		add_trait = shy
+	}
+
+}
+
+#A mighty beast
+character_event = {
+	id = foresthunting_events.3
+	desc = "EVTDESforesthunting_events.3"
+	picture = "GFX_forest_hunting_events"
+	is_triggered_only = yes
+	
+	trigger = {
+	}
+	
+	immediate = {
+		clr_character_flag = mighty_beast_event
+		set_character_flag = mighty_beast_event
+		character_event = { id = foresthunting_events.101 }
+	}
+	
+	option = {
+		trigger = { trait = hunter }
+		tooltip_info = hunter
+		name = "EVTOPTAforesthunting_events.3"
+		change_martial = 2
+		prestige = 150
+	}
+	
+	option = {
+		name = "EVTOPTBforesthunting_events.3"
+		change_martial = 1
+		prestige = 50
+	}
+	
+	option = {
+		name = "EVTOPTCforesthunting_events.3"
+		change_martial = 1
+		piety = 50
+	}
+	
+	option = {
+		name = "EVTOPTDforesthunting_events.3"
+		change_martial = 1
+		add_trait = kind
+	}
+
+}
+
+#A Lady in the forest
+character_event = {
+	id = foresthunting_events.4
+	desc = "EVTDESforesthunting_events.4"
+	picture = "GFX_forest_hunting_events"
+	is_triggered_only = yes
+	
+	trigger = {
+
+	}
+	
+	immediate = {
+		clr_character_flag = lady_in_forest_eventflag
+		set_character_flag = lady_in_forest_eventflag
+		character_event = { id = foresthunting_events.101 }	
+	}
+	
+	#Dont believe
+	option = {
+		trigger = {
+			trait = cynical
+		}
+		tooltip_info = cynical
+		name = "EVTOPTAforesthunting_events.4"
+	}
+	
+	#Scaredy Cat
+	option = {
+		name = "EVTOPTBforesthunting_events.4"
+		add_character_modifier = { name = lady_in_the_woods duration = -1 } 
+		add_trait = paranoid
+	}
+}
+
+#A band of archers joins your cause
+character_event = {
+	id = foresthunting_events.5
+	desc = "EVTDESforesthunting_events.5"
+	picture = "GFX_forest_hunting_events"
+	is_triggered_only = yes
+	
+	trigger = {
+	}
+	
+	immediate = {
+		clr_character_flag = archer_joins_courtier_flag
+		set_character_flag = archer_joins_courtier_flag
+		liege = { 
+			capital_scope = {
+				save_event_target_as = spawn_location
+			}
+		}
+		character_event = { id = foresthunting_events.101 }	
+	}
+	
+	option = {
+		tooltip_info = martial
+		name = "EVTOPTAforesthunting_events.5"
+		spawn_unit = {
+		  owner = ROOT
+		  province = event_target:spawn_location
+		  home = event_target:spawn_location
+		  troops = {
+			archers = { 20 20 }
+			light_cavalry = { 10 10 }
+		  }
+		  reinforces = yes
+		  attrition = 0.5
+		  disband_on_peace = no
+		  maintenance_multiplier = 0.0
+		}
+	}
+}
+
+#Hanging on a cliff
+character_event = {
+	id = foresthunting_events.6
+	desc = "EVTDESforesthunting_events.6"
+	picture = "GFX_forest_hunting_events"
+	is_triggered_only = yes
+	
+	trigger = {
+	}
+	
+	immediate = {
+		clr_character_flag = content_court_cap_event
+		set_character_flag = content_court_cap_event
+		liege = {
+			random_courtier = {
+				limit = {
+					is_female = no
+					has_minor_title = no
+					is_priest = no
+				}
+				prefered_limit = {
+					is_rival = ROOT
+				}
+				prefered_limit = {
+					NOT = { opinion = { who = ROOT value = 0 } }
+				}
+				save_event_target_as = chosen_victim
+			}
+		}
+		character_event = { id = foresthunting_events.101 }
+	}
+	
+	option = {
+		trigger = { NOT = { trait = kind } }
+		name = "EVTOPTAforesthunting_events.6"
+		event_target:chosen_victim = { death = { death_reason = death_fallen killer = ROOT } }
+	}
+	
+	option = {
+		name = "EVTOPTCforesthunting_events.6"
+		event_target:chosen_victim = {
+			remove_rival = ROOT
+			reverse_opinion = { modifier = saved_life_thankful years = 10 }
+		}
+	}
+	
+}
+
+#A Image of a saint
+character_event = {
+	id = foresthunting_events.7
+	desc = "EVTDESforesthunting_events.7"
+	picture = "GFX_forest_hunting_events"
+	is_triggered_only = yes
+	
+	trigger = {
+	}
+	
+	immediate = {
+		clr_character_flag = saint_spotted_event
+		set_character_flag = saint_spotted_event
+		liege = { 
+			capital_scope = {
+				save_event_target_as = spawn_location
+			}
+		}
+		character_event = { id = foresthunting_events.101 }
+	}
+	
+	option = {
+		name = "EVTOPTAforesthunting_events.7"
+		spawn_unit = {
+		  owner = ROOT
+		  province = event_target:spawn_location
+		  home = event_target:spawn_location
+		  troops = {
+			heavy_infantry = { 200 200 }
+			light_infantry = { 200 200 }
+			archers = { 100 100 }
+		  }
+		  reinforces = yes
+		  attrition = 0.5
+		  disband_on_peace = no
+		  maintenance_multiplier = 0.0
+		}
+	}
+	option = {
+		name = "EVTOPTBforesthunting_events.7"
+		change_learning = 4
+	}
+	
+	option = {
+		name = "EVTOPTCforesthunting_events.7"
+		piety = 350
+		add_character_modifier = { modifier = saintly_preditions duration = -1 }
+	}
+}
+
+##############
+#	Journey counter and end
+##############
+
+
+#Journey counter
+character_event = {
+	id = foresthunting_events.101
+	
+	is_triggered_only = yes
+	hide_window = yes
+	
+	trigger = {
+	}
+	
+	immediate = {
+		hidden_tooltip = {
+				if = {
+					limit = { check_variable = { which = journey_count value = 1 } }
+					subtract_variable = { which = journey_count value = 1 }
+					random_list = {
+						40 = {
+							trigger = {
+								OR = {
+									had_character_flag = { flag = bandit_attack_hunting days = 273750 }
+									NOT = { has_character_flag = bandit_attack_hunting }
+								}	
+							}
+							character_event = { id = foresthunting_events.1 months = 3 } 
+						}
+						40 = {
+							trigger = {
+								OR = {
+									had_character_flag = { flag = HuntingFriend_flag days = 1825 }
+									NOT = { has_character_flag = HuntingFriend_flag }
+								}		
+							}
+							character_event = { id = foresthunting_events.2 months = 3 } 
+						}
+						40 = {
+							trigger = {
+								AND = {
+									had_character_flag = { flag = mighty_beast_event days = 1825 }
+									NOT = { has_character_flag = mighty_beast_event }
+								}		
+							}
+							character_event = { id = foresthunting_events.3 months = 3 }
+						}
+						40 = { 
+							trigger = {
+								OR = {
+									had_character_flag = { flag = lady_in_forest_eventflag days = 1825 }
+									NOT = { has_character_flag = lady_in_forest_eventflag }
+								}	
+							}
+							character_event = { id = foresthunting_events.4 months = 3 } 
+						}
+						40 = { 
+							trigger = {
+								OR = {	
+									martial = 10
+									had_character_flag = { flag = archer_joins_courtier_flag days = 1825 }
+									NOT = { has_character_flag = archer_joins_courtier_flag }
+								}
+							}
+							character_event = { id = foresthunting_events.5 months = 3 } 
+						}
+						40 = { 
+							trigger = {
+								OR = {
+									had_character_flag = { flag = content_court_cap_event days = 1825 }
+									NOT = { has_character_flag = content_court_cap_event }
+								}
+								liege = {
+									any_courtier = {
+										is_female = no
+										has_minor_title = no
+										is_priest = no
+									}
+								}
+							}
+							character_event = { id = foresthunting_events.6 months = 3 } 
+						}
+						40 = { 
+							trigger = {
+								OR = {
+									NOT = { has_character_flag = saint_spotted_event }
+								}
+							}
+							character_event = { id = foresthunting_events.7 months = 3 } 
+						}
+					}
+				}
+				else = {
+					character_event = { id = foresthunting_events.100 days = 10 }
+				}
+		}
+	}
+	
+	option = {
+		name = "EVTOPTAforesthunting_events.101"
+	}
+}
+
+#Journey END
+narrative_event = {
+	id = foresthunting_events.100 
+	title = "EVTTITforesthunting_events.100"
+	desc = "EVTDESforesthunting_events.100"
+	picture = "GFX_forest_hunting_events"
+	
+	border = GFX_event_narrative_frame_diplomacy
+	is_triggered_only = yes
+	
+	trigger = {
+	}
+	
+	immediate = {
+	}
+	
+	option = {
+		name = "EVTOPTAforesthunting_events.100"
+		change_martial = 1
+		remove_trait = on_journey
+	}
+}
+
+#Journey START
+narrative_event = {
+	id = foresthunting_events.102 
+	title = "EVTTITforesthunting_events.102"
+	desc = "EVTDESforesthunting_events.102"
+	picture = "GFX_forest_hunting_events"
+	
+	border = GFX_event_narrative_frame_diplomacy
+	is_triggered_only = yes
+	
+	trigger = {
+	}
+	
+	immediate = {
+	}
+	
+	option = {
+		name ="EVTOPTAforesthunting_events.102"
+		hidden_tooltip = {
+			set_variable = { which = journey_count value = 2 }
+			random_list = {
+				40 = { character_event = { id = foresthunting_events.1 months = 2 } }
+				40 = { character_event = { id = foresthunting_events.2 months = 2 } }
+				40 = { character_event = { id = foresthunting_events.3 months = 2 } }
+				40 = { character_event = { id = foresthunting_events.5 months = 2 } }
+			}
+		}
+	}
+}

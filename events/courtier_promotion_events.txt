@@ -1,0 +1,167 @@
+namespace = court_prom
+#Promotion_event
+character_event = {
+	id = court_prom.1
+	desc = "EVTDEScourt_prom.1"
+	picture = "GFX_evt_council"
+	is_triggered_only = yes
+
+	trigger = {
+		OR = {
+			#Diplomacy
+			AND = {
+				has_character_flag = diplomacy_courtier
+				NOT = {
+					check_variable = {
+						which = money_gained
+						which = myvardip
+					}
+				}
+			}
+			AND = {
+				has_character_flag = martial_courtier
+				NOT = {
+					check_variable = {
+						which = money_gained
+						which = myvarmar
+					}
+				}
+			}
+			AND = {
+				has_character_flag = stewardship_courtier
+				NOT = {
+					check_variable = {
+							which = money_gained
+							which = myvarste
+					}
+				}
+			}
+			AND = {
+				has_character_flag = intrigue_courtier
+				NOT = {
+					check_variable = {
+						which = money_gained			
+						which = myvarint
+					}
+				}
+			}
+			AND = {
+				has_character_flag = learning_courtier
+				NOT = {
+					check_variable = {
+						which = money_gained
+						which = myvarlea
+					}
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "EVTOPTAcourt_prom.1"
+		wealth = 5
+		hidden_tooltip = {	
+			remove_character_modifiers = { modifier = job_gain amount = 100000 }
+			set_variable = { which = job_amt value = 0 }
+			set_variable = { which = money_gained value = 0 }
+			#Search which type of start you run
+			if = {
+				limit = { has_character_flag = diplomacy_courtier }
+				export_to_variable { which = job_amt value = diplomacy }
+			}
+			if = {
+				limit = { has_character_flag = martial_courtier }
+				export_to_variable { which = job_amt value = martial }
+			}
+			if = {
+				limit = { has_character_flag = stewardship_courtier }
+				export_to_variable { which = job_amt value = stewardship }
+			}
+			if = {
+				limit = { has_character_flag = intrigue_courtier }
+				export_to_variable { which = job_amt value = intrigue }
+			}
+			if = {
+				limit = { has_character_flag = learning_courtier }
+				export_to_variable { which = job_amt value = learning }
+			}
+			#Calculate new valuee
+			while = {
+				limit = {
+					check_variable = {
+						which = job_amt
+						value = 1
+					}
+				}
+				subtract_variable = {
+					which = job_amt
+					value = 1
+				}
+				add_character_modifier = {
+					modifier = job_gain
+					duration = -1
+					stacking = yes
+				}
+				change_variable = {
+					which = money_gained
+					value = 1
+				}
+			}
+		}
+		custom_tooltip = { text = NEWSALARYPROM }
+	}
+
+}
+
+character_event = {
+	id = court_prom.2
+	desc = "EVTDEScourt_prom.2"
+	only_playable = yes
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		is_landed = no
+	}
+	
+	immediate = {
+	}
+	
+	option = {
+		name = "EVTOPTAcourt_prom.2"
+		ROOT = {
+			export_to_variable = { which = myvardip value = diplomacy }
+			export_to_variable = { which = myvarste value = stewardship }
+			export_to_variable = { which = myvarmar value = martial }
+			export_to_variable = { which = myvarint value = intrigue }
+			export_to_variable = { which = myvarlea value = learning }
+			character_event = { id = court_prom.1 days = 0 }
+		}
+	}
+}
+
+character_event = {
+	id = court_prom.3
+	desc = "EVTDEScourt_prom.3"
+	only_playable = yes
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		is_landed = no
+	}
+	
+	immediate = {
+	}
+	
+	option = {
+		name = "EVTOPTAcourt_prom.3"
+		random_province = {
+			limit = {
+				is_land = no
+				distance = { who = ROOT distance < 1000 }
+			}
+			save_event_target_as = spawn_location
+		}
+	}
+}

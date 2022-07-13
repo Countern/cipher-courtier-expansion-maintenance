@@ -1,0 +1,154 @@
+decisions = {
+	#Contact Military groups
+	find_army_decision = {
+		is_high_prio = yes
+		potential = {
+			ai = no
+			OR = {
+				independent = no
+				is_landed = yes
+			}
+			has_character_modifier = homeless
+			prisoner = no
+			NOT = { trait = on_journey }
+		}
+		allow = {
+			wealth = 0
+			age = 15
+		}
+		effect = {
+			character_event = { id = recruit_event.1 }
+		}
+	}
+	
+	#Contact Military groups
+	raise_black_flag_decision = {
+		is_high_prio = yes
+		potential = {
+			ai = no
+			NOT = { culture = pirate }
+			NOT = { trait = pirate_courtier }
+			OR = {
+				has_character_modifier = homeless
+				AND = {
+					NOT = { num_of_count_titles = 2 }
+					NOT = { realm_size = 2 } 
+				}
+			}
+			NOT = { trait = on_journey }
+		}
+		allow = {
+			independent = yes
+			is_landed = yes
+		}
+		effect = {
+			add_trait = pirate_courtier
+			culture = pirate
+		}
+	}
+	
+	#Contact Military groups x25
+	find_army_250_decision = {
+		is_high_prio = yes
+		potential = {
+			ai = no
+			OR = {
+				independent = no
+				is_landed = yes
+			}
+			has_character_modifier = homeless
+			prisoner = no
+			NOT = { trait = on_journey }
+		}
+		allow = {
+			wealth = 0
+			age = 15
+		}
+		effect = {
+			character_event = { id = recruit_event.5 }
+		}
+	}
+}
+
+targetted_decisions = {
+	start_looting_decision = {
+		is_high_prio = yes
+		filter = self
+		ai_target_filter = none
+		
+		potential = {
+			has_character_modifier = homeless
+			is_allowed_to_loot = yes
+		}
+		allow = {
+			war = no
+		}
+		effect = {
+			any_unit = {
+				set_looting = yes
+			}
+		}
+	}
+	
+	#promise_servitude_in_war = {
+	#	is_high_prio = yes
+	#	filter = independent_rulers
+	#	ai_target_filter = none
+	#	potential = { war = yes }
+	#	from_potential = {
+	#		has_character_modifier = homeless
+	#		trait = martial_trait
+	#	}
+	#	allow = {
+	#		ROOT = {
+	#			NOT = { war_with = FROM }
+	#			war = yes
+	#			any_war = {
+	#				NOT = { war_score = 50 }
+	#			}
+	#			wealth = 40
+	#		}
+	#	}
+	#	effect = {
+	#		set_character_flag = contracting_courtier
+	#		FROM = { set_character_flag = contracted_courtier }
+	#		FROM = {
+	#			join_attacker_wars = ROOT
+	#			join_defender_wars = ROOT
+	#		}
+	#	}
+	#}
+}
+
+decisions = {
+	have_a_navy_decision = {
+		potential = {
+			ai = no
+			has_character_modifier = homeless
+			liege = {
+				any_realm_province = {
+					port = yes
+				}
+			}
+			NOT = { trait = on_journey }
+			independent = no
+		}
+		allow = {
+			war = no
+			wealth = 10
+		}
+		effect = {
+			wealth = -10
+			spawn_fleet = {
+				province = closest # closest sea zone
+				owner = ROOT
+				disband_on_peace = no
+				troops =
+				{
+				galleys = { 10 10 }
+				}
+				earmark = claimant_adventure
+			}
+		}
+	}
+}

@@ -1,0 +1,31 @@
+### Example elective succession setup
+courtier_election = {
+	elector_stances = { #Electoral stances visible on the Electors' tab. Do not directly affect voting pattern unless used as triggers in the modifiers of candidate_voter_score.
+		my_stance = {
+			icon = 5
+			days = 1
+		}
+	}
+	elector_selection = {
+		days = 1		# If below 0, ROOT is not valid to be an Elector. Any character above 0 will be an elector.
+		max_amount = 1 # Determines max amount of electors, with the lower scoring ones being excluded (limit is optional)
+		additive_modifier = { #
+			value = 100000
+			ai = no
+		}
+	}
+	elector_vote_strength = { #Affects the voting strength of each elector.
+		days = 1 # 1 elector = 1 vote.
+		additive_modifier = {
+			character = FROM
+			value = 1 # Ex: An Elector with the humble trait is worth an addtional 3 votes.
+		}
+	}
+	candidate_vote_score = { #Chance of an Elector voting for a candidate over the other. The candidate with the highest value will be picked.
+		days = 1
+		##########################   Elector voting himself   ##########################
+	}
+	candidate_trigger = { #Trigger to determine what characters are valid candidates that can be voted by electors.
+		dynasty = FROM
+	}
+}

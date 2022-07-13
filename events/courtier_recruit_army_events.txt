@@ -1,0 +1,651 @@
+namespace = recruit_event
+#Recruit start event	
+narrative_event = {
+	id = recruit_event.1
+	title = "EVTTITrecruit_event.1"
+	desc = "EVTDESrecruit_event.1"
+	picture = "GFX_find_army"
+	is_triggered_only = yes
+
+	trigger = {
+	}
+	
+	#Local Bandits
+	option = {
+		trigger = {
+			wealth = 5 
+		}
+		name = "EVTOPTArecruit_event.1"
+		character_event = { id = recruit_event.2 tooltip = FINDSFROMBANDITS }
+	}
+	
+	#Retinue Militias
+	option = {
+		trigger = {
+			wealth = 15
+		}
+		name = "EVTOPTBrecruit_event.1"
+		character_event = { id = recruit_event.3 }
+	}
+	
+	#Mercenary Corps
+	option = {
+		trigger = {
+			wealth = 10	
+		}
+		name = "EVTOPTCrecruit_event.1"
+		character_event = { id = recruit_event.4 }
+	}
+	
+	#Leave Option
+	option = {
+		name = "EVTOPTDrecruit_event.1"
+		
+	}
+}
+
+#Bandits
+character_event = {
+	id = recruit_event.2
+	desc = "EVTDESrecruit_event.2"
+	picture = "GFX_bandits_picture"
+	is_triggered_only = yes
+
+	trigger = {
+	}
+	
+	immediate = {
+		if = {
+			limit = { is_landed = no }
+			liege = { 
+				capital_scope = {
+					save_event_target_as = spawn_location
+				}
+			}
+		}
+		else = {
+			random_demesne_title = {
+				limit = { tier = BARON }
+				location = { save_event_target_as = spawn_location }
+			}
+		}
+	}
+	
+	#50 light
+	option = {
+		name = "EVTOPTArecruit_event.2"
+		wealth = -5
+		spawn_unit = {
+		  owner = ROOT
+		  province = event_target:spawn_location
+		  earmark = courtier_forces
+		  home = event_target:spawn_location
+		  troops = {
+			light_infantry = { 50 50 }
+		  }
+		  reinforces = yes
+		  attrition = 0.5
+		  disband_on_peace = no
+		  maintenance_multiplier = 0.4
+		}
+	}
+	
+	#50 archers
+	option = {
+		name = "EVTOPTBrecruit_event.2"
+		wealth = -5
+		spawn_unit = {
+		  owner = ROOT
+		  earmark = courtier_forces
+		  province = event_target:spawn_location
+		  home = event_target:spawn_location
+		  troops = {
+			archers = { 50 50 }
+		  }
+		  reinforces = yes
+		  attrition = 0.5
+		  disband_on_peace = no
+		  maintenance_multiplier = 0.4
+		}
+	}
+	
+	#25 ligth 25 arch
+	option = {
+		name = "EVTOPTCrecruit_event.2"
+		wealth = -5
+		spawn_unit = {
+		  owner = ROOT
+		  earmark = courtier_forces
+		  province = event_target:spawn_location
+		  home = event_target:spawn_location
+		  troops = {
+			light_infantry = { 25 25 }
+			archers = { 25 25 }
+		  }
+		  reinforces = yes
+		  attrition = 0.5
+		  disband_on_peace = no
+		  maintenance_multiplier = 0.4
+		}
+	}
+	
+	#return for better options
+	option = {
+		name = "EVTOPTOtheroptions"
+		character_event = { id = recruit_event.1 tooltip = ReturnTOPICK }
+	}
+}
+
+#Specialty Recruits
+character_event = {
+	id = recruit_event.3
+	desc = "EVTDESrecruit_event.3"
+	picture = "GFX_retinues_pictures"
+	is_triggered_only = yes
+
+	trigger = {
+	}
+	
+	immediate = {
+		if = {
+			limit = { is_landed = no }
+			liege = { 
+				capital_scope = {
+					save_event_target_as = spawn_location
+				}
+			}
+		}
+		else = {
+			random_demesne_title = {
+				limit = { is_titular = no }
+				location = { save_event_target_as = spawn_location }
+			}
+		}
+	}
+	
+	#50 heavy infantry
+	option = {
+		name = "EVTOPTArecruit_event.3"
+		wealth = -15
+		spawn_unit = {
+		  owner = ROOT
+		  earmark = courtier_forces
+		  province = event_target:spawn_location
+		  home = event_target:spawn_location
+		  troops = {
+			heavy_infantry = { 50 50 }
+		  }
+		  reinforces = yes
+		  attrition = 0.5
+		  disband_on_peace = no
+		  maintenance_multiplier = 0.5
+		}
+	}
+	
+	#40 heavy infantry 10 ligth cav
+	option = {
+		name = "EVTOPTBrecruit_event.3"
+		wealth = -15
+		spawn_unit = {
+		  owner = ROOT
+		  earmark = courtier_forces
+		  province = event_target:spawn_location
+		  home = event_target:spawn_location
+		  troops = {
+			heavy_infantry = { 40 40 }
+			light_cavalry = { 10 10 }
+		  }
+		  reinforces = yes
+		  attrition = 0.5
+		  disband_on_peace = no
+		  maintenance_multiplier = 0.5
+		}
+	}
+	
+	#30 heavy inf 20 pike
+	option = {
+		name = "EVTOPTCrecruit_event.3"
+		wealth = -15
+		spawn_unit = {
+		  owner = ROOT
+		  earmark = courtier_forces
+		  province = event_target:spawn_location
+		  home = event_target:spawn_location
+		  troops = {
+			heavy_infantry = { 30 30 }
+			pikemen = { 20 20 }
+		  }
+		  reinforces = yes
+		  attrition = 0.5
+		  disband_on_peace = no
+		  maintenance_multiplier = 0.5
+		}
+	}
+	
+	#return for better options
+	option = {
+		name = "EVTOPTOtheroptions"
+		character_event = { id = recruit_event.1 tooltip = ReturnTOPICK }
+	}
+}
+
+#Mercenary Recruits
+character_event = {
+	id = recruit_event.4
+	desc = "EVTDESrecruit_event.4"
+	picture = "GFX_evt_council"
+	is_triggered_only = yes
+
+	trigger = {
+	}
+	
+	immediate = {
+		if = {
+			limit = { is_landed = no }
+			liege = { 
+				capital_scope = {
+					save_event_target_as = spawn_location
+				}
+			}
+		}
+		else = {
+			random_demesne_title = {
+				limit = { is_titular = no }
+				location = { save_event_target_as = spawn_location }
+			}
+		}
+	}
+	
+	#30 pikemen 20 heavy cav
+	option = {
+		name = "EVTOPTArecruit_event.4"
+		wealth = -10
+		spawn_unit = {
+		  owner = ROOT
+		  earmark = courtier_forces
+		  province = event_target:spawn_location
+		  home = event_target:spawn_location
+		  troops = {
+			pikemen = { 30 30 }
+			knights = { 20 20 }
+		  }
+		  reinforces = yes
+		  attrition = 0.5
+		  disband_on_peace = no
+		  maintenance_multiplier = 0.6
+		}
+	}
+	
+	#20 pikemen 20 heavy and 10 heavy cavalry
+	option = {
+		name = "EVTOPTBrecruit_event.4"
+		wealth = -10
+		spawn_unit = {
+		  owner = ROOT
+		  earmark = courtier_forces
+		  province = event_target:spawn_location
+		  home = event_target:spawn_location
+		  troops = {
+			pikemen = { 20 20 }
+			heavy_infantry = { 20 20 }
+			knights = { 10 10 }
+		  }
+		  reinforces = yes
+		  attrition = 0.5
+		  disband_on_peace = no
+		  maintenance_multiplier = 0.6
+		}
+	}
+	
+	#25 light cav 25 heavy cav
+	option = {
+		name = "EVTOPTCrecruit_event.4"
+		wealth = -10
+		spawn_unit = {
+		  owner = ROOT
+		  earmark = courtier_forces
+		  province = event_target:spawn_location
+		  home = event_target:spawn_location
+		  troops = {
+			light_cavalry = { 25 25 }
+			knights = { 25 25 }
+		  }
+		  reinforces = yes
+		  attrition = 0.5
+		  disband_on_peace = no
+		  maintenance_multiplier = 0.7
+		}
+	}
+	
+	#return for better options
+	option = {
+		name = "EVTOPTOtheroptions"
+		character_event = { id = recruit_event.1 tooltip = ReturnTOPICK }
+	}
+}
+
+
+#Recruit start even VERSION 250!
+narrative_event = {
+	id = recruit_event.5
+	title = "EVTTITrecruit_event.5"
+	desc = "EVTDESrecruit_event.5"
+	picture = "GFX_find_army"
+	is_triggered_only = yes
+
+	trigger = {
+	}
+	
+	#Local Bandits
+	option = {
+		trigger = {
+			wealth = 25
+		}
+		name = "EVTOPTArecruit_event.5"
+		character_event = { id = recruit_event.6 tooltip = FINDSFROMBANDITS }
+	}
+	
+	#Retinue Militias
+	option = {
+		trigger = {
+			wealth = 75
+		}
+		name = "EVTOPTBrecruit_event.5"
+		character_event = { id = recruit_event.7 }
+	}
+	
+	#Mercenary Corps
+	option = {
+		trigger = {
+			wealth = 50
+		}
+		name = "EVTOPTCrecruit_event.5"
+		character_event = { id = recruit_event.8 }
+	}
+	
+	#Leave Option
+	option = {
+		name = "EVTOPTDrecruit_event.1"
+		
+	}
+}
+
+#Bandits
+character_event = {
+	id = recruit_event.6
+	desc = "EVTDESrecruit_event.6"
+	picture = "GFX_bandits_picture"
+	is_triggered_only = yes
+
+	trigger = {
+	}
+	
+	immediate = {
+		if = {
+			limit = { is_landed = no }
+			liege = { 
+				capital_scope = {
+					save_event_target_as = spawn_location
+				}
+			}
+		}
+		else = {
+			random_demesne_title = {
+				limit = { is_titular = no }
+				location = { save_event_target_as = spawn_location }
+			}
+		}
+	}
+	
+	#50 light
+	option = {
+		name = "EVTOPTArecruit_event.6"
+		wealth = -25
+		spawn_unit = {
+		  owner = ROOT
+		  earmark = courtier_forces
+		  province = event_target:spawn_location
+		  home = event_target:spawn_location
+		  troops = {
+			light_infantry = { 250 250 }
+		  }
+		  reinforces = yes
+		  attrition = 0.5
+		  disband_on_peace = no
+		  maintenance_multiplier = 0.4
+		}
+	}
+	
+	#50 archers
+	option = {
+		name = "EVTOPTBrecruit_event.6"
+		wealth = -25
+		spawn_unit = {
+		  owner = ROOT
+		  earmark = courtier_forces
+		  province = event_target:spawn_location
+		  home = event_target:spawn_location
+		  troops = {
+			archers = { 250 250 }
+		  }
+		  reinforces = yes
+		  attrition = 0.5
+		  disband_on_peace = no
+		  maintenance_multiplier = 0.4
+		}
+	}
+	
+	#25 ligth 25 arch
+	option = {
+		name = "EVTOPTCrecruit_event.6"
+		wealth = -25
+		spawn_unit = {
+		  owner = ROOT
+		  earmark = courtier_forces
+		  province = event_target:spawn_location
+		  home = event_target:spawn_location
+		  troops = {
+			light_infantry = { 125 125 }
+			archers = { 125 125 }
+		  }
+		  reinforces = yes
+		  attrition = 0.5
+		  disband_on_peace = no
+		  maintenance_multiplier = 0.4
+		}
+	}
+	
+	#return for better options
+	option = {
+		name = "EVTOPTOtheroptions"
+		character_event = { id = recruit_event.5 tooltip = ReturnTOPICK }
+	}
+}
+
+#Specialty Recruits
+character_event = {
+	id = recruit_event.7
+	desc = "EVTDESrecruit_event.7"
+	picture = "GFX_retinues_pictures"
+	is_triggered_only = yes
+
+	trigger = {
+	}
+	
+	immediate = {
+		if = {
+			limit = { is_landed = no }
+			liege = { 
+				capital_scope = {
+					save_event_target_as = spawn_location
+				}
+			}
+		}
+		else = {
+			random_demesne_title = {
+				limit = { is_titular = no }
+				location = { save_event_target_as = spawn_location }
+			}
+		}
+	}
+	
+	#50 heavy infantry
+	option = {
+		name = "EVTOPTArecruit_event.7"
+		wealth = -75
+		spawn_unit = {
+		  owner = ROOT
+		  earmark = courtier_forces
+		  province = event_target:spawn_location
+		  home = event_target:spawn_location
+		  troops = {
+			heavy_infantry = { 250 250 }
+		  }
+		  reinforces = yes
+		  attrition = 0.5
+		  disband_on_peace = no
+		  maintenance_multiplier = 0.5
+		}
+	}
+	
+	#40 heavy infantry 10 ligth cav
+	option = {
+		name = "EVTOPTBrecruit_event.7"
+		wealth = -75
+		spawn_unit = {
+		  owner = ROOT
+		  earmark = courtier_forces
+		  province = event_target:spawn_location
+		  home = event_target:spawn_location
+		  troops = {
+			heavy_infantry = { 200 200 }
+			light_cavalry = { 50 50 }
+		  }
+		  reinforces = yes
+		  attrition = 0.5
+		  disband_on_peace = no
+		  maintenance_multiplier = 0.5
+		}
+	}
+	
+	#30 heavy inf 20 pike
+	option = {
+		name = "EVTOPTCrecruit_event.7"
+		wealth = -75
+		spawn_unit = {
+		  owner = ROOT
+		  earmark = courtier_forces
+		  province = event_target:spawn_location
+		  home = event_target:spawn_location
+		  troops = {
+			heavy_infantry = { 150 150 }
+			pikemen = { 100 100 }
+		  }
+		  reinforces = yes
+		  attrition = 0.5
+		  disband_on_peace = no
+		  maintenance_multiplier = 0.5
+		}
+	}
+	
+	#return for better options
+	option = {
+		name = "EVTOPTOtheroptions"
+		character_event = { id = recruit_event.5 tooltip = ReturnTOPICK }
+	}
+}
+
+#Mercenary Recruits
+character_event = {
+	id = recruit_event.8
+	desc = "EVTDESrecruit_event.8"
+	picture = "GFX_evt_council"
+	is_triggered_only = yes
+
+	trigger = {
+	}
+	
+	immediate = {
+		if = {
+			limit = { is_landed = no }
+			liege = { 
+				capital_scope = {
+					save_event_target_as = spawn_location
+				}
+			}
+		}
+		else = {
+			random_demesne_title = {
+				limit = { is_titular = no }
+				location = { save_event_target_as = spawn_location }
+			}
+		}
+	}
+	
+	#30 pikemen 20 heavy cav
+	option = {
+		name = "EVTOPTArecruit_event.8"
+		wealth = -50
+		spawn_unit = {
+		  owner = ROOT
+		  earmark = courtier_forces
+		  province = event_target:spawn_location
+		  home = event_target:spawn_location
+		  troops = {
+			pikemen = { 150 150 }
+			knights = { 100 100 }
+		  }
+		  reinforces = yes
+		  attrition = 0.5
+		  disband_on_peace = no
+		  maintenance_multiplier = 0.6
+		}
+	}
+	
+	#20 pikemen 20 heavy and 10 heavy cavalry
+	option = {
+		name = "EVTOPTBrecruit_event.8"
+		wealth = -50
+		spawn_unit = {
+		  owner = ROOT
+		  earmark = courtier_forces
+		  province = event_target:spawn_location
+		  home = event_target:spawn_location
+		  troops = {
+			pikemen = { 100 100 }
+			heavy_infantry = { 100 100 }
+			knights = { 50 50 }
+		  }
+		  reinforces = yes
+		  attrition = 0.5
+		  disband_on_peace = no
+		  maintenance_multiplier = 0.6
+		}
+	}
+	
+	#25 light cav 25 heavy cav
+	option = {
+		name = "EVTOPTCrecruit_event.8"
+		wealth = -50
+		spawn_unit = {
+		  owner = ROOT
+		  earmark = courtier_forces
+		  province = event_target:spawn_location
+		  home = event_target:spawn_location
+		  troops = {
+			light_cavalry = { 125 125 }
+			knights = { 125 125 }
+		  }
+		  reinforces = yes
+		  attrition = 0.5
+		  disband_on_peace = no
+		  maintenance_multiplier = 0.7
+		}
+	}
+	
+	#return for better options
+	option = {
+		name = "EVTOPTOtheroptions"
+		character_event = { id = recruit_event.5 tooltip = ReturnTOPICK }
+	}
+}

@@ -1,0 +1,34 @@
+﻿#CODE;ENGLISH;FRENCH;GERMAN;;SPANISH;;;;;;;;;x
+title_leathermaker;Leathermaker;Leathermaker;Leathermaker;;Leathermaker;;;;;;;;;x
+title_trader;Trader;Trader;Trader;;Trader;;;;;;;;;x
+title_blacksmith_desc;A master of smithing to craft arms and armour.;A master of smithing to craft arms and armour.;A master of smithing to craft arms and armour.;;A master of smithing to craft arms and armour.;;;;;;;;;x
+title_leathermaker_desc;A worker of animal hides to craft leather items.;A worker of animal hides to craft leather items.;A worker of animal hides to craft leather items.;;A worker of animal hides to craft leather items.;;;;;;;;;x
+title_trader_desc;A journeyman merchant.;A journeyman merchant.;A journeyman merchant.;;A journeyman merchant.;;;;;;;;;x
+title_blacksmith;Blacksmith;Blacksmith;Blacksmith;;Blacksmith;;;;;;;;;x
+summon_blacksmith_desc;Call forth your smith [Root.GetTitledFirstName] to create something for your treasury!;Call forth your smith [Root.GetTitledFirstName] to create something for your treasury!;Call forth your smith [Root.GetTitledFirstName] to create something for your treasury!;;Call forth your smith [Root.GetTitledFirstName] to create something for your treasury!;;;;;;;;;x
+summon_blacksmith_named;Summon Blacksmith;Summon Blacksmith;Summon Blacksmith;;Summon Blacksmith;;;;;;;;;x
+EDCC1;You summon your blacksmith to your chambers.;You summon your blacksmith to your chambers.;You summon your blacksmith to your chambers.;;You summon your blacksmith to your chambers.;;;;;;;;;x
+ETCC1;The Blacksmith Summoned;The Blacksmith Summoned;The Blacksmith Summoned;;The Blacksmith Summoned;;;;;;;;;x
+EOCC1A;This is a placeholder event so have some money!;This is a placeholder event so have some money!;This is a placeholder event so have some money!;;This is a placeholder event so have some money!;;;;;;;;;x
+abandon_oath;Abandon Oath;Abandon Oath;Abandon Oath;;Abandon Oath;;;;;;;;;x
+abandon_oath_desc;Now that i have my own residence, maybe i should accept that its time for me to set out on my own path!;Now that i have my own residence, maybe i should accept that its time for me to set out on my own path!;Now that i have my own residence, maybe i should accept that its time for me to set out on my own path!;;Now that i have my own residence, maybe i should accept that its time for me to set out on my own path!;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x

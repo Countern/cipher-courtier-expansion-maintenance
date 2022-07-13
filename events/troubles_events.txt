@@ -1,0 +1,598 @@
+namespace = troublesevents
+
+####################################################################
+####################################################################
+#####################Diplomatic Troubles############################
+####################################################################
+####################################################################
+
+long_character_event = {
+	id = troublesevents.1
+	desc = "EVTDESCtroublesevents.1"
+	picture = "GFX_town_picture"
+	border = GFX_event_long_frame_diplomacy
+	is_triggered_only = yes
+
+	trigger = {
+	}
+	
+	option = {
+		name = "EVTOPTAtroublesevents.1"
+		tooltip_info = diplomacy
+		trigger = {
+			wealth = 15
+			diplomacy = 5
+		}
+		wealth = -15
+		add_character_modifier = {	modifier = favor_of_the_commoners years = 20 stacking = yes }
+	}
+	
+	option = {
+		name = "EVTOPTBtroublesevents.1"
+		tooltip_info = diplomacy
+		trigger = {
+			diplomacy = 20
+		}
+		add_character_modifier = {	modifier = favor_of_the_commoners years = 20 stacking = yes }
+	}
+	
+	option = {
+		name = "EVTOPTCtroublesevents.1"
+		random_list = {
+			20 = { 
+				modifier = { factor = 1.4 diplomacy = 5 }
+				modifier = { factor = 1.6 diplomacy = 10 }
+				modifier = { factor = 1.8 diplomacy = 14 }
+				modifier = { factor = 2 diplomacy = 16 }
+				modifier = { factor = 2 diplomacy = 20 }
+				modifier = { factor = 1.5 trait = brave }
+				modifier = { factor = 1.8 trait = socializer }
+				modifier = { factor = 0.5 trait = canibbal }
+				modifier = { factor = 0.8 trait = cruel }
+				add_character_modifier = {	modifier = favor_of_the_commoners years = 20 stacking = yes } 
+			}
+			80 = { add_trait = stressed }
+		}
+	}
+	
+	option = {
+		name = "EVTOPTDDONTCARE"
+		prestige = -50
+	}
+	
+}
+
+long_character_event = {
+	id = troublesevents.2
+	desc = "EVTDESCtroublesevents.2"
+	picture = "GFX_town_picture"
+	border = GFX_event_long_frame_diplomacy
+	is_triggered_only = yes
+
+	trigger = {
+	}
+	
+	option = {
+		name = "EVTOPTAtroublesevents.2"
+		tooltip_info = diplomacy
+		trigger = {
+			has_character_modifier = favor_of_the_commoners
+		}
+		wealth = 5
+		liege = { opinion = { modifier = extremely_grateful who = ROOT years = 10 } }
+	}
+	
+	option = {
+		name = "EVTOPTBtroublesevents.2"
+		tooltip_info = diplomacy
+		trigger = {
+			diplomacy = 18
+		}
+		wealth = 5
+		liege = { opinion = { modifier = extremely_grateful who = ROOT years = 10 } }
+	}
+	
+	option = {
+		name = "EVTOPTCtroublesevents.2"
+		random_list = {
+			20 = { 
+				modifier = { factor = 1.2 diplomacy = 5 }
+				modifier = { factor = 1.4 diplomacy = 10 }
+				modifier = { factor = 1.6 diplomacy = 14 }
+				modifier = { factor = 1.6 trait = strong }
+				modifier = { factor = 1.8 diplomacy = 16 }
+				modifier = { factor = 2 diplomacy = 20 }
+				modifier = { factor = 1.5 trait = brave }
+				modifier = { factor = 1.8 trait = socializer }
+				modifier = { factor = 0.5 trait = canibbal }
+				modifier = { factor = 0.8 trait = cruel }
+				modifier = { factor = 0.8 trait = dull }
+				modifier = { factor = 1.6 trait = genious }
+				wealth = 5
+				liege = { opinion = { modifier = extremely_grateful who = ROOT years = 10 } }
+			}
+			80 = {
+				prestige = -20
+				location = { add_province_modifier = { modifier = charismatic_independence years = 5 } }
+			}
+		}
+	}
+	
+	option = {
+		name = "EVTOPTDtroublesevents.2"
+		location = { add_province_modifier = { modifier = charismatic_independence years = 5 } }
+		prestige = -30
+	}
+}
+
+
+long_character_event = {
+	id = troublesevents.3
+	desc = "EVTDESCtroublesevents.3"
+	picture = "GFX_town_picture"
+	border = GFX_event_long_frame_diplomacy
+	is_triggered_only = yes
+
+	trigger = {
+	}
+	
+	option = {
+		name = "EVTOPTAtroublesevents.3"
+		tooltip_info = diplomacy
+		trigger = {
+			trait = 25
+		}
+		add_character_modifier = {modifier = favor_of_the_commoners years = 20 stacking = yes }
+		liege = { opinion = { modifier = swayed who = ROOT years = 10 } }
+	}
+	
+	option = {
+		name = "EVTOPTBtroublesevents.3"
+		tooltip_info = diplomacy
+		trigger = {
+			diplomacy = 15
+		}
+		liege = { opinion = { modifier = swayed who = ROOT years = 10 } }
+	}
+	
+	option = {
+		name = "EVTOPTCtroublesevents.3"
+		tooltip_info = diplomacy
+		trigger = {
+			intrigue = 18
+		}
+		wealth = 5
+		liege = { opinion = { modifier = swayed who = ROOT years = 10 } }
+	}
+	
+	option = {
+		name = "EVTOPTDtroublesevents.3"
+		random_list = {
+			10 = { 
+				modifier = { factor = 1.2 diplomacy = 5 }
+				modifier = { factor = 1.4 diplomacy = 10 }
+				modifier = { factor = 1.6 diplomacy = 14 }
+				modifier = { factor = 1.6 trait = strong }
+				modifier = { factor = 2 diplomacy = 20 }
+				modifier = { factor = 1.5 trait = brave }
+				modifier = { factor = 1.5 trait = gregarios }
+				modifier = { factor = 1.8 trait = socializer }
+				modifier = { factor = 0.5 trait = canibbal }
+				modifier = { factor = 0.8 trait = cruel }
+				modifier = { factor = 0.8 trait = dull }
+				modifier = { factor = 1.6 trait = genious }
+				liege = { opinion = { modifier = swayed who = ROOT years = 10 } }
+				prestige = 40
+			}
+			90 = {
+				remove_character_modifier = favor_of_the_commoners
+				prestige = -10				
+			}
+		}
+	}
+	
+	option = {
+		name = "EVTOPTEtroublesevents.3"
+		add_character_modifier = {	modifier = favor_of_the_commoners years = 20 stacking = yes }
+		liege = { opinion = { modifier = publicly_offended who = ROOT years = 10 } }
+		prestige = -30
+	}
+}
+
+
+long_character_event = {
+	id = troublesevents.4
+	desc = "EVTDESCtroublesevents.4"
+	picture = "GFX_town_picture"
+	border = GFX_event_long_frame_diplomacy
+	is_triggered_only = yes
+
+	trigger = {
+	}
+	
+	option = {
+		name = "EVTOPTAtroublesevents.4"
+		tooltip_info = diplomacy
+		prestige = -35
+		add_character_modifier = {	modifier = favor_of_the_commoners years = 20 stacking = yes }
+		remove_character_modifier = favor_of_the_nobility
+		
+	}
+	
+	option = {
+		name = "EVTOPTBtroublesevents.4"
+		tooltip_info = diplomacy
+		prestige = 35
+		add_character_modifier = {modifier = favor_of_the_nobility years = 20 stacking = yes }
+		remove_character_modifier = favor_of_the_commoners
+	}
+	
+	option = {
+		name = "EVTOPTCtroublesevents.4"
+		random_list = {
+			10 = { 
+				modifier = { factor = 1.2 diplomacy = 5 }
+				modifier = { factor = 1.4 diplomacy = 10 }
+				modifier = { factor = 1.6 diplomacy = 14 }
+				modifier = { factor = 1.6 trait = strong }
+				modifier = { factor = 1.8 diplomacy = 16 }
+				modifier = { factor = 2 diplomacy = 20 }
+				modifier = { factor = 1.5 trait = brave }
+				modifier = { factor = 1.8 trait = socializer }
+				modifier = { factor = 0.5 trait = canibbal }
+				modifier = { factor = 0.8 trait = cruel }
+				modifier = { factor = 0.8 trait = dull }
+				modifier = { factor = 1.6 trait = genious }
+				modifier = { factor = 0.7 has_character_modifier = favor_of_the_commoners }
+				modifier = { factor = 0.7 has_character_modifier = favor_of_the_nobility }
+				modifier = { factor = 1.2 has_character_modifier = favor_of_the_clergy }
+				modifier = { factor = 1.2 prestige = 100 }
+				modifier = { factor = 1.2 prestige = 200 }
+				modifier = { factor = 1.2 prestige = 300 }
+				add_character_modifier = {modifier = favor_of_the_nobility years = 20 stacking = yes }
+				add_character_modifier = {	modifier = favor_of_the_commoners years = 20 stacking = yes }
+			}
+			90 = {
+				prestige = -20
+				location = { add_province_modifier = { modifier = charismatic_independence years = 5 } }
+			}
+		}
+	}
+	
+	option = {
+		name = "EVTOPTDtroublesevents.4"
+		remove_character_modifier = favor_of_the_commoners
+		remove_character_modifier = favor_of_the_nobility
+		prestige = -40
+	}
+}
+
+
+####################################################################
+####################################################################
+#####################Martial Troubles############################
+####################################################################
+####################################################################
+
+
+long_character_event = {
+	id = troublesevents.10
+	desc = "EVTDESCtroublesevents.10"
+	picture = "GFX_town_picture"
+	border = GFX_event_long_frame_martial
+	is_triggered_only = yes
+
+	trigger = {
+	}
+	
+	option = {
+		name = "EVTOPTAtroublesevents.10"
+		tooltip_info = cruel
+		trigger = {
+			trait = cruel
+		}
+		gold = 50
+		LIEGE = { opinion = { modifier = opinion_charge_traitor who = ROOT years = 5 } }
+	}
+	
+	option = {
+		name = "EVTOPTBtroublesevents.10"
+		tooltip_info = diplomacy
+		trigger = {
+			diplomacy = 20
+		}
+		prestige = 25
+		add_character_modifier = {modifier = favor_of_the_nobility years = 20 stacking = yes }
+	}
+	
+	option = {
+		name = "EVTOPTCtroublesevents.10"
+		random_list = {
+			20 = { 
+				modifier = { factor = 1.4 martial = 5 }
+				modifier = { factor = 1.6 martial = 10 }
+				modifier = { factor = 1.8 martial = 14 }
+				modifier = { factor = 1.3 trait = strong }
+				modifier = { factor = 1.8 martial = 16 }
+				modifier = { factor = 2 martial = 20 }
+				modifier = { factor = 1.3 trait = brave }
+				modifier = { factor = 1.5 trait = wroth }
+				modifier = { factor = 1.1 trait = canibbal }
+				modifier = { factor = 0.8 trait = kind }
+				modifier = { factor = 0.8 trait = dull }
+				modifier = { factor = 0.8 trait = craven }
+				modifier = { factor = 1.6 trait = genious }
+				add_character_modifier = {modifier = favor_of_the_nobility years = 20 stacking = yes }		
+				prestige = 50
+			}
+			80 = {
+				add_trait = severely_injured
+				prestige = -20				
+			}
+		}
+	}
+	
+	option = {
+		name = "EVTOPTDtroublesevents.10"
+		prestige = -40
+	}
+}
+
+long_character_event = {
+	id = troublesevents.11
+	desc = "EVTDESCtroublesevents.11"
+	picture = "GFX_town_picture"
+	border = GFX_event_long_frame_martial
+	is_triggered_only = yes
+
+	trigger = {
+	}
+	
+	option = {
+		name = "EVTOPTAtroublesevents.11"
+		prestige = 60
+		location = { add_province_modifier = { modifier = independance years = 2 } }
+	}
+	
+	option = {
+		name = "EVTOPTBtroublesevents.11"
+		location = { add_province_modifier = { modifier = weak_independance years = 10 } }
+		random = { add_trait = craven chance = 20 }
+		prestige = -25		
+	}
+}
+
+long_character_event = {
+	id = troublesevents.12
+	desc = "EVTDESCtroublesevents.12"
+	picture = "GFX_town_picture"
+	border = GFX_event_long_frame_martial
+	is_triggered_only = yes
+
+	trigger = {
+	}
+	
+	option = {
+		name = "EVTOPTAtroublesevents.12"
+		prestige = 40
+		save_event_target_as = combatant_2
+		liege = {
+			any_courtier_or_vassal = {
+				limit = {
+					martial = 5
+					ai = yes
+				}
+				preferred_limit = { NOT = { dynasty = none } } 
+				save_event_target_as = combatant_1 
+			}
+		}
+		character_event = { id = HFP.10096 tooltip = Challenged_to_duel }
+	}
+	
+	option = {
+		name = "EVTOPTBtroublesevents.12"
+		prestige = -100
+	}
+	
+	option = {
+		name = "EVTOPTBtroublesevents.12"
+		tooltip_info = learning
+		trigger = {
+			learning = 15
+		}
+		piety = 50
+	}
+}
+
+long_character_event = {
+	id = troublesevents.13
+	desc = "EVTDESCtroublesevents.13"
+	picture = "GFX_town_picture"
+	border = GFX_event_long_frame_martial
+	is_triggered_only = yes
+
+	trigger = {
+	}
+	
+	option = {
+		name = "EVTOPTAtroublesevents.13"
+		tooltip_info = martial
+		trigger = { 
+			martial = 10
+		}
+		prestige = 20
+		random = { add_trait = severely_injured  chance = 10 }
+		spawn_unit = {
+			owner = ROOT
+			province = location
+			home = location
+			troops = {
+			heavy_infantry = { 30 30 }
+			}
+			reinforces = no
+			attrition = 1.0
+			maintenance_multiplier = 0
+		}
+	}
+	
+	option = {
+		name = "EVTOPTBtroublesevents.13"
+		prestige = 30
+		add_character_modifier = { modifier = favor_of_the_nobility years = 20 }
+		random_unit = {
+			damage_unit = {
+				amount = 40
+			}
+		}
+	}
+	
+	option = {
+		name = "EVTOPTCtroublesevents.13"
+		tooltip_info = stewardship
+		trigger = { stewardship = 5 wealth = 15 }
+		wealth = -15
+		add_character_modifier = { modifier = favor_of_the_nobility years = 20 }
+	}
+	
+	option = {
+		name = "EVTOPTDtroublesevents.13"
+		tooltip_info = intrigue
+		trigger = { OR = { intrigue = 10 trait = cruel } }
+		wealth = 10
+		remove_character_modifier = favor_of_the_nobility
+	}
+	
+	option = {
+		name = "EVTOPTEtroublesevents.13"
+		prestige = -10
+	}
+}
+
+long_character_event = {
+	only_playable = yes
+	id = troublesevents.1001
+	is_triggered_only = yes
+	hide_window = yes
+	trigger = {
+		is_landed = yes
+		top_liege = {
+			OR = {
+				any_vassal = {
+					has_character_modifier = homeless
+				}
+				any_vassal = {
+					any_vassal = {
+						has_character_modifier = homeless
+					}
+				}
+				any_vassal = {
+					any_vassal = {
+						any_vassal = {
+							has_character_modifier = homeless
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	option = {
+		save_event_target_as = owner_of_TP
+		random_demesne_province = {
+			limit = { NOT = { has_province_modifier = province_troubles } }
+			save_event_target_as = troubled_province
+			top_liege = {
+				any_vassal = {
+					limit = { has_character_modifier = homeless}
+					character_event = { id = troublesevents.1002 }
+				}
+				any_vassal = {
+					any_vassal = {
+						limit = { has_character_modifier = homeless}
+						character_event = { id = troublesevents.1002 }
+					}
+				}
+				any_vassal = {
+					any_vassal = {
+						any_vassal = {
+							limit = { has_character_modifier = homeless}
+							character_event = { id = troublesevents.1002 }
+						}
+					}
+				}			
+			}
+			add_province_modifier = { modifier = province_troubles years = 5 }
+		}
+	}
+}
+
+letter_event = {
+	id = troublesevents.1002
+	desc = "EVTDESCtroublesevents.1002"
+	portrait = event_target:owner_of_TP
+	is_triggered_only = yes
+	
+	trigger = {
+		NOT = { has_character_flag = disabled_troubles_warning }
+	}
+	
+	option = {
+		name = "EVTOPTAtroublesevents.1002"
+	}
+	
+	option = {
+		name = "EVTOPTBtroublesevents.1002"
+		set_character_flag = disabled_troubles_warning
+	}
+}
+
+
+long_character_event = {
+	id = troublesevents.20
+	desc = "EVTDESCtroublesevents.20"
+	picture = "GFX_town_picture"
+	border = GFX_event_long_frame_martial
+	is_triggered_only = yes
+
+	trigger = {
+	}
+	
+	option = {
+		name = "EVTOPTAtroublesevents.20"
+		tooltip_info = stewardship
+		trigger = {
+			stewardship = 12
+		}	
+		add_character_modifier = { modifier = favor_of_the_commoners years = 20 }
+	}
+	
+	option = {
+		name = "EVTOPTBtroublesevents.20"
+		tooltip_info = stewardship
+		trigger = {
+			stewardship = 10
+		}	
+		prestige = 25
+		liege = { opinion = { modifier = helped_with_finances who = root years = 10 } }
+	}
+	
+	option = {
+		name = "EVTOPTCtroublesevents.20"
+		random = { chance = 30 add_trait = cruel }		
+	}
+	
+	option = {
+		name = "EVTOPTDtroublesevents.20"
+		random = { chance = 30 add_trait = kind }
+	}
+	
+	option = {
+		name = "EVTOPTEtroublesevents.20"
+		tooltip_info = stewardship
+		trigger = {
+			stewardship = 5
+		}	
+		wealth = 30
+		random = { chance = 30 add_trait = greedy }
+	}
+}

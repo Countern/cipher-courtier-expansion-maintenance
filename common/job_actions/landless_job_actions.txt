@@ -1,0 +1,34 @@
+action_manage_business = {
+	attribute = stewardship
+
+	potential = {
+		FROM = {
+			character_modifier = {
+ 					 modifier = aspiring_business_owner
+}
+		}
+	}
+
+	offmap = yes
+	
+	monthly_character_wealth = 0.2
+
+	
+	events = {  }
+	
+}
+
+
+action_testing = {
+	attribute = stewardship
+
+	potential = { }
+
+	offmap = yes
+	
+	monthly_character_wealth = 0.2
+
+	
+	events = {  }
+	
+}

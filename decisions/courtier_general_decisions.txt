@@ -1,0 +1,106 @@
+targetted_decisions = {
+	send_a_letter = {
+		from_potential = {
+			has_character_modifier = homeless
+			ai = no
+		}
+		potential = {
+			OR = {
+				is_ruler = yes
+				NOT = { dynasty = none }
+			}
+			FROM = { age = 14 }
+		}
+		allow = {
+			liege = { distance = { who = ROOT value < 200 } }
+			FROM = { not = { trait = on_journey } }
+			FROM = { not = { is_incapable = yes } }
+			age = 14
+			FROM = { learning = 4 }
+			FROM = { wealth = 4 }
+			custom_tooltip = {
+				text = hasnt_finished_sending_prev
+				OR = {
+					FROM = { had_character_flag = { flag = Sent_letter days = 64 } }
+					FROM = { NOT = { has_character_flag = Sent_letter } }
+				}
+			}
+			custom_tooltip = {
+				text = hasnt_failed_letter_sending
+				NOT = { ROOT = { has_opinion_modifier = { who = FROM modifier = slightly_annoyed } } }
+				NOT = { ROOT = { has_opinion_modifier = { who = FROM modifier = boring_letter } } }
+			}
+		}
+		effect = {
+			wealth = -4
+			ROOT = {
+				save_event_target_as = letter_person
+			}
+			FROM = {
+				character_event = { id = courtierletter_event.1 }
+			}
+		}
+	}
+	
+	set_out_as_character = {
+		from_potential = {
+			is_landed = yes
+			ai = no
+		}
+		potential = {
+			OR = {
+				is_child_of = FROM
+				sibling = FROM
+				is_close_relative = FROM
+			}
+			is_landed = no
+		}
+		allow = {
+			#FROM = { NOT = { tier = count } }
+			OR = {
+				any_child = {
+					NOT = { is_landed = yes }
+				}
+				num_of_children = 0
+			}
+		}
+		effect = {
+			ROOT = {
+				create_title = {
+					tier = COUNT
+					landless = yes
+					name = "COLLINS_SEAT"
+					holder = ROOT
+					culture = ROOT
+					ruler = "LANDLESS_TITLE"
+					ruler_female = "LANDLESS_TITLE_FEMALE"
+				}
+				any_demesne_title = {
+					if = {
+						limit = { is_landless_type_title = yes }
+						gender_succ = true_cognatic
+						succession = { base_type = feudal_elective voting_rules = courtier_election } 
+						set_title_flag = The_lonely_title
+					}
+				}
+				clear_wealth = yes
+				wealth = 50
+				add_character_modifier = {
+					modifier = homeless
+					duration = -1
+				}
+				any_child = {
+					limit = { 
+						is_landed = no
+					}
+					add_character_modifier = {
+						modifier = homeless
+						duration = -1
+					}	
+				}
+			}
+			set_defacto_liege = FROM
+			FROM = { set_player_character = ROOT }
+		}
+	}
+}

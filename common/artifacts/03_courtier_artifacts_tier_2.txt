@@ -1,0 +1,52 @@
+court_long_sword = {
+	quality = 2
+	flags = { material long_sword }
+	active = {
+		is_adult = yes
+	}
+	picture = "GFX_long_sword"
+	combat_rating = 20
+	light_infantry_offensive = 0.1
+	heavy-_infantry_offensive = 0.2
+	monthly_prestige = 0.1
+	slot = weapon 
+}
+
+court_winged_spear = {
+	quality = 2
+	flags = { material winged_spear }
+	active = {
+		is_adult = yes
+	}
+	picture = "GFX_winged_spear"
+	combat_rating = 15
+	pikemen_defensive_offensive = 0.2
+	ligth_cavalry_defensive = 0.1
+	slot = weapon 
+}
+
+court_long_bow = {
+	quality = 2
+	flags = { material long_bow }
+	active = {
+		is_adult = yes
+	}
+	picture = "GFX_long_bow"
+	combat_rating = 10
+	archers_offensive = 0.1
+	slot = weapon 
+}
+
+court_chain_armor = {
+	quality = 2
+	flags = { material chain_armor }
+	active = {
+		is_adult = yes
+	}
+	picture = "GFX_chain_armor"
+	combat_rating = 10
+	light_infantry_defensive = 0.1
+	heavy_infantry_defensive = 0.1
+	monthly_prestige = 0.15
+	slot = torso
+}

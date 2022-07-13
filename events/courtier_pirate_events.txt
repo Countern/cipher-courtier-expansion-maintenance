@@ -1,0 +1,35 @@
+namespace = piratecourtierev
+
+character_event = {
+	id = piratecourtierev.1
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		trait = pirate_courtier
+		NOT = { culture = pirate }
+		is_adult = yes
+		NOT = { dynasty = none }
+	}
+	option = {
+		name = EVTOPTpiratecourtierev.1
+		remove_trait = pirate_courtier 
+	}	
+}
+
+character_event = {
+	id = piratecourtierev.2
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		NOT = { trait = pirate_courtier }
+		culture = pirate
+		is_adult = yes
+		NOT = { dynasty = none }
+	}
+	option = {
+		name = EVTOPTpiratecourtierev.2
+		add_trait = pirate_courtier 
+	}	
+}

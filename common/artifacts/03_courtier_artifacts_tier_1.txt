@@ -1,0 +1,73 @@
+court_common_sword = {
+	quality = 1
+	flags = { common_sword }
+	active = {
+		is_adult = yes
+	}
+	picture = "GFX_common_sword"
+	combat_rating = 5
+	light_infantry_defensive = 0.05
+	monthly_prestige = 0.01
+	slot = weapon 
+}
+
+court_common_spear = {
+	quality = 1
+	flags = { common_spear }
+	active = {
+		is_adult = yes
+	}
+	picture = "GFX_common_spear"
+	combat_rating = 5
+	pikemen_defensive_offensive = 0.05
+	slot = weapon 
+}
+
+court_common_axe = {
+	quality = 1
+	flags = { common_axe }
+	active = {
+		is_adult = yes
+	}
+	picture = "GFX_common_axe"
+	combat_rating = 5
+	light_infantry_offensive = 0.05
+	slot = weapon 
+}
+
+
+court_common_bow = {
+	quality = 1
+	flags = { common_bow }
+	active = {
+		is_adult = yes
+	}
+	picture = "GFX_common_bow"
+	combat_rating = 3
+	archers_offensive = 0.01
+	slot = weapon 
+}
+
+court_low_quality_gear = {
+	quality = 1
+	flags = {  common_axe }
+	active = {
+		is_adult = yes
+	}
+	picture = "GFX_low_quality_gear"
+	combat_rating = 5
+	monthly_prestige = 0.01
+	slot = torso
+}
+
+court_corroded_chain_armor = {
+	quality = 1
+	flags = {  corroded_chain_armor }
+	active = {
+		is_adult = yes
+	}
+	picture = "GFX_corroded_chain_armor"
+	combat_rating = 6
+	monthly_prestige = 0.01
+	slot = torso
+}

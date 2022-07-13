@@ -1,0 +1,140 @@
+namespace = liege_land_events
+
+#Totally Rejected
+character_event  = {
+	id = liege_land_events.1
+	desc = "EVTDESliege_land_events.1"
+	picture = "GFX_arrival_court"
+	is_triggered_only = yes
+	
+	immediate = {
+		liege = { reverse_remove_favor = ROOT }
+	}
+	
+	option = {
+		name = "EVTOPTAliege_land_events.1"
+		opinion = { modifier = liege_refuse_begging who = ROOT years = 10 } 
+	}
+}
+
+#Totally Rejected
+character_event  = {
+	id = liege_land_events.2
+	desc = "EVTDESliege_land_events.2"
+	picture = "GFX_arrival_court"
+	is_triggered_only = yes
+	
+	immediate = {
+	}
+	
+	option = {
+		name = "EVTOPTAliege_land_events.2"
+	}
+}
+
+#Totally Accepted
+character_event  = {
+	id = liege_land_events.3
+	desc = "EVTDESliege_land_events.3"
+	picture = "GFX_arrival_court"
+	is_triggered_only = yes
+	
+	immediate = {
+		liege = { reverse_remove_favor = ROOT }
+	}
+	
+	option = {
+		name = "EVTOPTAliege_land_events.3"
+		liege = {
+			random_demesne_title  = {
+				limit = { 
+					is_capital = no
+					is_primary_holder_title_tier = no
+					tier = county
+				}
+				grant_title = { target = ROOT type = claim }  	
+			}
+		}
+	}
+}
+
+#Hidden lose job when landed
+character_event = {
+	id = liege_land_events.4
+	desc = "EVTDESliege_land_events.4"
+	is_triggered_only = yes
+	trigger = {
+		is_landed = yes
+		num_of_count_titles = 2
+		OR = {
+			trait = bureaucrat_trait
+			trait = merchant_trait
+			trait = martial_trait
+			trait = scholar_trait
+			trait = spy_trait
+			has_character_modifier = job_gain
+			any_demesne_title = {
+				has_title_flag = The_lonely_title 
+			}
+		}
+	}
+	immediate = {
+	}
+	option = {
+		name = "EVTOPTAliege_land_events.4"
+		remove_trait = bureaucrat_trait
+		remove_trait = merchant_trait
+		remove_trait = martial_trait
+		remove_trait = scholar_trait
+		remove_trait = spy_trait
+		remove_character_modifier = homeless
+		create_character = {
+			random_traits = no
+			name = "Hassan"
+			dynasty = none
+			religion = ROOT
+			culture = ROOT
+			female = no
+			age = 40
+			health = 10000000
+			fertility = 0.8
+					
+			attributes = {
+			martial = 0
+			diplomacy = 0
+			stewardship = 0
+			intrigue = 0
+			learning = 0
+			}
+			add_trait = incapable
+		}
+		random_demesne_title = {
+			limit = { has_title_flag = The_lonely_title }
+			grant_title = new_character
+		}
+		new_character = {
+			set_defacto_liege = THIS
+		}
+		set_character_flag = once_a_courtier
+		remove_character_modifiers = { modifier = job_gain amount = 10000000000 } 
+	}
+}	
+
+
+#Army Disperses on death
+character_event = {
+	id = liege_land_events.5
+	ai = no
+	desc = "EVTDESliege_land_events.5"
+	is_triggered_only = yes
+	trigger = {
+		has_character_flag = once_a_courtier
+		NOT = { has_character_modifier = homeless }
+	}
+	immediate = {
+	}
+	option = {
+		name = "EVTOPTAliege_land_events.5"
+		disband_event_forces = courtier_forces
+	}
+}	

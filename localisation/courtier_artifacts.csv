@@ -1,0 +1,39 @@
+court_iron_ingot;Iron Ingot;;;;;;;;x
+court_iron_ingot_desc;A ingot of iron, a blacksmith might know what to do with this.;;;;;;;;x
+court_crafting_thread;Linen Thread;;;;;;;;x
+court_crafting_thread_desc;A strong thread, very hard to break. Might be usable as a secondary material.;;;;;;;;x
+court_assorted_leather;Assorted Leather;;;;;;;;x
+court_assorted_leather_desc;A assorted leather, gathered from the wild, a leatherworker might know what to do with this.;;;;;;;;x
+court_common_sword;Common Sword;;;;;;;;x
+court_common_sword_desc;A low quality and basic sword, used in battle by swordsmen.;;;;;;;;x
+court_common_spear;Common Spear;;;;;;;;x
+court_common_spear_desc;A low quality and basic spear, used in battle by pikemen.;;;;;;;;x
+court_common_axe;Common Axe;;;;;;;;x
+court_common_axe_desc;A low quality and basic axe, very commonly used by raiders.;;;;;;;;x
+court_common_bow;Common Bow;;;;;;;;x
+court_common_bow_desc;A low quality and basic bow, used in battle by hunters and archers.;;;;;;;;x
+court_low_quality_gear;Low Quality Leather Gear;;;;;;;;x
+court_low_quality_gear_desc;;;;;;;;;x
+;;;;;;;;;x
+court_gold;Gold Ingot;;;;;;;;x
+court_gold_desc;Everyone, from the far reaches of asia to the corners of europe, has a fascinaton for gold. As a bartering item, has a ceremonial material, countless civilizations have been built around the concept of gold. And now you hold a piece.;;;;;;;;x
+court_spices;Spices;;;;;;;;x
+court_spices_desc;Spices, a exotic material know as more valuable then gold itself. Mainly brought to the europe from the lands of India and china, they sell well as they spice anything kind of bland food cooked up.;;;;;;;;x
+court_silk_thread;Silk Thread;;;;;;;;x
+court_silk_thread_desc;Silk Thread, a material so valuable its known as the patron name of a route spanning kilometers from china all the way to europe. One of the most valuable materials ever made, its used to create beautiful gowns, dresses and others.;;;;;;;;x
+court_jade;Jade Rock;;;;;;;;x
+court_jade_desc;Such a small material cannot be unvalued when taken into account its usage in chinese ceremonies and other prestigious activities.;;;;;;;;x
+;;;;;;;;;
+court_corroded_chain_armor;Weak Chain Mail;;;;;;;;
+court_corroded_chain_armor_desc;;;;;;;;;
+court_long_sword;Long Sword;;;;;;;;
+court_long_sword_desc;;;;;;;;;
+GFX_winged_spear;Winged Spear;;;;;;;;
+GFX_winged_spear_desc;;;;;;;;;
+GFX_long_bow;Long Bow;;;;;;;;
+GFX_long_bow_desc;;;;;;;;;
+GFX_chain_armor;Refined Chain Armor;;;;;;;;
+GFX_chain_armor_desc;;;;;;;;;
+;;;;;;;;;
+court_bundle_wood;Bundle of Wood;;;;;;;;
+court_bundle_wood_desc;This is a high ammount of quality wood, can be used to fabricate weaponry and others!;;;;;;;;

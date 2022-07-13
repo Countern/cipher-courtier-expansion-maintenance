@@ -1,0 +1,73 @@
+# On_journey
+on_journey = {
+	
+	potential = {
+		always = no
+	}
+	random = no
+	pilgrimage = yes 
+}
+
+bureaucrat_trait = {
+	potential = {
+		always = no
+	}
+	random = no
+	general_opinion = 5
+}
+
+martial_trait = {
+	potential = {
+		always = no
+	}
+	random = no
+	combat_rating = 10
+}
+
+merchant_trait = {
+	potential = {
+		always = no
+	}
+	monthly_character_wealth = 0.1
+	random = no
+}
+
+spy_trait = {
+	potential = {
+		always = no
+	}
+	random = no
+	plot_power_modifier = 0.05
+}
+
+scholar_trait = {
+	potential = {
+		always = no
+	}
+	random = no
+	monthly_character_piety = 0.05
+	health = 0.5
+}
+
+experienced_merchant = {
+	potential = {
+		always = no
+	}
+	lifestyle = yes
+	random = no
+	stewardship = 2
+	learning = 1
+}
+
+pirate_courtier = {
+	lifestyle = yes
+	random = no
+	vice = yes
+	diplomacy = -2
+	martial = 2
+	intrigue = 2
+	general_opinion = -40
+	vassal_opinion = 40
+	prevent_decadence = yes 
+ 	inherit_chance = 100
+}

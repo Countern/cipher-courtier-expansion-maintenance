@@ -1,0 +1,119 @@
+liege_deligthed = {
+	opinion = 15
+}
+
+liege_annoyed = {
+	opinion = -5
+}
+
+bored = {
+	opinion = -5
+}
+
+swayed = {
+	opinion = 10
+}
+
+saved_life_thankful = {
+	opinion = 60
+}
+
+extremely_grateful = {
+	opinion = 30
+}
+
+liege_refuse_begging = {
+	opinion = -20
+}
+
+beautiful_poem = {
+	opinion = 30
+    decay = yes
+}
+
+ok_poem = {
+	opinion = 15
+	decay = yes
+}
+
+nice_letter = {
+	opinion = 10
+    decay = yes
+}
+
+boring_letter = {
+	opinion = -5
+}
+
+zelous_letter = {
+	opinion = 10
+    decay = yes
+}
+
+heretical_letter = {
+	opinion = -40
+}
+
+religious_disagreements = {
+	opinion = -15
+}
+
+incredible_letter = {
+	opinion = 20  
+	decay = yes
+}
+
+sent_diplo_letter = {
+	opinion = 5
+}
+
+sent_deg_letter = {
+	opinion = -5
+}
+
+family_offended = {
+	opinion = -25
+	prison_reason = yes
+}
+
+family_offended_rebound = {
+	opinion = -10
+}
+
+lands_offended = {
+	opinion = -15
+	prison_reason = yes
+}
+
+lands_offended_rebound = {
+	opinion = -5
+}
+
+publicly_offended = {
+	opinion = -15
+}
+
+publicly_offended_rebound = {
+	opinion = 10
+}
+
+degraded_offended = {
+	opinion = -10
+}
+
+slightly_annoyed = {
+	opinion = -2
+}
+
+helped_with_finances = {
+	opinion = 20
+}
+
+betrayed_me = {
+	opinion = -100
+	disable_non_aggression_pacts = yes
+	execute_reason = yes
+	prison_reason = yes
+	crime = yes
+	decay = yes
+}

@@ -1,0 +1,79 @@
+on_yearly_pulse = {
+	events = {
+		liege_land_events.4
+		homeless_event.2
+		homeless_event.8
+		homeless_event.3
+		lalad_events.1045
+		piratecourtierev.1
+		piratecourtierev.2
+	}
+	random_events = {
+		del = {
+			delay = 1
+			1 = homeless_event.4
+		}
+		random_trader_events = {
+			50 = trader_events.2
+			70 = trader_events.3
+			20 = trader_events.4
+		}
+	}
+}
+
+on_bi_yearly_pulse = {
+	events = {
+		court_prom.2
+		trader_events.7
+	}
+	random_events = {
+		random_troubles_events = {
+			delay = 10
+			5 = troublesevents.1001
+			90 = 0
+		}
+	}
+}
+
+on_five_year_pulse = {
+	events = {
+		trader_events.1
+		trader_events.6
+	}
+}
+
+on_marriage = {
+	events = {
+		homeless_event.16
+	}
+}
+
+on_major_battle_won = {
+	events = {
+		courtierwar_events.2
+	}
+}
+
+on_adulthood = {
+	events = {
+		courtierwar_events.4
+	}
+}
+
+on_battle_won_owner = {
+	events = {
+		courtierwar_events.3
+	}
+}
+
+on_death = {
+	events = {
+		liege_land_events.5
+	}
+}
+
+#on_war_ended_victory = {
+#	events = {
+#		courtierwar_events.2
+#	}
+#}

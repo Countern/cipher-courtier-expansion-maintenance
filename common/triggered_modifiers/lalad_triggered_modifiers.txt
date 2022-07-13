@@ -1,0 +1,36 @@
+negative_money = {
+	potential = {
+		ai = no
+		is_landed = no
+	}
+	
+	trigger = {
+		wealth = 0
+	}
+	
+	icon = 24
+	
+	prestige = -1
+	
+	active = no
+}
+
+unlawful_holder = {
+	potential = {
+		ai = no
+	}
+	trigger = {
+		is_landed = yes
+		has_character_flag = { unlawfull_territory_holder }
+		NOT = { had_character_flag = { flag = unlawfull_territory_holder days = 7300 } }
+		NOT = { realm_size = 5 }
+		NOT = { higher_tier_than = count }
+	}
+	
+	icon = 25
+	
+	diplomacy = -3
+	general_opinion = -15
+	monthly_character_prestige = 0.05
+	monthly_character_piety = 0.05
+}

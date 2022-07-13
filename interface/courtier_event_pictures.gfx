@@ -1,0 +1,76 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_visiting_capital"
+		texturefile = "gfx\\event_pictures\visitingcapital.tga"
+		allwaystransparent = yes
+	}	
+	spriteType = {
+		name = "GFX_find_army"
+		texturefile = "gfx\\event_pictures\recruitarmies.tga"
+		allwaystransparent = yes
+	}	
+	spriteType = {
+		name = "GFX_bandits_picture"
+		texturefile = "gfx\\event_pictures\bandits_picture.tga"
+		allwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_retinues_pictures"
+		texturefile = "gfx\\event_pictures\retinues_pictures.tga"
+		allwaystransparent = yes
+	}		spriteType = {
+		
+	name = "GFX_evt_gift"
+		texturefile = "gfx\\event_pictures\money_paid.tga"
+		allwaystransparent = yes
+	}	
+	
+	spriteType = {
+		name = "GFX_forest_hunting_events"
+		texturefile = "gfx\\event_pictures\forest_hunting_events.tga"
+		allwaystransparent = yes
+	}	
+	
+	spriteType = {
+		name = "GFX_traveling_picture"
+		texturefile = "gfx\\event_pictures\traveling_picture.tga"
+		allwaystransparent = yes
+	}	
+	spriteType = {
+		name = "GFX_arrival_court"
+		texturefile = "gfx\\event_pictures\arrival_court.tga"
+		allwaystransparent = yes
+	}	
+	spriteType = {
+		name = "GFX_countrySide"
+		texturefile = "gfx\\event_pictures\countrySide.tga"
+		allwaystransparent = yes
+	}	
+	spriteType = {
+		name = "GFX_diseased_province"
+		texturefile = "gfx\\event_pictures\diseased_province.tga"
+		allwaystransparent = yes
+	}	
+	spriteType = {
+		name = "GFX_countrySide-succ"
+		texturefile = "gfx\\event_pictures\countrySide-succ.tga"
+		allwaystransparent = yes
+	}	
+	spriteType = {
+		name = "GFX_blackmith_picture"
+		texturefile = "gfx\\event_pictures\blackmith_picture.tga"
+		allwaystransparent = yes
+	}	
+	spriteType = {
+		name = "GFX_quarry_picture"
+		texturefile = "gfx\\event_pictures\quarry_picture.tga"
+		allwaystransparent = yes
+	}	
+	
+	spriteType = {
+		name = "GFX_evt_india_traders"
+		texturefile = "gfx\\event_pictures\india_traders.tga"
+		allwaystransparent = yes
+	}
+	
+}

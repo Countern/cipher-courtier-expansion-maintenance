@@ -1,0 +1,1002 @@
+namespace = courtierletter_event
+
+#Decision to choose letter event
+character_event = {
+	id = courtierletter_event.1
+	desc = "EVTDESCcourtierletter.1"
+	picture = "GFX_evt_gift"
+	portrait = event_target:letter_person
+	is_triggered_only = yes
+	
+	immediate = {
+		clr_character_flag = Sent_letter
+		set_character_flag = Sent_letter
+	}
+	
+	option = {
+		name = "EVTOPTAcourtierletter.1"
+		character_event = { id = courtierletter_event.2 }
+	}
+	option = {
+		name = "EVTOPTBcourtierletter.1"
+		character_event = { id = courtierletter_event.3 }
+	}
+	option = {
+		name = "EVTOPTCcourtierletter.1"
+		character_event = { id = courtierletter_event.4 }
+	}
+	option = {
+		name = "EVTOPTDcourtierletter.1"
+		clr_character_flag = Sent_letter
+		wealth = 4
+	}
+}
+
+#####################GOOD##########################
+
+#Good letter options
+character_event = {
+	id = courtierletter_event.2
+	desc = "EVTDESCcourtierletter.2"
+	picture = "GFX_evt_gift"
+	portrait = event_target:letter_person
+	is_triggered_only = yes
+	
+	#POET DONE
+	option = {
+		trigger = {
+			trait = poet
+		}
+		tooltip_info = poet
+		name = "EVTOPTAcourtierletter.2"
+		random_list = {
+			90 = {
+				modifier = {
+					factor = 1.5 diplomacy = 10
+				}
+				modifier = {
+					factor = 1.5 diplomacy = 15
+				}
+				modifier = {
+					factor = 0.1 NOT = { diplomacy = 5 }
+				}
+				modifier = {
+					factor = 1.6 diplomacy = 20
+				}
+				modifier = {
+					factor = 2 diplomacy = 25
+				}
+				modifier = {
+					factor = 0.5 NOT = { event_target:letter_person = { opinion = { who = ROOT value = 0 } } }
+				}
+				modifier = {
+					factor = 0.2 event_target:letter_person = { is_rival = Root }
+				}
+				modifier = {
+					factor = 0.1 event_target:letter_person = { has_opinion_modifier = { who = ROOT  modifier = sent_diplo_letter } }
+				}
+				modifier = {
+					factor = 0.4 event_target:letter_person = { has_opinion_modifier = { who = ROOT  modifier = beautiful_poem } }
+				}
+				modifier = {
+					factor = 0.9 trait = naive_appeaser
+				}
+				modifier = {
+					factor = 1.2 trait = underhanded_rogue
+				}
+				modifier = {
+					factor = 1.4 trait = charismatic_negotiator
+				}
+				modifier = {
+					factor = 1.6 trait = grey_eminence
+				}
+				modifier = {
+					factor = 2 trait = socializer
+				}
+				modifier = {
+					factor = 2 is_friend = yes
+				}
+				modifier = {
+					factor = 0.5 religion_group = pagan
+				}
+				character_event = { id = courtierletter_event.5 tooltip = LETTERWORKING months = 2 }
+			}
+			10 = {
+				character_event = { id = courtierletter_event.11 tooltip = LETTERFAIL months = 2 }
+			}
+		}
+		if = {
+			limit = { NOT = { event_target:letter_person = { has_opinion_modifier = { who = ROOT modifier = sent_diplo_letter } } } }
+			event_target:letter_person = { opinion = { modifier = sent_diplo_letter who = ROOT years = 1 } }
+		}
+
+	}
+
+	#ATTEMPT POET DONE
+	option = { 
+		trigger = {
+			NOT = { trait = poet } 
+		}
+		name = "EVTOPTBcourtierletter.2"
+		random_list = {
+			50 = {
+				modifier = {
+					factor = 0.1 NOT = { diplomacy = 5 }
+				}
+				modifier = {
+					factor = 1.5 diplomacy = 10
+				}
+				modifier = {
+					factor = 1.5 diplomacy = 15
+				}
+				modifier = {
+					factor = 1.6 diplomacy = 20
+				}
+				modifier = {
+					factor = 2 diplomacy = 25
+				}
+				modifier = {
+					factor = 0.6 NOT = { event_target:letter_person = { opinion = { who = ROOT value = 0 } } }
+				}
+				modifier = {
+					factor = 0.5 event_target:letter_person = { is_rival = Root }
+				}
+				modifier = {
+					factor = 0.1 event_target:letter_person = { has_opinion_modifier = { who = ROOT  modifier = sent_diplo_letter } }
+				}
+				modifier = {
+					factor = 0.5 event_target:letter_person = { has_opinion_modifier = { who = ROOT  modifier = ok_poem } }
+				}
+				modifier = {
+					factor = 0.9 trait = naive_appeaser
+				}
+				modifier = {
+					factor = 1.2 trait = underhanded_rogue
+				}
+				modifier = {
+					factor = 1.4 trait = charismatic_negotiator
+				}
+				modifier = {
+					factor = 1.6 trait = grey_eminence
+				}
+				modifier = {
+					factor = 1.5 trait = socializer
+				}
+				modifier = {
+					factor = 2 is_friend = yes
+				}
+				modifier = {
+					factor = 0.5 religion_group = pagan
+				}
+				character_event = { id = courtierletter_event.6 tooltip = LETTERWORKING months = 2 } 
+			}
+			40 = {
+				character_event = { id = courtierletter_event.11 tooltip = LETTERFAIL months = 2 }
+			}
+		}
+		if = {
+			limit = { NOT = { event_target:letter_person = { has_opinion_modifier = { who = ROOT modifier = sent_diplo_letter } } } }
+			event_target:letter_person = { opinion = { modifier = sent_diplo_letter who = ROOT years = 1 } }
+		}
+	}
+	
+	#diplomacy maxed letter Done
+	option = { 
+		trigger = { diplomacy = 20 NOT = { event_target:letter_person = { has_opinion_modifier = { who = ROOT  modifier = sent_diplo_letter } } } }
+		tooltip_info = diplomacy
+		name = "EVTOPTCcourtierletter.2"
+		character_event = { id = courtierletter_event.7 tooltip = LETTERWORKING months = 2 }
+	}
+		
+	#Send a letter to a person of same religion
+	option = {
+		trigger = {
+			event_target:letter_person = { religion = ROOT }
+		}
+		tooltip_info = religion
+		name = "EVTOPTDcourtierletter.2"
+		random_list = {
+			60 = {
+				modifier = {
+					factor = 0.1 NOT = { diplomacy = 5 }
+				}
+				modifier = {
+					factor = 1.2 event_target:letter_person = { piety = 500 }
+				}
+				modifier = {
+					factor = 1.2 event_target:letter_person = { piety = 1000 }
+				}
+				modifier = {
+					factor = 1.2 event_target:letter_person = { piety = 1500 }
+				}
+				modifier = {
+					factor = 3 event_target:letter_person = { trait = zealous }
+				}
+				modifier = {
+					factor = 0.5 event_target:letter_person = { trait = cynical }
+				}
+				modifier = {
+					factor = 1.2 diplomacy = 10
+				}
+				modifier = {
+					factor = 1.2 diplomacy = 15
+				}
+				modifier = {
+					factor = 1.2 diplomacy = 20
+				}
+				modifier = {
+					factor = 2 diplomacy = 25
+				}
+				modifier = {
+					factor = 0.5 NOT = { event_target:letter_person = { opinion = { who = ROOT value = 0 } } }
+				}
+				modifier = {
+					factor = 0.2 NOT = { event_target:letter_person = { is_rival = Root } }
+				}
+				modifier = {
+					factor = 0.05 event_target:letter_person = { has_opinion_modifier = { who = ROOT  modifier = sent_diplo_letter } }
+				}
+				modifier = {
+					factor = 0.9 trait = naive_appeaser
+				}
+				modifier = {
+					factor = 1.2 trait = underhanded_rogue
+				}
+				modifier = {
+					factor = 1.4 trait = charismatic_negotiator
+				}
+				modifier = {
+					factor = 1.6 trait = grey_eminence
+				}
+				modifier = {
+					factor = 1.5 trait = socializer
+				}
+				modifier = {
+					factor = 2 is_friend = yes
+				}
+				character_event = { id = courtierletter_event.8 tooltip = LETTERWORKING months = 2 }
+			}
+			30 = {
+				character_event = { id = courtierletter_event.11 tooltip = LETTERFAIL months = 2 }			
+			}
+		}
+		if = {
+			limit = { NOT = { event_target:letter_person = { has_opinion_modifier = { who = ROOT modifier = sent_diplo_letter } } } }
+			event_target:letter_person = { opinion = { modifier = sent_diplo_letter who = ROOT years = 1 } }
+		}
+	}
+	
+	option = { #NOT
+		trigger = {
+			NOT = { event_target:letter_person = { religion = ROOT } }
+		}
+		tooltip_info = religion
+		name = "EVTOPTEcourtierletter.2"
+		random_list = {
+			60 = {
+				modifier = {
+					factor = 0.1 NOT = { diplomacy = 5 }
+				}
+				modifier = {
+					factor = 0.8 event_target:letter_person = { piety = 500 }
+				}
+				modifier = {
+					factor = 0.9 event_target:letter_person = { piety = 1000 }
+				}
+				modifier = {
+					factor = 0.9 event_target:letter_person = { piety = 1500 }
+				}
+				modifier = {
+					factor = 0 event_target:letter_person = { trait = zealous }
+				}
+				modifier = {
+					factor = 1.1 event_target:letter_person = { trait = cynical }
+				}
+				modifier = {
+					factor = 1.8 diplomacy = 10
+				}
+				modifier = {
+					factor = 1.8 diplomacy = 15
+				}
+				modifier = {
+					factor = 1.2 diplomacy = 20
+				}
+				modifier = {
+					factor = 2 diplomacy = 25
+				}
+				modifier = {
+					factor = 0.5 NOT = { event_target:letter_person = { opinion = { who = ROOT value = 0 } } }
+				}
+				modifier = {
+					factor = 0.2 event_target:letter_person = { is_rival = Root }
+				}
+				modifier = {
+					factor = 0.1 event_target:letter_person = { has_opinion_modifier = { who = ROOT  modifier = sent_diplo_letter } }
+				}
+				modifier = {
+					factor = 0.8 event_target:letter_person = { has_opinion_modifier = { who = ROOT  modifier = zelous_letter } }
+				}
+				modifier = {
+					factor = 0.9 trait = naive_appeaser
+				}
+				modifier = {
+					factor = 1.2 trait = underhanded_rogue
+				}
+				modifier = {
+					factor = 1.4 trait = charismatic_negotiator
+				}
+				modifier = {
+					factor = 1.6 trait = grey_eminence
+				}
+				modifier = {
+					factor = 1.5 trait = socializer
+				}
+				modifier = {
+					factor = 2 is_friend = yes
+				}
+				character_event = { id = courtierletter_event.9 tooltip = LETTERWORKING months = 2 }
+			}
+			30 = {
+				character_event = { id = courtierletter_event.12 tooltip = LETTERFAIL months = 2 }			
+			}
+		}
+		if = {
+			limit = { NOT = { event_target:letter_person = { has_opinion_modifier = { who = ROOT modifier = sent_diplo_letter } } } }
+			event_target:letter_person = { opinion = { modifier = sent_diplo_letter who = ROOT years = 1 } }
+		}
+	}
+
+	option = { #NOT
+		name = "EVTOPTFcourtierletter.2"
+		random_list = {
+			70 = {
+				modifier = {
+					factor = 0.1 NOT = { diplomacy = 5 }
+				}
+				modifier = {
+					factor = 1.2 diplomacy = 10
+				}
+				modifier = {
+					factor = 1.2 diplomacy = 15
+				}
+				modifier = {
+					factor = 1.2 diplomacy = 20
+				}
+				modifier = {
+					factor = 2 diplomacy = 25
+				}
+				modifier = { 
+					factor = 0.2
+					event_target:letter_person = { has_opinion_modifier = { who = ROOT modifier = sent_diplo_letter } }
+				}
+				modifier = {
+					factor = 0.8 event_target:letter_person = { has_opinion_modifier = { who = ROOT  modifier = nice_letter } }
+				}
+				modifier = {
+					factor = 0.8 event_target:letter_person = { opinion = { who = ROOT value = 40 } }
+				}
+				modifier = {
+					factor = 0.6 event_target:letter_person = { opinion = { who = ROOT value = 60 } }
+				}
+				modifier = {
+					factor = 0.5 event_target:letter_person = { opinion = { who = ROOT value = 70 } }
+				}
+				character_event = { id = courtierletter_event.10 tooltip = LETTERWORKING months = 2 }
+			}
+			30 = {
+				character_event = { id = courtierletter_event.13 tooltip = LETTERFAIL months = 2 }	
+			}
+		}
+		if = {
+			limit = { NOT = { event_target:letter_person = { has_opinion_modifier = { who = ROOT modifier = sent_diplo_letter } } } }
+			event_target:letter_person = { opinion = { modifier = sent_diplo_letter who = ROOT years = 1 } }
+		}
+	}
+}
+
+##################GOOD GOOD OPTIONS####################################
+
+#Hella GOOD POEM
+letter_event = {
+	id = courtierletter_event.5
+	desc = "EVTDESCcourtierletter.5"
+	portrait = event_target:letter_person
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTAcourtierletter.5"
+		event_target:letter_person = { opinion = { modifier = beautiful_poem who = ROOT years = 10 } }
+	}
+}
+
+#Great Poem
+letter_event = {
+	id = courtierletter_event.6
+	desc = "EVTDESCcourtierletter.6"
+	portrait = event_target:letter_person
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTAcourtierletter.6"
+		event_target:letter_person = { opinion = { modifier = ok_poem who = ROOT years = 7 } }
+		random = { chance = 30 add_trait = poet }
+	}
+}
+
+#Always suceed diplo letter
+letter_event = {
+	id = courtierletter_event.7
+	desc = "EVTDESCcourtierletter.7"
+	portrait = event_target:letter_person
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTAcourtierletter.7"
+		event_target:letter_person = { opinion = { modifier = incredible_letter who = ROOT years = 15 } }
+	}
+}
+
+#Improve threw same faith
+letter_event = {
+	id = courtierletter_event.8
+	desc = "EVTDESCcourtierletter.8"
+	portrait = event_target:letter_person
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTAcourtierletter.8"
+		if = {
+			limit = { trait = cynical }
+			remove_trait = cynical
+		}
+		event_target:letter_person = {
+			random = { chance = 20 add_trait = zelous }
+			opinion = { modifier = zelous_letter who = ROOT years = 6 } 
+		}
+	}
+}
+
+#Improve diferent religion
+letter_event = {
+	id = courtierletter_event.9
+	desc = "EVTDESCcourtierletter.9"
+	portrait = event_target:letter_person
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTAcourtierletter.9"
+		event_target:letter_person = { 
+			random = { chance = 10 set_secret_religion = ROOT }
+			opinion = { modifier = zelous_letter who = ROOT years = 6 } 
+		}
+	}
+}
+
+#Improve diferent religion
+letter_event = {
+	id = courtierletter_event.10
+	desc = "EVTDESCcourtierletter.10"
+	portrait = event_target:letter_person
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTAcourtierletter.10"
+		event_target:letter_person = { 
+			opinion = { modifier = nice_letter who = ROOT years = 4 } 
+		}
+	}
+	
+	option = {
+		trigger = {
+			event_target:letter_person = { opinion = { who = ROOT value = 60 } }
+		}
+		tooltip_info = opinion
+		name = "EVTOPTBcourtierletter.10"
+		event_target:letter_person = { 
+			add_friend = ROOT
+			opinion = { modifier = nice_letter who = ROOT years = 4 } 
+		}
+	}
+}
+
+#didnt bother to read
+letter_event = {
+	id = courtierletter_event.11
+	desc = "EVTDESCcourtierletter.13"
+	portrait = event_target:letter_person
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTAcourtierletter.13"
+		event_target:letter_person = { 
+			opinion = { modifier = boring_letter who = ROOT months = 6 } 
+		}
+	}
+}
+
+#Horrified!!!
+letter_event = {
+	id = courtierletter_event.12
+	desc = "EVTDESCcourtierletter.12"
+	portrait = event_target:letter_person
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTAcourtierletter.12"
+		event_target:letter_person = { 
+			opinion = { modifier = heretical_letter who = ROOT years = 2 } 
+		}
+	}
+}
+
+#didnt bother to read
+letter_event = {
+	id = courtierletter_event.13
+	desc = "EVTDESCcourtierletter.13"
+	portrait = event_target:letter_person
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTAcourtierletter.13"
+		event_target:letter_person = { 
+			opinion = { modifier = boring_letter who = ROOT months = 6 } 
+		}
+	}
+}
+
+##################################################################################
+
+###########################Degrading Letters!!!###################################
+
+
+#Degrading Letter options
+character_event = {
+	id = courtierletter_event.3
+	desc = "EVTDESCcourtierletter.3"
+	picture = "GFX_evt_gift"
+	portrait = event_target:letter_person
+	is_triggered_only = yes
+	
+	#Insult Dynasty
+	option = {
+		trigger = {
+			NOT = { event_target:letter_person = { dynasty = ROOT } }
+		}
+		name = "EVTOPTAcourtierletter.3"
+		random_list = {
+			50 = {
+				modifier = {
+					factor = 1.2 diplomacy = 10
+				}
+				modifier = {
+					factor = 1.2 diplomacy = 15
+				}
+				modifier = {
+					factor = 1.2 diplomacy = 20
+				}
+				modifier = {
+					factor = 2 diplomacy = 25
+				}
+				modifier = {
+					factor = 1.5 event_target:letter_person = { prestige = 500 }
+				}
+				modifier = {
+					factor = 2 event_target:letter_person = { higher_tier_than = DUKE }
+				}
+				modifier = {
+					factor = 2 event_target:letter_person = { higher_tier_than = KING }
+				}
+				modifier = {
+					factor = 1.2 event_target:letter_person = { prestige = 1000 }
+				}
+				modifier = {
+					factor = 0.6 event_target:letter_person = { prestige = 1500 }
+				}
+				modifier = {
+					factor = 0.2 event_target:letter_person = { trait = kind }
+				}
+				modifier = {
+					factor = 1.2 event_target:letter_person = { num_of_children = 1 }
+				}
+				modifier = {
+					factor = 0.2 NOT = { event_target:letter_person = { has_opinion_modifier = { who = ROOT  modifier = sent_deg_letter } } }
+				}
+				modifier = {
+					factor = 0.9 trait = naive_appeaser
+				}
+				modifier = {
+					factor = 1.2 trait = underhanded_rogue
+				}
+				modifier = {
+					factor = 1.4 trait = charismatic_negotiator
+				}
+				modifier = {
+					factor = 1.6 trait = grey_eminence
+				}
+				modifier = {
+					factor = 1.5 trait = cruel
+				}
+				modifier = {
+					factor = 1.5 event_target:letter_person = { has_focus = focus_family  }
+				}
+				modifier = {
+					factor = 2 is_friend = yes
+				}
+				modifier = {
+					factor = 1.5 religion_group = pagan
+				}
+				character_event = { id = courtierletter_event.14 tooltip = LETTEREXTINS months = 2 }
+			}
+			50 = {
+				character_event = { id = courtierletter_event.18 tooltip = LETTERFAIL months = 2 }
+			}
+		}
+		if = {
+			limit = { NOT = { event_target:letter_person = { has_opinion_modifier = { who = ROOT modifier = sent_deg_letter } } } }
+			event_target:letter_person = { opinion = { modifier = sent_deg_letter who = ROOT years = 1 } }
+		}
+	}
+
+	#Insult Lands
+	option = { 
+		trigger = {
+			event_target:letter_person = { is_landed = yes }
+		}
+		name = "EVTOPTBcourtierletter.3"
+		random_list = {
+			50 = {
+				modifier = {
+					factor = 1.2 diplomacy = 10
+				}
+				modifier = {
+					factor = 1.2 diplomacy = 15
+				}
+				modifier = {
+					factor = 1.2 diplomacy = 20
+				}
+				modifier = {
+					factor = 2 diplomacy = 25
+				}
+				modifier = {
+					factor = 1.5 event_target:letter_person = { prestige = 500 }
+				}
+				modifier = {
+					factor = 0.5 event_target:letter_person = { higher_tier_than = DUKE }
+				}
+				modifier = {
+					factor = 0.4 event_target:letter_person = { higher_tier_than = KING }
+				}
+				modifier = {
+					factor = 1.2 event_target:letter_person = { prestige = 1000 }
+				}
+				modifier = {
+					factor = 0.6 event_target:letter_person = { prestige = 1500 }
+				}
+				modifier = {
+					factor = 0.2 event_target:letter_person = { trait = kind }
+				}
+				modifier = {
+					factor = 1.5 event_target:letter_person = { NOT = { num_of_titles = 3 } }
+				}
+				modifier = {
+					factor = 0.2 NOT = { event_target:letter_person = { has_opinion_modifier = { who = ROOT  modifier = sent_deg_letter } } }
+				}
+				modifier = {
+					factor = 0.9 trait = naive_appeaser
+				}
+				modifier = {
+					factor = 1.2 trait = underhanded_rogue
+				}
+				modifier = {
+					factor = 1.4 trait = charismatic_negotiator
+				}
+				modifier = {
+					factor = 1.6 trait = grey_eminence
+				}
+				modifier = {
+					factor = 1.5 trait = cruel
+				}
+				modifier = {
+					factor = 1.5 event_target:letter_person = { has_focus = focus_family  }
+				}
+				modifier = {
+					factor = 2 is_friend = yes
+				}
+				modifier = {
+					factor = 1.5 religion_group = pagan
+				}
+				character_event = { id = courtierletter_event.15 tooltip = LETTERWORKING months = 2 } 
+			}
+			50 = {
+				character_event = { id = courtierletter_event.19 tooltip = LETTERFAIL months = 2 }
+			}
+		}
+		if = {
+			limit = { NOT = { event_target:letter_person = { has_opinion_modifier = { who = ROOT modifier = sent_deg_letter } } } }
+			event_target:letter_person = { opinion = { modifier = sent_deg_letter who = ROOT years = 1 } }
+		}
+	}
+	
+	#Publicly Humiliate
+	option = {
+		name = "EVTOPTCcourtierletter.3"
+		random_list = {
+			60 = {
+				modifier = {
+					factor = 1.2 diplomacy = 10
+				}
+				modifier = {
+					factor = 1.2 diplomacy = 15
+				}
+				modifier = {
+					factor = 1.2 diplomacy = 20
+				}
+				modifier = {
+					factor = 2 diplomacy = 25
+				}
+				modifier = {
+					factor = 1.5 event_target:letter_person = { prestige = 500 }
+				}
+				modifier = {
+					factor = 2 event_target:letter_person = { higher_tier_than = DUKE }
+				}
+				modifier = {
+					factor = 2 event_target:letter_person = { higher_tier_than = KING }
+				}
+				modifier = {
+					factor = 1.2 event_target:letter_person = { prestige = 1000 }
+				}
+				modifier = {
+					factor = 0.6 event_target:letter_person = { prestige = 1500 }
+				}
+				modifier = {
+					factor = 0.2 event_target:letter_person = { trait = kind }
+				}
+				modifier = {
+					factor = 1.2 event_target:letter_person = { num_of_children = 1 }
+				}
+				modifier = {
+					factor = 0.2 NOT = { event_target:letter_person = { has_opinion_modifier = { who = ROOT  modifier = sent_deg_letter } } }
+				}
+				modifier = {
+					factor = 0.9 trait = naive_appeaser
+				}
+				modifier = {
+					factor = 1.2 trait = underhanded_rogue
+				}
+				modifier = {
+					factor = 1.4 trait = charismatic_negotiator
+				}
+				modifier = {
+					factor = 1.6 trait = grey_eminence
+				}
+				modifier = {
+					factor = 1.5 trait = cruel
+				}
+				modifier = {
+					factor = 1.5 event_target:letter_person = { has_focus = focus_family  }
+				}
+				modifier = {
+					factor = 2 is_friend = yes
+				}
+				modifier = {
+					factor = 1.5 religion_group = pagan
+				}
+				character_event = { id = courtierletter_event.16 tooltip = LETTERWORKING months = 2 }
+			}
+			30 = {
+				character_event = { id = courtierletter_event.19 tooltip = LETTERFAIL months = 2 }			
+			}
+		}
+		if = {
+			limit = { NOT = { event_target:letter_person = { has_opinion_modifier = { who = ROOT modifier = sent_deg_letter } } } }
+			event_target:letter_person = { opinion = { modifier = sent_deg_letter who = ROOT years = 1 } }
+		}
+	}
+		
+	#Threaten Blackmail
+	option = {
+		trigger = {
+			OR = {
+				event_target:letter_person = { NOT = { higher_tier_than = ROOT } }
+				event_target:letter_person = { NOT = { max_realm_levy_diff = { who = ROOT value = -2000 } }	}
+			}
+		}
+		name = "EVTOPTDcourtierletter.3"
+		random_list = {
+			60 = {
+				modifier = {
+					factor = 1.2 diplomacy = 10
+				}
+				modifier = {
+					factor = 1.2 diplomacy = 15
+				}
+				modifier = {
+					factor = 1.2 diplomacy = 20
+				}
+				modifier = {
+					factor = 2 diplomacy = 25
+				}
+				modifier = {
+					factor = 1.5 event_target:letter_person = { prestige = 500 }
+				}
+				modifier = {
+					factor = 0.5 event_target:letter_person = { higher_tier_than = DUKE }
+				}
+				modifier = {
+					factor = 2 event_target:letter_person = { tier = craven }
+				}
+				modifier = {
+					factor = 0.5 event_target:letter_person = { tier = brave }
+				}
+				modifier = {
+					factor = 0.4 event_target:letter_person = { tier = ambitious }
+				}
+				modifier = {
+					factor = 0.4 event_target:letter_person = { higher_tier_than = KING }
+				}
+				modifier = {
+					factor = 1.2 event_target:letter_person = { prestige = 1000 }
+				}
+				modifier = {
+					factor = 0.6 event_target:letter_person = { prestige = 1500 }
+				}
+				modifier = {
+					factor = 0.2 event_target:letter_person = { trait = kind }
+				}
+				modifier = {
+					factor = 1.2 event_target:letter_person = { num_of_children = 1 }
+				}
+				modifier = {
+					factor = 0.6 NOT = { event_target:letter_person = { has_opinion_modifier = { who = ROOT  modifier = sent_deg_letter } } }
+				}
+				modifier = {
+					factor = 0 NOT = { event_target:letter_person = { has_opinion_modifier = { who = ROOT modifier = degraded_offended } } }
+				}
+				modifier = {
+					factor = 0.9 trait = naive_appeaser
+				}
+				modifier = {
+					factor = 1.2 trait = underhanded_rogue
+				}
+				modifier = {
+					factor = 1.4 trait = charismatic_negotiator
+				}
+				modifier = {
+					factor = 1.6 trait = grey_eminence
+				}
+				modifier = {
+					factor = 1.5 trait = cruel
+				}
+				modifier = {
+					factor = 1.5 event_target:letter_person = { has_focus = focus_family  }
+				}
+				modifier = {
+					factor = 2 is_friend = yes
+				}
+				modifier = {
+					factor = 1.5 religion_group = pagan
+				}
+				character_event = { id = courtierletter_event.17 tooltip = LETTERWORKING months = 2 }
+			}
+			30 = {
+				character_event = { id = courtierletter_event.19 tooltip = LETTERFAIL months = 2 }			
+			}
+		}
+		if = {
+			limit = { NOT = { event_target:letter_person = { has_opinion_modifier = { who = ROOT modifier = sent_deg_letter } } } }
+			event_target:letter_person = { opinion = { modifier = sent_deg_letter who = ROOT years = 1 } }
+		}
+	}
+	
+	option = { #Consider Rival
+		trigger = {
+			NOT = { is_rival = event_target:letter_person }
+			event_target:letter_person = { NOT = { opinion = { who = ROOT value = -50 } } }
+		}
+		tooltip_info = rival
+		name = "EVTOPTEcourtierletter.3"
+		character_event = { id = courtierletter_event.18 tooltip = LETTERWORKING months = 2 }
+	}
+}
+
+
+#Insulted Family extremly
+letter_event = {
+	id = courtierletter_event.14
+	desc = "EVTDESCcourtierletter.14"
+	portrait = event_target:letter_person
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTAcourtierletter.14"
+		event_target:letter_person = { 
+			opinion = { modifier = family_offended who = ROOT years = 6 } 
+			any_dynasty_member = {
+					opinion = { modifier = family_offended_rebound who = ROOT years = 6 } 
+			}
+		}
+	}
+}
+
+#Insulted Lands extremly
+letter_event = {
+	id = courtierletter_event.15
+	desc = "EVTDESCcourtierletter.15"
+	portrait = event_target:letter_person
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTAcourtierletter.15"
+		event_target:letter_person = { 
+			opinion = { modifier = lands_offended who = ROOT years = 6 } 
+			any_courtier = {
+					opinion = { modifier = lands_offended_rebound who = ROOT years = 6 } 
+			}
+		}
+	}
+}
+
+#Publicly humiliate extremly
+letter_event = {
+	id = courtierletter_event.16
+	desc = "EVTDESCcourtierletter.16"
+	portrait = event_target:letter_person
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTAcourtierletter.16"
+		event_target:letter_person = { 
+			opinion = { modifier = publicly_offended who = ROOT years = 2 } 
+			any_rival = {
+				opinion = { modifier = publicly_offended_rebound who = ROOT years = 2 } 
+			}
+		}
+	}
+}
+
+#Blackmail
+letter_event = {
+	id = courtierletter_event.17
+	desc = "EVTDESCcourtierletter.17"
+	portrait = event_target:letter_person
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTAcourtierletter.17"
+		event_target:letter_person = { 
+			add_favor = ROOT
+			opinion = { modifier = degraded_offended who = ROOT years = 2 } 
+		}
+	}
+}
+
+#Became Rivals
+letter_event = {
+	id = courtierletter_event.18
+	desc = "EVTDESCcourtierletter.18"
+	portrait = event_target:letter_person
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTAcourtierletter.18"
+		event_target:letter_person = { 
+			is_rival = ROOT
+		}
+	}
+}
+
+#Failed to insult
+letter_event = {
+	id = courtierletter_event.19
+	desc = "EVTDESCcourtierletter.19"
+	portrait = event_target:letter_person
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTAcourtierletter.19"
+		event_target:letter_person = { 
+			opinion = { modifier = slightly_annoyed who = ROOT months = 6 } 
+		}
+	}
+}

@@ -1,0 +1,463 @@
+namespace = trader_events
+character_event = { #Gaining event from target
+	id = trader_events.1
+	title = "EVTTITLEtrader_events.1"
+	desc = "EVTDEStrader_events.1"
+	picture = "GFX_evt_armory"
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		OR = {
+			AND = {
+				has_assigned_minor_title = title_trader
+				ai = no
+				is_landed = no
+			}
+			AND = {
+				has_minor_title = title_trader
+				ai = yes
+			}
+		}
+	}
+	
+	option = {
+		name = "EVTOPTIONAtrader_events.1"
+		random_list = {
+			60 = { add_artifact = court_iron_ingot }
+			60 = { add_artifact = court_crafting_thread }
+			60 = { add_artifact = court_assorted_leather }
+			60 = { add_artifact = court_bundle_wood }
+			5 = { add_artifact = court_spices }
+			5 = { add_artifact = court_jade }
+			5 = { add_artifact = court_silk_thead }
+			5 = { add_artifact = court_gold }
+		}
+		random = { 
+			chance = 10 
+			random_list = {
+				60 = { add_artifact = court_iron_ingot }
+				60 = { add_artifact = court_crafting_thread }
+				60 = { add_artifact = court_assorted_leather }
+				60 = { add_artifact = court_bundle_wood }
+				5 = { 
+					modifier = {
+					  factor = 45
+					  liege = { capital_scope = { region = world_india } }
+					}
+					add_artifact = court_spices 
+				}
+				5 = { 
+					modifier = {
+					  factor = 35
+					  OR = {
+						culture_group = chinese_group
+						culture_group = tibetan_group
+						culture_group = altaic
+					  }
+					  china_offmap_tribute_decisions_enabled_trigger = yes
+					}
+					add_artifact = court_jade 
+				}
+				5 = { 
+					modifier = {
+					  factor = 35
+					  OR = {
+						culture_group = chinese_group
+						culture_group = tibetan_group
+						culture_group = altaic
+					  }
+					  china_offmap_tribute_decisions_enabled_trigger = yes
+					}
+					add_artifact = court_silk_thead 
+				}
+				5 = { 
+					modifier = {
+					  factor = 35
+					  liege = { capital_scope = { region = world_africa } }
+					}
+					add_artifact = court_gold 
+				}
+			}
+		}
+	}
+}
+
+character_event = { #Trader job European sand
+	id = trader_events.2
+	title = "EVTTITLEtrader_events.2"
+	desc = "EVTDEStrader_events.2"
+	picture = "GFX_evt_traders"
+	portrait = event_target:trader_storyhearer
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		liege = {
+			capital_scope = {
+				region = world_europe
+			}
+		}
+		trait = merchant_trait
+		independant = no
+		NOT = { has_game_rule = { name = courtier_overhaul_mod value = overhaul_mode } }
+	}
+	
+	immediate = {
+		any_realm_character = {
+			limit = { has_minor_title = title_trader }
+			save_event_target_as = trader_storyhearer
+		}
+	}
+	
+	option = {
+		name = "EVTOPTIONAtrader_events.2"
+		trigger = { trait = lunatic }
+		tooltip_info = lunatic
+		event_target:trader_storyhearer = {
+			change_learning = -1
+			opinion = { modifier = misinformed_satisfied who = ROOT years = 10 }
+		}
+	}
+	
+	option = {
+		name = "EVTOPTIONBtrader_events.2"
+		trigger = { 
+			OR = {
+				trait = zealous
+				learning = 6
+			}
+		}
+		tooltip_info = learning
+		prestige = 20
+		event_target:trader_storyhearer = {
+			opinion = { modifier = swayed who = ROOT years = 10 }
+		}
+	}
+	
+	option = {
+		name = "EVTOPTIONCtrader_events.2"
+		trigger = { 
+			any_dynasty_member_even_if_dead = {
+				OR = {
+					culture_group = arabic
+					culture_group = iranian				
+				}
+			}
+		}
+		tooltip_info = dynasty_member
+		event_target:trader_storyhearer = {
+			opinion = { modifier = swayed who = ROOT years = 5 }
+		}
+	}
+	
+	option = {
+		name = "EVTOPTIONDtrader_events.2"
+		trigger = { 
+			NOT = { learning = 6 }
+		}
+		event_target:trader_storyhearer = {
+			opinion = { modifier = bored who = ROOT years = 5 }
+		}
+	}
+}
+
+character_event = { #Foreigner in india
+	id = trader_events.3
+	title = "EVTTITLEtrader_events.3"
+	desc = "EVTDEStrader_events.3"
+	picture = "GFX_evt_india_traders"
+	portrait = event_target:trader_storyhearer
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		liege = { capital_scope = { region = world_india } }
+		trait = merchant_trait
+		independant = no
+		NOT = { culture_group = indo_aryan_group }
+		NOT = { has_game_rule = { name = courtier_overhaul_mod value = overhaul_mode } }
+	}
+	
+	immediate = {
+	}
+	
+	option = {#spices
+		name = "EVTOPTIONAtrader_events.3"
+		add_artifact = court_spices
+	}
+	
+	option = {#secret religion
+		name = "EVTOPTIONBtrader_events.3"
+		trigger = { 
+			liege = { religion_group = indian_group }			
+		}
+		liege = {}
+		set_secret_religion = liege
+	}
+	
+	option = {#literature
+		name = "EVTOPTIONCtrader_events.3"
+		change_learning = 1
+		random = { change = 10 add_trait = erudite }
+	}
+	
+	option = {#nothing
+		name = "EVTOPTIONDtrader_events.3"
+		custom_tooltip = { text = "Cooldown_reseted" }
+		clr_character_flag = already_moved
+	}
+}
+
+character_event = { #Mali Hajj
+	id = trader_events.4
+	title = "EVTTITLEtrader_events.4"
+	desc = "EVTDEStrader_events.4"
+	picture = "GFX_evt_india_traders"
+	portrait = event_target:trader_storyhearer
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		trait = merchant_trait	
+		OR = {
+			liege = { capital_scope = { region = world_middle_east } }
+			liege = { capital_scope = { region = world_africa_north } }
+		}
+		OR = {
+			religion_group = muslim
+			religion_group = jewish_group
+		}
+		NOT = { has_game_rule = { name = courtier_overhaul_mod value = overhaul_mode } }
+	}
+	
+	immediate = {
+	}
+	
+	option = {
+		trigger = {
+			religion_group = muslim_group
+		}
+		tooltip_info = religion
+		name = "EVTOPTIONBtrader_events.4"
+		piety = 50
+		add_artifact = court_gold
+	}
+	
+	option = {#Gold trader from mali
+		name = "EVTOPTIONAtrader_events.4"
+		add_artifact = court_gold
+	}
+	
+}
+
+character_event = { #Muslims in euroope
+	id = trader_events.5
+	title = "EVTTITLEtrader_events.5"
+	desc = "EVTDEStrader_events.5"
+	picture = "GFX_evt_india_traders"
+	portrait = event_target:trader_storyhearer
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		trait = merchant_trait
+		OR = {
+			liege = { capital_scope = { region = world_europe } }
+		}
+		OR = {
+			religion_group = muslim
+			religion_group = jewish_group
+		}
+		NOT = { has_game_rule = { name = courtier_overhaul_mod value = overhaul_mode } }
+	}
+	
+	immediate = {
+	}
+	
+	option = {
+		trigger = {
+			trait = zealous
+		}
+		tooltip_info = zealous
+		name = "EVTOPTIONAtrader_events.5"
+		piety = 200
+		add_character_modifier = { modifier = muslim_overconfidence years = 2 }
+		
+	}
+	
+	option = {
+		name = "EVTOPTIONBtrader_events.5"
+		add_character_modifier = { modifier = respecting_christians years = 2 }
+	}
+		
+	option = {
+		name = "EVTOPTIONCtrader_events.5"
+		add_trait = sympathy_christendom 
+		liege = {
+			random_realm_character = {
+				limit = { is_priest = yes }
+				add_friend = ROOT
+			}
+		}
+		add_character_modifier = { modifier = respecting_christians years = 2 }
+	}
+	
+}
+
+
+
+character_event = { #Gaining event from target
+	id = trader_events.6
+	title = "EVTTITLEtrader_events.6"
+	desc = "EVTDEStrader_events.6"
+	picture = "GFX_evt_armory"
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		is_landed = no
+		trait = merchant_trait
+	}
+	
+	option = {
+		name = "EVTOPTIONAtrader_events.6"
+		random_list = {
+			60 = { add_artifact = court_iron_ingot }
+			60 = { add_artifact = court_crafting_thread }
+			60 = { add_artifact = court_assorted_leather }
+			60 = { add_artifact = court_bundle_wood }
+			2 = { add_artifact = court_spices }
+			2 = { add_artifact = court_jade }
+			2 = { add_artifact = court_silk_thead }
+			2 = { add_artifact = court_gold }
+		}
+		random = { 
+			chance = 10 
+			random_list = {
+				60 = { add_artifact = court_iron_ingot }
+				60 = { add_artifact = court_crafting_thread }
+				60 = { add_artifact = court_assorted_leather }
+				60 = { add_artifact = court_bundle_wood }
+				2 = { 
+					modifier = {
+					  factor = 45
+					  liege = { capital_scope = { region = world_india } }
+					}
+					add_artifact = court_spices 
+				}
+				2 = { 
+					modifier = {
+					  factor = 35
+					  OR = {
+						culture_group = chinese_group
+						culture_group = tibetan_group
+						culture_group = altaic
+					  }
+					  china_offmap_tribute_decisions_enabled_trigger = yes
+					}
+					add_artifact = court_jade 
+				}
+				2 = { 
+					modifier = {
+					  factor = 35
+					  OR = {
+						culture_group = chinese_group
+						culture_group = tibetan_group
+						culture_group = altaic
+					  }
+					  china_offmap_tribute_decisions_enabled_trigger = yes
+					}
+					add_artifact = court_silk_thead 
+				}
+				2 = { 
+					modifier = {
+					  factor = 35
+					  liege = { capital_scope = { region = world_africa } }
+					}
+					add_artifact = court_gold 
+				}
+			}
+		}
+	}
+}
+
+
+character_event = { #Gaining event from target
+	id = trader_events.7
+	title = "EVTTITLEtrader_events.7"
+	desc = "EVTDEStrader_events.7"
+	picture = "GFX_evt_armory"
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		ai = yes
+		or = {
+			has_minor_title = title_trader	
+			trait = merchant_trait
+		}
+	}
+	
+	option = {
+		name = "EVTOPTIONAtrader_events.7"
+		random_list = {
+			50 = { 
+				modifier = {
+					factor = 0
+					NOT ={ has_artifact = court_iron_ingot }
+				}
+				destroy_artifact = court_iron_ingot 
+			}
+			50 = { 
+				modifier = {
+					factor = 0
+					NOT ={ has_artifact = court_crafting_thread }
+				}
+				destroy_artifact = court_crafting_thread 
+			}
+			50 = { 
+				modifier = {
+					factor = 0
+					NOT ={ has_artifact = court_assorted_leather }
+				}
+				destroy_artifact = court_assorted_leather 
+			}
+			50 = {
+				modifier = {
+					factor = 0
+					NOT ={ has_artifact = court_bundle_wood }
+				}
+				destroy_artifact = court_bundle_wood 
+			}
+			50 = { 
+				modifier = {
+					factor = 0
+					NOT ={ has_artifact = court_spices }
+				}
+				destroy_artifact = court_spices 
+			}
+			50 = { 
+				modifier = {
+					factor = 0
+					NOT ={ has_artifact = court_jade }
+				}
+				destroy_artifact = court_jade 
+			}
+			50 = { 
+				modifier = {
+					factor = 0
+					NOT ={ has_artifact = court_silk_thead }
+				}
+				destroy_artifact = court_silk_thead
+			}
+			50 = {
+				modifier = {
+					factor = 0
+					NOT ={ has_artifact = court_gold }
+				}
+				destroy_artifact = court_gold 
+			}
+		}
+	}
+}
