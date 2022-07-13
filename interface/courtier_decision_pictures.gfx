@@ -1,38 +1,38 @@
 spriteTypes = {
-  spriteType = {
-    name = "GFX_Visiting_capital_decision"
-    texturefile = "gfx\\interface\\decision_icons\\visit_capital.dds"
-  }
-  spriteType = {
-    name = "GFX_become_LALAD"
-    texturefile = "gfx\\interface\\decision_icons\\become_LALAD.dds"
-  }
-  spriteType = {
-    name = "GFX_find_job"
-    texturefile = "gfx\\interface\\decision_icons\\find_job.dds"
-  } 
-  spriteType = {
-    name = "GFX_quit_job"
-    texturefile = "gfx\\interface\\decision_icons\\quit_job.dds"
-  } 
-  spriteType = {
-    name = "GFX_find_army_decision"
-    texturefile = "gfx\\interface\\decision_icons\\recruit_soldiers.dds"
-  }   
-  spriteType = {
-    name = "GFX_find_army_250_decision"
-    texturefile = "gfx\\interface\\decision_icons\\recruit_soldiers.dds"
-  } 
-  spriteType = {
-    name = "GFX_Hunting_Forest_decision"
-    texturefile = "gfx\\interface\\decision_icons\\hunting_forest.dds"
-  }  
-  spriteType = {
-    name = "GFX_search_for_problems_in_realm_decision"
-    texturefile = "gfx\\interface\\decision_icons\\go_country_side.dds"
-  }  
-  spriteType = {
-    name = "GFX_raise_black_flag_decision"
-    texturefile = "gfx\\interface\\decision_icons\\become_pirate.dds"
-  }
+	spriteType = {
+		name = "GFX_Visiting_capital_decision"
+		texturefile = "gfx\\interface\\decision_icons\\visit_capital.dds"
+	}
+	spriteType = {
+		name = "GFX_become_LALAD"
+		texturefile = "gfx\\interface\\decision_icons\\become_LALAD.dds"
+	}
+	spriteType = {
+		name = "GFX_find_job"
+		texturefile = "gfx\\interface\\decision_icons\\find_job.dds"
+	} 
+	spriteType = {
+		name = "GFX_quit_job"
+		texturefile = "gfx\\interface\\decision_icons\\quit_job.dds"
+	} 
+	spriteType = {
+		name = "GFX_find_army_decision"
+		texturefile = "gfx\\interface\\decision_icons\\recruit_soldiers.dds"
+	}   
+	spriteType = {
+		name = "GFX_find_army_250_decision"
+		texturefile = "gfx\\interface\\decision_icons\\recruit_soldiers.dds"
+	} 
+	spriteType = {
+		name = "GFX_Hunting_Forest_decision"
+		texturefile = "gfx\\interface\\decision_icons\\hunting_forest.dds"
+	}  
+	spriteType = {
+		name = "GFX_search_for_problems_in_realm_decision"
+		texturefile = "gfx\\interface\\decision_icons\\go_country_side.dds"
+	}  
+	spriteType = {
+		name = "GFX_raise_black_flag_decision"
+		texturefile = "gfx\\interface\\decision_icons\\become_pirate.dds"
+	}
 }
