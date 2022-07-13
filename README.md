@@ -4,4 +4,4 @@ The original mod is created by "Magickarp" Cipher and can be found [here](https:
 As of 2022-7-12, I will be patching up Cipher's Courtier Expansion mod to fix any errors and obsolete/deprecated codes.
 
 ### Important References
-* [Maintainer's Notes](../blob/Maintainer's Notes.md)
+* [Maintainer's Notes](../blob/master/Maintainer's Notes.md)
