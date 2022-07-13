@@ -76,7 +76,7 @@ LANDLESS_TITLE;Sir;;;;;;;;;;;;;x
 LANDLESS_TITLE_FEMALE;Lady;;;;;;;;;;;;;x
 title_courtier;Courtier;;;;;;;;;;;;;x
 title_courtier_desc;This character spends their days at court.;;;;;;;;;;;;;x
-;;;;;;;;;;;;;;
+
 #Unused strings;;;;;;;;;;;;;;
 EVTDESClalad_events.101;My liege has decide to set out on adventure, leaving me in charge of his holdings.;;;;;;;;;;;;;x
 EVTOPTAlalad_events.101;Hurry back.;;;;;;;;;;;;;x
@@ -129,12 +129,12 @@ setting_up_a_band;Setting up a band of criminals;;;;;;;;;;;;;x
 setting_up_a_band_desc;This character is looking for amoral men to hire.;;;;;;;;;;;;;x
 finding_zealots;Finding Zealots;;;;;;;;;;;;;x
 finding_zealots_desc;This character is looking for zealots for a holy war against the heathens.;;;;;;;;;;;;;x
-;;;;;;;;;;;;;;x
+
 NEWSALARYINT;Your new job will now pay you based on your Intrigue! (0.05 * Intrige);;;;;;;;;;;;;x
 NEWSALARYMAR;Your new job will now pay you based on your Martial! (0.05 * Martial);;;;;;;;;;;;;x
 NEWSALARYLEA;Your new job will now pay you based on your Learning! (0.05 * Learning);;;;;;;;;;;;;x
 NEWSALARYDIP;Your new job will now pay you based on your Diplomacy! (0.05 * Diplomacy);;;;;;;;;;;;;x
 NEWSALARYSTE;Your new job will now pay you based on your Stewardship! (0.05 * Stewardship);;;;;;;;;;;;;x
 NEWSALARYPROM;Your salary will be adjusted to your current stats!;;;;;;;;;;;;;x
-;;;;;;;;;;;;;;x
+
 EVTOPTChomeless_event.1;All of you, leave me!;;;;;;;;;;;;;x

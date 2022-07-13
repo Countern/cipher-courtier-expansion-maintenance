@@ -1,35 +1,35 @@
-EVTTITLEtrader_events.1;Return of Investments;;;;;;;;x
-EVTDEStrader_events.1;While you were busy, you remembered of that trader you personally used to sell and barter with. Suddenly, he shows up at court, happy to see you. As it seems, he has some great returns from the investments you made along time ago...;;;;;;;;x
-EVTOPTIONAtrader_events.1;Oh this will do great!;;;;;;;;x
-sell_material;Sell Materials;;;;;;;;x
-sell_material_desc;Give one of your materials to this trader, in hopes he would find a good price in the local markets. His opinion, and the location in the world you are in affect his prices.;;;;;;;;x
-;;;;;;;;;x
-EVTTITLEtrader_events.3;Adventures in India;;;;;;;;x
-EVTDEStrader_events.3;It's been quite some time since you´ve arrived here, and ye you haven't gotten used to the locals tastes and their manners. However, you've gained quite some good impressions on some things...;;;;;;;;x
-EVTOPTIONAtrader_events.3;"Their spices are better than gold!";;;;;;;;x
-EVTOPTIONBtrader_events.3;"Their gods are quite many and accepting";;;;;;;;x
-EVTOPTIONCtrader_events.3;"Their literature is quite phenomenal";;;;;;;;x
-EVTOPTIONDtrader_events.3;"Absolutely nothing and i just wanna go home....";;;;;;;;x
-Cooldown_reseted;You will be able to use the move decision again!;;;;;;;;x
-EVTTITLEtrader_events.4;The Golden Hajj;;;;;;;;x
-EVTDEStrader_events.4;From the lands of mali came a prince. He was accompannied by 45 cammels, and he seemed to be on his way to mecca. In everystore he passed threw, merchants were showered with gold and ores. This man passed by your stand, merchant, and he smiled buying worthless relics of islam for exorbitant prices. You were in awe as gold was brougth from the cammels into your hands.;;;;;;;;x
-EVTOPTIONBtrader_events.4;This is a gift from Allah is it not?;;;;;;;;x
-EVTOPTIONAtrader_events.4;Gold, Gold, GOLD!!!;;;;;;;;x
-EVTTITLEtrader_events.5;Christian Europe;;;;;;;;x
-EVTDEStrader_events.5;It's been hard lately. You knew it would be challenging traveling to these parts of the world, but these infidels seem to look at you discomfortingly. You must admit that you may have deserved it. They are a bit behind in various fields of science, and you have taunted them for it, but they do seem capable of much more. But you also pity them for not following the words of the phrophet, peace be upon him.;;;;;;;;x
-EVTOPTIONAtrader_events.5;"They are so unfortunate, i must teach them how to properly behave";;;;;;;;x
-EVTOPTIONBtrader_events.5;"Their zeal of the phrophet ?s? is still quite admirable, ill try to respect that";;;;;;;;x
-EVTOPTIONCtrader_events.5;"I'll participate in one of their prayers, if only to learn them better";;;;;;;;x
-;;;;;;;;;x
-muslim_overconfidence;Muslim Superiority;;;;;;;;x
-respecting_christians;Respecting Christian Culture;;;;;;;;x
-EVTTITLEtrader_events.6;Another day of Work;;;;;;;;x
-EVTDEStrader_events.6;This is the fruits of your labor after some months of working. Hope it went well!;;;;;;;;x
-EVTOPTIONAtrader_events.6;Lots of materials!;;;;;;;;x
-CONSTRUCT_WARNING;A residence isnt in or has been recently constructed;;;;;;;;x
-buy_residence;Buy a Residence;;;;;;;;x
-buy_residence_desc;Buy a residence barony. This will build a castle in a free holding of your liege. This cannot terminate your courtier status but will phroibit you from moving courts for good.;;;;;;;;x
-EVTDESmoving_events.10;The new residence you have ordered has begun construction. After so long, you finaly will have a place to call your own! This might be the start of your dynasties sucess, or where your dynasty recovers past glories, but now its time to gather man that will serve you!;;;;;;;;x
-EVTOPTAmoving_events.10;This shall [ROOT.GetOnlyDynastyName]'s new home;;;;;;;;x
-EVTDESmoving_events.11;[ROOT.GetOnlyDynastyName]'s new castle has finally finished construction! People from the realm line up to see the new residence, new peasants flock near to find new opportunities in your lands, and some lords are starting to notice your presence in the region. This is trully a new beggining.;;;;;;;;
-EVTOPTAmoving_events.11;This is the beggining of something new!;;;;;;;;
+EVTTITLEtrader_events.1;Return of Investments;;;;;;;;;;;;;x
+EVTDEStrader_events.1;While you were busy, you remembered of that trader you personally used to sell and barter with. Suddenly, he shows up at court, happy to see you. As it seems, he has some great returns from the investments you made along time ago...;;;;;;;;;;;;;x
+EVTOPTIONAtrader_events.1;Oh this will do great!;;;;;;;;;;;;;x
+sell_material;Sell Materials;;;;;;;;;;;;;x
+sell_material_desc;Give one of your materials to this trader, in hopes he would find a good price in the local markets. His opinion, and the location in the world you are in affect his prices.;;;;;;;;;;;;;x
+
+EVTTITLEtrader_events.3;Adventures in India;;;;;;;;;;;;;x
+EVTDEStrader_events.3;It's been quite some time since you´ve arrived here, and ye you haven't gotten used to the locals tastes and their manners. However, you've gained quite some good impressions on some things...;;;;;;;;;;;;;x
+EVTOPTIONAtrader_events.3;"Their spices are better than gold!";;;;;;;;;;;;;x
+EVTOPTIONBtrader_events.3;"Their gods are quite many and accepting";;;;;;;;;;;;;x
+EVTOPTIONCtrader_events.3;"Their literature is quite phenomenal";;;;;;;;;;;;;x
+EVTOPTIONDtrader_events.3;"Absolutely nothing and i just wanna go home....";;;;;;;;;;;;;x
+Cooldown_reseted;You will be able to use the move decision again!;;;;;;;;;;;;;x
+EVTTITLEtrader_events.4;The Golden Hajj;;;;;;;;;;;;;x
+EVTDEStrader_events.4;From the lands of mali came a prince. He was accompannied by 45 cammels, and he seemed to be on his way to mecca. In everystore he passed threw, merchants were showered with gold and ores. This man passed by your stand, merchant, and he smiled buying worthless relics of islam for exorbitant prices. You were in awe as gold was brougth from the cammels into your hands.;;;;;;;;;;;;;x
+EVTOPTIONBtrader_events.4;This is a gift from Allah is it not?;;;;;;;;;;;;;x
+EVTOPTIONAtrader_events.4;Gold, Gold, GOLD!!!;;;;;;;;;;;;;x
+EVTTITLEtrader_events.5;Christian Europe;;;;;;;;;;;;;x
+EVTDEStrader_events.5;It's been hard lately. You knew it would be challenging traveling to these parts of the world, but these infidels seem to look at you discomfortingly. You must admit that you may have deserved it. They are a bit behind in various fields of science, and you have taunted them for it, but they do seem capable of much more. But you also pity them for not following the words of the phrophet, peace be upon him.;;;;;;;;;;;;;x
+EVTOPTIONAtrader_events.5;"They are so unfortunate, i must teach them how to properly behave";;;;;;;;;;;;;x
+EVTOPTIONBtrader_events.5;"Their zeal of the phrophet ?s? is still quite admirable, ill try to respect that";;;;;;;;;;;;;x
+EVTOPTIONCtrader_events.5;"I'll participate in one of their prayers, if only to learn them better";;;;;;;;;;;;;x
+
+muslim_overconfidence;Muslim Superiority;;;;;;;;;;;;;x
+respecting_christians;Respecting Christian Culture;;;;;;;;;;;;;x
+EVTTITLEtrader_events.6;Another day of Work;;;;;;;;;;;;;x
+EVTDEStrader_events.6;This is the fruits of your labor after some months of working. Hope it went well!;;;;;;;;;;;;;x
+EVTOPTIONAtrader_events.6;Lots of materials!;;;;;;;;;;;;;x
+CONSTRUCT_WARNING;A residence isnt in or has been recently constructed;;;;;;;;;;;;;x
+buy_residence;Buy a Residence;;;;;;;;;;;;;x
+buy_residence_desc;Buy a residence barony. This will build a castle in a free holding of your liege. This cannot terminate your courtier status but will phroibit you from moving courts for good.;;;;;;;;;;;;;x
+EVTDESmoving_events.10;The new residence you have ordered has begun construction. After so long, you finaly will have a place to call your own! This might be the start of your dynasties sucess, or where your dynasty recovers past glories, but now its time to gather man that will serve you!;;;;;;;;;;;;;x
+EVTOPTAmoving_events.10;This shall [ROOT.GetOnlyDynastyName]'s new home;;;;;;;;;;;;;x
+EVTDESmoving_events.11;[ROOT.GetOnlyDynastyName]'s new castle has finally finished construction! People from the realm line up to see the new residence, new peasants flock near to find new opportunities in your lands, and some lords are starting to notice your presence in the region. This is trully a new beggining.;;;;;;;;;;;;;x
+EVTOPTAmoving_events.11;This is the beggining of something new!;;;;;;;;;;;;;x

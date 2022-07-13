@@ -52,6 +52,7 @@ character_event  = {
 					is_primary_holder_title_tier = no
 					tier = county
 				}
+				save_event_target_as = title_gave_away
 				grant_title = { target = ROOT type = claim }  	
 			}
 		}
