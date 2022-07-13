@@ -24,9 +24,6 @@ character_event  = {
 	picture = "GFX_arrival_court"
 	is_triggered_only = yes
 	
-	immediate = {
-	}
-	
 	option = {
 		name = "EVTOPTAliege_land_events.2"
 	}
@@ -80,8 +77,6 @@ character_event = {
 			}
 		}
 	}
-	immediate = {
-	}
 	option = {
 		name = "EVTOPTAliege_land_events.4"
 		remove_trait = bureaucrat_trait
@@ -133,8 +128,6 @@ character_event = {
 	trigger = {
 		has_character_flag = once_a_courtier
 		NOT = { has_character_modifier = homeless }
-	}
-	immediate = {
 	}
 	option = {
 		name = "EVTOPTAliege_land_events.5"

@@ -6,8 +6,6 @@ character_event = {
 	desc = "EVTDEScourtiercountry_events.1"
 	picture = "GFX_diseased_province"
 	is_triggered_only = yes
-	#trigger = {
-	#}
 	
 	immediate = {
 		clr_character_flag = country_side_plague
@@ -109,8 +107,6 @@ character_event = {
 	desc = "EVTDEScourtiercountry_events.4"
 	picture = "GFX_quarry_picture"
 	is_triggered_only = yes
-	trigger = {
-	}
 	
 	immediate = {
 		clr_character_flag = quarry_country_side
@@ -135,11 +131,6 @@ character_event = {
 	desc = "EVTDEScourtiercountry_events.5"
 	picture = "GFX_quarry_picture"
 	is_triggered_only = yes
-	trigger = {
-	}
-	
-	immediate = {
-	}
 
 	option = {
 		name = "EVTOPTAcourtiercountry_events.5"
@@ -220,11 +211,6 @@ character_event = {
 	desc = "EVTDEScourtiercountry_events.7"
 	picture = "GFX_blackmith_picture"
 	is_triggered_only = yes
-	trigger = {
-	}
-	
-	immediate = {
-	}
 	
 	option = {
 		name = "EVTOPTAcourtiercountry_events.7"
@@ -241,22 +227,23 @@ character_event = {
 		add_artifact = court_iron_ingot
 		wealth = -25
 		create_character = {
-		  random_traits = yes
-		  dynasty = none
-		  religion = liege
-		  culture = liege
-		  female = no
-		  attributes = {
+			random_traits = yes
+			dynasty = none
+			religion = liege
+			culture = liege
+			female = no
+			attributes = {
 			martial = 15
 			diplomacy = 5
 			stewardship = 5
 			intrigue = 5
 			learning = 5
-		  }
-		  health = 6
-		  fertility = 1
-		  trait = tough_soldier
-		  trait = brawny
+			}
+			health = 6
+			fertility = 1
+			trait = tough_soldier
+			trait = brawny # CleanSlate/CK2Plus
+			trait = robust # Vanilla
 		}
 		character_event = { id = courtiercountry_events.101 }
 	}
@@ -340,12 +327,6 @@ narrative_event = {
 	
 	border = GFX_event_narrative_frame_diplomacy
 	is_triggered_only = yes
-	
-	trigger = {
-	}
-	
-	immediate = {
-	}
 	
 	option = {
 		name ="EVTOPTAcourtiercountry_events.102"

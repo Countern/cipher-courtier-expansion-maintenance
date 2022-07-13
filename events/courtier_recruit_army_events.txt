@@ -7,8 +7,6 @@ narrative_event = {
 	picture = "GFX_find_army"
 	is_triggered_only = yes
 
-	trigger = {
-	}
 	
 	#Local Bandits
 	option = {
@@ -51,8 +49,6 @@ character_event = {
 	picture = "GFX_bandits_picture"
 	is_triggered_only = yes
 
-	trigger = {
-	}
 	
 	immediate = {
 		if = {
@@ -143,8 +139,6 @@ character_event = {
 	picture = "GFX_retinues_pictures"
 	is_triggered_only = yes
 
-	trigger = {
-	}
 	
 	immediate = {
 		if = {
@@ -236,8 +230,6 @@ character_event = {
 	picture = "GFX_evt_council"
 	is_triggered_only = yes
 
-	trigger = {
-	}
 	
 	immediate = {
 		if = {
@@ -374,8 +366,6 @@ character_event = {
 	picture = "GFX_bandits_picture"
 	is_triggered_only = yes
 
-	trigger = {
-	}
 	
 	immediate = {
 		if = {
@@ -466,8 +456,6 @@ character_event = {
 	picture = "GFX_retinues_pictures"
 	is_triggered_only = yes
 
-	trigger = {
-	}
 	
 	immediate = {
 		if = {

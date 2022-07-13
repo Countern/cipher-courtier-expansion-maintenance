@@ -162,9 +162,6 @@ narrative_event  = {
 	picture = "GFX_arrival_court"
 	is_triggered_only = yes
 	
-	immediate = {
-	}
-	
 	option = {
 		name = "EVTOPTAmoving_events.3"
 		prestige = -250
@@ -399,9 +396,6 @@ character_event = {
 	desc = "EVTDESmoving_events.10"
 	picture = "GFX_arrival_court"
 	is_triggered_only = yes
-	
-	immediate = {
-	}
 	
 	option = {
 		name = "EVTOPTAmoving_events.10"

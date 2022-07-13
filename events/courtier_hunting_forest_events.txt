@@ -6,8 +6,6 @@ character_event = {
 	desc = "EVTDESforesthunting_events.1"
 	picture = "GFX_forest_hunting_events"
 	is_triggered_only = yes
-	trigger = {
-	}
 	
 	immediate = {
 		clr_character_flag = bandit_attack_hunting
@@ -52,9 +50,6 @@ character_event = {
 	picture = "GFX_forest_hunting_events"
 	is_triggered_only = yes
 	hide_from = yes
-	
-	trigger = {
-	}
 	
 	immediate = {
 		clr_character_flag = HuntingFriend_flag
@@ -101,9 +96,6 @@ character_event = {
 	desc = "EVTDESforesthunting_events.3"
 	picture = "GFX_forest_hunting_events"
 	is_triggered_only = yes
-	
-	trigger = {
-	}
 	
 	immediate = {
 		clr_character_flag = mighty_beast_event
@@ -180,9 +172,6 @@ character_event = {
 	picture = "GFX_forest_hunting_events"
 	is_triggered_only = yes
 	
-	trigger = {
-	}
-	
 	immediate = {
 		clr_character_flag = archer_joins_courtier_flag
 		set_character_flag = archer_joins_courtier_flag
@@ -219,9 +208,6 @@ character_event = {
 	desc = "EVTDESforesthunting_events.6"
 	picture = "GFX_forest_hunting_events"
 	is_triggered_only = yes
-	
-	trigger = {
-	}
 	
 	immediate = {
 		clr_character_flag = content_court_cap_event
@@ -267,9 +253,6 @@ character_event = {
 	desc = "EVTDESforesthunting_events.7"
 	picture = "GFX_forest_hunting_events"
 	is_triggered_only = yes
-	
-	trigger = {
-	}
 	
 	immediate = {
 		clr_character_flag = saint_spotted_event
@@ -420,12 +403,6 @@ narrative_event = {
 	
 	border = GFX_event_narrative_frame_diplomacy
 	is_triggered_only = yes
-	
-	trigger = {
-	}
-	
-	immediate = {
-	}
 	
 	option = {
 		name = "EVTOPTAforesthunting_events.100"

@@ -179,9 +179,6 @@ character_event = { #Foreigner in india
 		NOT = { has_game_rule = { name = courtier_overhaul_mod value = overhaul_mode } }
 	}
 	
-	immediate = {
-	}
-	
 	option = {#spices
 		name = "EVTOPTIONAtrader_events.3"
 		add_artifact = court_spices
@@ -229,9 +226,6 @@ character_event = { #Mali Hajj
 			religion_group = jewish_group
 		}
 		NOT = { has_game_rule = { name = courtier_overhaul_mod value = overhaul_mode } }
-	}
-	
-	immediate = {
 	}
 	
 	option = {

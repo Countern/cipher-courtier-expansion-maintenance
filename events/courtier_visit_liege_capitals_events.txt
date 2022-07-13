@@ -7,9 +7,6 @@ character_event = {
 	picture = "GFX_visiting_capital"
 	is_triggered_only = yes
 	
-	trigger = {
-	}
-	
 	immediate = {
 		clr_character_flag = Unexpected_visit
 		set_character_flag = Unexpected_visit
@@ -50,9 +47,6 @@ character_event = {
 	picture = "GFX_visiting_capital"
 	is_triggered_only = yes
 	
-	trigger = {
-	}
-	
 	immediate = {
 		clr_character_flag = diplo_courtcapital_event
 		set_character_flag = diplo_courtcapital_event
@@ -72,9 +66,6 @@ character_event = {
 	desc = "EVTDESliegecap_events.3"
 	picture = "GFX_visiting_capital"
 	is_triggered_only = yes
-	
-	trigger = {
-	}
 	
 	immediate = {
 		clr_character_flag = taoist_capital_event
@@ -171,9 +162,6 @@ character_event = {
 	portrait = event_target:chosen_councelour
 	is_triggered_only = yes
 	
-	trigger = {
-	}
-	
 	immediate = {
 		clr_character_flag = unexpected_meeting
 		set_character_flag = unexpected_meeting
@@ -223,9 +211,6 @@ character_event = {
 	picture = "GFX_visiting_capital"
 	is_triggered_only = yes
 	
-	trigger = {
-	}
-	
 	immediate = {
 		clr_character_flag = content_court_cap_event
 		set_character_flag = content_court_cap_event
@@ -260,9 +245,6 @@ character_event = {
 	desc = "EVTDESliegecap_events.7"
 	picture = "GFX_visiting_capital"
 	is_triggered_only = yes
-	
-	trigger = {
-	}
 	
 	immediate = {
 		clr_character_flag = party_court_cap_event
@@ -302,9 +284,6 @@ character_event = {
 	
 	is_triggered_only = yes
 	hide_window = yes
-	
-	trigger = {
-	}
 	
 	immediate = {
 		hidden_tooltip = {
@@ -396,12 +375,6 @@ narrative_event = {
 	border = GFX_event_narrative_frame_diplomacy
 	is_triggered_only = yes
 	
-	trigger = {
-	}
-	
-	immediate = {
-	}
-	
 	option = {
 		name = "EVTOPTAliegecap_events.100"
 		remove_trait = on_journey
@@ -417,12 +390,6 @@ narrative_event = {
 	
 	border = GFX_event_narrative_frame_diplomacy
 	is_triggered_only = yes
-	
-	trigger = {
-	}
-	
-	immediate = {
-	}
 	
 	option = {
 		name ="EVTOPTAliegecap_events.102"

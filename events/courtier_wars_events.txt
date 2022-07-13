@@ -15,9 +15,6 @@ character_event = {
 		}
 	}
 	
-	immediate = {
-	}
-	
 	option = {
 		name = "EVTOPTAcourtierwar_events.2"
 		custom_tooltip = { text = YouWilBePaid }

@@ -13,8 +13,6 @@ long_character_event = {
 	border = GFX_event_long_frame_diplomacy
 	is_triggered_only = yes
 
-	trigger = {
-	}
 	
 	option = {
 		name = "EVTOPTAtroublesevents.1"
@@ -69,8 +67,6 @@ long_character_event = {
 	border = GFX_event_long_frame_diplomacy
 	is_triggered_only = yes
 
-	trigger = {
-	}
 	
 	option = {
 		name = "EVTOPTAtroublesevents.2"
@@ -133,8 +129,6 @@ long_character_event = {
 	border = GFX_event_long_frame_diplomacy
 	is_triggered_only = yes
 
-	trigger = {
-	}
 	
 	option = {
 		name = "EVTOPTAtroublesevents.3"
@@ -207,8 +201,6 @@ long_character_event = {
 	border = GFX_event_long_frame_diplomacy
 	is_triggered_only = yes
 
-	trigger = {
-	}
 	
 	option = {
 		name = "EVTOPTAtroublesevents.4"
@@ -282,8 +274,6 @@ long_character_event = {
 	border = GFX_event_long_frame_war
 	is_triggered_only = yes
 
-	trigger = {
-	}
 	
 	option = {
 		name = "EVTOPTAtroublesevents.10"
@@ -345,8 +335,6 @@ long_character_event = {
 	border = GFX_event_long_frame_war
 	is_triggered_only = yes
 
-	trigger = {
-	}
 	
 	option = {
 		name = "EVTOPTAtroublesevents.11"
@@ -369,8 +357,6 @@ long_character_event = {
 	border = GFX_event_long_frame_war
 	is_triggered_only = yes
 
-	trigger = {
-	}
 	
 	option = {
 		name = "EVTOPTAtroublesevents.12"
@@ -411,8 +397,6 @@ long_character_event = {
 	border = GFX_event_long_frame_war
 	is_triggered_only = yes
 
-	trigger = {
-	}
 	
 	option = {
 		name = "EVTOPTAtroublesevents.13"
@@ -554,8 +538,6 @@ long_character_event = {
 	border = GFX_event_long_frame_war
 	is_triggered_only = yes
 
-	trigger = {
-	}
 	
 	option = {
 		name = "EVTOPTAtroublesevents.20"
