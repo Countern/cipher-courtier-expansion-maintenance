@@ -135,23 +135,23 @@ character_event = {
 	}
 }
 
-character_event = {
-	id = court_prom.3
-	only_playable = yes
-	hide_window = yes
-	is_triggered_only = yes
-
-	trigger = {
-		is_landed = no
-	}
-	
-	immediate = {
-		random_province = {
-			limit = {
-				is_land = no
-				distance = { who = ROOT distance < 1000 }
-			}
-			save_event_target_as = spawn_location
-		}
-	}
-}
+#character_event = {
+#	id = court_prom.3
+#	only_playable = yes
+#	hide_window = yes
+#	is_triggered_only = yes
+#
+#	trigger = {
+#		is_landed = no
+#	}
+#	
+#	immediate = {
+#		random_province = {
+#			limit = {
+#				is_land = no
+#				distance = { who = ROOT distance < 1000 }
+#			}
+#			save_event_target_as = spawn_location
+#		}
+#	}
+#}

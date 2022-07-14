@@ -70,7 +70,7 @@ character_event = {
 					factor = 0.5 NOT = { event_target:letter_person = { opinion = { who = ROOT value = 0 } } }
 				}
 				modifier = {
-					factor = 0.2 event_target:letter_person = { is_rival = Root }
+					factor = 0.2 event_target:letter_person = { is_rival = ROOT }
 				}
 				modifier = {
 					factor = 0.1 event_target:letter_person = { has_opinion_modifier = { who = ROOT  modifier = sent_diplo_letter } }
@@ -139,7 +139,7 @@ character_event = {
 					factor = 0.6 NOT = { event_target:letter_person = { opinion = { who = ROOT value = 0 } } }
 				}
 				modifier = {
-					factor = 0.5 event_target:letter_person = { is_rival = Root }
+					factor = 0.5 event_target:letter_person = { is_rival = ROOT }
 				}
 				modifier = {
 					factor = 0.1 event_target:letter_person = { has_opinion_modifier = { who = ROOT  modifier = sent_diplo_letter } }
@@ -231,7 +231,7 @@ character_event = {
 					factor = 0.5 NOT = { event_target:letter_person = { opinion = { who = ROOT value = 0 } } }
 				}
 				modifier = {
-					factor = 0.2 NOT = { event_target:letter_person = { is_rival = Root } }
+					factor = 0.2 NOT = { event_target:letter_person = { is_rival = ROOT } }
 				}
 				modifier = {
 					factor = 0.05 event_target:letter_person = { has_opinion_modifier = { who = ROOT  modifier = sent_diplo_letter } }
@@ -308,7 +308,7 @@ character_event = {
 					factor = 0.5 NOT = { event_target:letter_person = { opinion = { who = ROOT value = 0 } } }
 				}
 				modifier = {
-					factor = 0.2 event_target:letter_person = { is_rival = Root }
+					factor = 0.2 event_target:letter_person = { is_rival = ROOT }
 				}
 				modifier = {
 					factor = 0.1 event_target:letter_person = { has_opinion_modifier = { who = ROOT  modifier = sent_diplo_letter } }

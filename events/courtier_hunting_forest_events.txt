@@ -234,7 +234,7 @@ character_event = {
 	option = {
 		trigger = { NOT = { trait = kind } }
 		name = "EVTOPTAforesthunting_events.6"
-		event_target:chosen_victim = { death = { death_reason = death_fallen killer = ROOT } }
+		event_target:chosen_victim = { death = { death_reason = death_murder_unknown killer = ROOT } } # death_fallen
 	}
 	
 	option = {

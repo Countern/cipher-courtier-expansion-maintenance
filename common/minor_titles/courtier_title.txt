@@ -7,6 +7,7 @@ title_courtier = {
 
     allowed_to_hold = {
         ai = no
+		# Audax Validator "." Ignore_1006
 		has_landed_title = c_COLLINS_SEAT
     }
 

@@ -17,7 +17,7 @@ narrative_event  = {
 	
 	option = {
 		name = "EVTOPTAmoving_events.1"
-		Root = {
+		ROOT = {
 			set_defacto_liege = event_target:newLiege
 			give_minor_title = title_courtier
 		}
@@ -60,7 +60,7 @@ narrative_event  = {
 		hidden_tooltip = {
 			remove_character_modifier = modifier_well_recieved_courtier
 		}
-		Root = {
+		ROOT = {
 			set_defacto_liege = event_target:newLiege
 			give_minor_title = title_courtier
 		}
@@ -89,7 +89,7 @@ narrative_event  = {
 		hidden_tooltip = {
 			remove_character_modifier = modifier_well_recieved_courtier
 		}
-		Root = {
+		ROOT = {
 			set_defacto_liege = event_target:newLiege
 		}
 		if = {
@@ -123,7 +123,7 @@ narrative_event  = {
 		hidden_tooltip = {
 			remove_character_modifier = modifier_well_recieved_courtier
 		}
-		Root = {
+		ROOT = {
 			set_defacto_liege = event_target:newLiege
 			give_minor_title = title_courtier
 		}
@@ -140,7 +140,7 @@ narrative_event  = {
 		hidden_tooltip = {
 			remove_character_modifier = modifier_well_recieved_courtier
 		}
-		Root = {
+		ROOT = {
 			set_defacto_liege = event_target:newLiege
 			give_minor_title = title_courtier
 		}
@@ -411,6 +411,7 @@ character_event = {
 	
 	option = {
 		name = "EVTOPTAmoving_events.11"
+		# Audax Validator "." Ignore_1006
 		event_target:province_chosen = { build_holding = { title = b_newHome type = castle holder = ROOT } }
 	}
 }

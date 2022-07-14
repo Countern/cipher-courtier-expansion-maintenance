@@ -1,18 +1,11 @@
 on_yearly_pulse = {
 	events = {
 		liege_land_events.4
-		homeless_event.2
-		homeless_event.8
-		homeless_event.3
 		lalad_events.1045
 		piratecourtierev.1
 		piratecourtierev.2
 	}
 	random_events = {
-		del = {
-			delay = 1
-			1 = homeless_event.4
-		}
 		random_trader_events = {
 			50 = trader_events.2
 			70 = trader_events.3

@@ -45,7 +45,7 @@ long_character_event = {
 				modifier = { factor = 2 diplomacy = 20 }
 				modifier = { factor = 1.5 trait = brave }
 				modifier = { factor = 1.8 trait = socializer }
-				modifier = { factor = 0.5 trait = cannibal }
+				modifier = { factor = 0.5 OR = { trait = cannibal trait = cannibal_trait } }
 				modifier = { factor = 0.8 trait = cruel }
 				add_character_modifier = {	modifier = favor_of_the_commoners years = 20 stacking = yes } 
 			}
@@ -100,7 +100,7 @@ long_character_event = {
 				modifier = { factor = 2 diplomacy = 20 }
 				modifier = { factor = 1.5 trait = brave }
 				modifier = { factor = 1.8 trait = socializer }
-				modifier = { factor = 0.5 trait = cannibal }
+				modifier = { factor = 0.5 OR = { trait = cannibal trait = cannibal_trait } }
 				modifier = { factor = 0.8 trait = cruel }
 				modifier = { factor = 0.8 trait = dull }
 				modifier = { factor = 1.6 trait = genius }
@@ -171,7 +171,7 @@ long_character_event = {
 				modifier = { factor = 1.5 trait = brave }
 				modifier = { factor = 1.5 trait = gregarious }
 				modifier = { factor = 1.8 trait = socializer }
-				modifier = { factor = 0.5 trait = cannibal }
+				modifier = { factor = 0.5 OR = { trait = cannibal trait = cannibal_trait } }
 				modifier = { factor = 0.8 trait = cruel }
 				modifier = { factor = 0.8 trait = dull }
 				modifier = { factor = 1.6 trait = genius }
@@ -231,7 +231,7 @@ long_character_event = {
 				modifier = { factor = 2 diplomacy = 20 }
 				modifier = { factor = 1.5 trait = brave }
 				modifier = { factor = 1.8 trait = socializer }
-				modifier = { factor = 0.5 trait = cannibal }
+				modifier = { factor = 0.5 OR = { trait = cannibal trait = cannibal_trait } }
 				modifier = { factor = 0.8 trait = cruel }
 				modifier = { factor = 0.8 trait = dull }
 				modifier = { factor = 1.6 trait = genius }
@@ -307,7 +307,7 @@ long_character_event = {
 				modifier = { factor = 2 martial = 20 }
 				modifier = { factor = 1.3 trait = brave }
 				modifier = { factor = 1.5 trait = wroth }
-				modifier = { factor = 1.1 trait = cannibal }
+				modifier = { factor = 1.1 OR = { trait = cannibal trait = cannibal_trait } }
 				modifier = { factor = 0.8 trait = kind }
 				modifier = { factor = 0.8 trait = dull }
 				modifier = { factor = 0.8 trait = craven }
