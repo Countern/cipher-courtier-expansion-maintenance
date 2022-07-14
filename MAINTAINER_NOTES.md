@@ -9,9 +9,11 @@
    * `lalad_loc.csv` - **EVTDESChomeless_event.1** - Weird "ou'"
    * `ciphers_courtier_loc.csv` - **EVTDESmoving_events.5** - Unknown character after "ruler"
    * `troubles_courtier_loc.csv` - **EVTDESCtroublesevents.3** - The [GetName] in [Liege.GetName] is only for titles, not characters
+   * `N/A` - **EVTDESrecruit_event.8 .7 .6** - Localisation key does not key, key refers to recruiting army 250 edition
 4. Decisions to take note of:
    * `00_LALAD_decisions.txt` - **quit_job** - Decision not removing job traits and character flags after quitting
    * `00_LALAD_decisions.txt` - **move_court_to** - Players being able to move to their own liege's court
+      * Might add another decision to pay homage or swear an oath to player's current liege as a courtier
    * `Courtier_troubles_decisions.txt` - **solve_trouble** - Immediate_Revolt province modifier still active once a rebellion start
       * Might add an on_action instance to solve the problem above
 5. Events to take note of:
