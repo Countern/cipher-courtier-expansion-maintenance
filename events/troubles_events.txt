@@ -555,7 +555,7 @@ long_character_event = {
 			stewardship = 10
 		}	
 		prestige = 25
-		liege = { opinion = { modifier = helped_with_finances who = root years = 10 } }
+		liege = { opinion = { modifier = helped_with_finances who = ROOT years = 10 } }
 	}
 	
 	option = {

@@ -440,8 +440,8 @@ character_event = {
 	}
 	option = {
 		name = "EVTOPTAhomeless_event.15"
-		from = { save_event_target_as = spouse_divorced }
-		root = { save_event_target_as = parent_liege }
+		FROM = { save_event_target_as = spouse_divorced }
+		ROOT = { save_event_target_as = parent_liege }
 		new_character = { character_event = { id = homeless_event.17 } }
 	}
 }

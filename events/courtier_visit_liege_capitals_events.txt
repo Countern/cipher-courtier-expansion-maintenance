@@ -179,7 +179,7 @@ character_event = {
 			trait = gregarious
 		}
 		tooltip_info = gregarious
-		name = "EVTOPTlAliegecap_events.5"
+		name = "EVTOPTAliegecap_events.5"
 		reverse_add_favor = event_target:chosen_councelour
 	}
 	

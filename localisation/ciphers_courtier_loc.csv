@@ -63,7 +63,7 @@ EVTOPTCrecruit_event.3;Recruit 30 heavy infantry and 20 pikemen.;;;;;;;;;;;;;x
 EVTOPTArecruit_event.4;Recruit 30 pikemen and 20 heavy cavalry.;;;;;;;;;;;;;x
 EVTOPTBrecruit_event.4;Recruit 20 pikemen and 20 heavy infantry and 10 heavy cavalry.;;;;;;;;;;;;;x
 EVTOPTCrecruit_event.4;Recruit 25 light cavalry and 25 heavy cavalry.;;;;;;;;;;;;;x
-EVTDESrecruit_event.1; All know that in this world, one must be surrounded by loyal men to survive. However, men do not come without a monetary incentive. Luckily, there are various ways one can find an amenable band of men. Shall we get them from group of peasant bandits, from a group of specialised retinues, or from the expensive but very qualified mercenary groups. \n \n \n §M(Hire from bandits: Costs 5 ¤ upfront, 0.5 maintenance)§! \n §M(Hire from retinues: Costs 15 ¤ upfront, 0.6 maintenance)§! \n §M(Hire from mercenaries: Costs 10 ¤ upfront, 0.8 maintenance)§!;;;;;;;;;;;;;x
+EVTDESrecruit_event.1; All know that in this world, one must be surrounded by loyal men to survive. However, men do not come without a monetary incentive. Luckily, there are various ways one can find an amenable band of men. Shall we get them from group of peasant bandits, from a group of specialised retinues, or from the expensive but very qualified mercenary groups. \n \n \n §M(Hire from bandits: Costs 5¤ upfront, 0.5 maintenance)§! \n §M(Hire from retinues: Costs 15¤ upfront, 0.6 maintenance)§! \n §M(Hire from mercenaries: Costs 10¤ upfront, 0.8 maintenance)§!;;;;;;;;;;;;;x
 EVTOPTArecruit_event.1;The local banditry tends to be cheap.;;;;;;;;;;;;;x
 EVTOPTBrecruit_event.1;Retinues tend to form more capable armies.;;;;;;;;;;;;;x
 EVTOPTCrecruit_event.1;I came for the best, and these mercenaries are battle-tested.;;;;;;;;;;;;;x
@@ -380,7 +380,7 @@ EVTOPTArecruit_event.8;Recruit 150 pikemen and 100 heavy cavalry.;;;;;;;;;;;;;x
 EVTOPTBrecruit_event.8;Recruit 100 pikemen and 100 heavy infantry and 50 heavy cavalry.;;;;;;;;;;;;;x
 EVTOPTCrecruit_event.8;Recruit 125 light cavalry and 125 heavy cavalry.;;;;;;;;;;;;;x
 EVTTITrecruit_event.5;Recruiting Time;;;;;;;;;;;;;x
-EVTDESrecruit_event.5; All know that in this world, one must be surrounded by loyal men to survive. However, men do not come without a monetary incentive. Luckily, there are various ways one can find an amenable band of men. Shall we get them from group of peasant bandits, from a group of specialised retinues, or from the expensive but very qualified mercenary groups. \n \n \n §M(Hire from bandits: Costs  25  ¤ upfront)§! \n §M(Hire from retinues: Costs 75 ¤ upfront)§! \n §M(Hire from mercenaries: Costs 50 ¤ upfront)§!;;;;;;;;;;;;;x
+EVTDESrecruit_event.5; All know that in this world, one must be surrounded by loyal men to survive. However, men do not come without a monetary incentive. Luckily, there are various ways one can find an amenable band of men. Shall we get them from group of peasant bandits, from a group of specialised retinues, or from the expensive but very qualified mercenary groups. \n \n \n §M(Hire from bandits: Costs  25¤ upfront)§! \n §M(Hire from retinues: Costs 75¤ upfront)§! \n §M(Hire from mercenaries: Costs 50¤ upfront)§!;;;;;;;;;;;;;x
 EVTOPTArecruit_event.5;The local banditry tends to be cheap.;;;;;;;;;;;;;x
 EVTOPTBrecruit_event.5;Retinues tend to form more capable armies.;;;;;;;;;;;;;x
 EVTOPTCrecruit_event.5;I came for the best, and these mercenaries are battle-tested.;;;;;;;;;;;;;x

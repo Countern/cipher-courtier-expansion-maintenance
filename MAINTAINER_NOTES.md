@@ -18,10 +18,11 @@
       * Might add an on_action instance to solve the problem above
 5. Events to take note of:
    * `courtier_visit_liege_capitals_events.txt` - **liegecap_events.6** - Description text too long, might convert to long_character_event or narrative_event
+   * `courtier_wars_events.txt` - **courtierwar_events.3** - No need for AI ruler to have an option that rewards the player martial courtier, just reference the player courtier themselves in an immediate block
 6. Minor titles files to take note of:
    * `courtier_title.txt` - **title_courtier** - A lot of missing code for a minor title instance
 
-### Notes on missing stuff that's part of the mod
+## Notes on missing stuff that's part of the mod
 * Something about "aspiring_business_owner" char modifier
    * Missing modifier
    * Only tied to action_manage_business instance in `/common/job_actions/`

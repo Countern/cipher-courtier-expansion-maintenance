@@ -26,7 +26,7 @@ character_event = {
 	id = courtierwar_events.2
 	desc = "EVTDESCcourtierwar_events.2"
 	picture = "GFX_evt_gift"
-	portrait = from
+	portrait = FROM
 	is_triggered_only = yes
 	
 	trigger = {
