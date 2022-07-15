@@ -63,7 +63,7 @@ EVTOPTCrecruit_event.3;Recruit 30 heavy infantry and 20 pikemen.;;;;;;;;;;;;;x
 EVTOPTArecruit_event.4;Recruit 30 pikemen and 20 heavy cavalry.;;;;;;;;;;;;;x
 EVTOPTBrecruit_event.4;Recruit 20 pikemen and 20 heavy infantry and 10 heavy cavalry.;;;;;;;;;;;;;x
 EVTOPTCrecruit_event.4;Recruit 25 light cavalry and 25 heavy cavalry.;;;;;;;;;;;;;x
-EVTDESrecruit_event.1; All know that in this world, one must be surrounded by loyal men to survive. However, men do not come without a monetary incentive. Luckily, there are various ways one can find an amenable band of men. Shall we get them from group of peasant bandits, from a group of specialised retinues, or from the expensive but very qualified mercenary groups. \n \n \n Â§M(Hire from bandits: Costs 5 Â¤ upfront, 0.5 maintenance)Â§! \n Â§M(Hire from retinues: Costs 15 Â¤ upfront, 0.6 maintenance)Â§! \n Â§M(Hire from mercenaries: Costs 10 Â¤ upfront, 0.8 maintenance)Â§!;;;;;;;;;;;;;x
+EVTDESrecruit_event.1; All know that in this world, one must be surrounded by loyal men to survive. However, men do not come without a monetary incentive. Luckily, there are various ways one can find an amenable band of men. Shall we get them from group of peasant bandits, from a group of specialised retinues, or from the expensive but very qualified mercenary groups. \n \n \n §M(Hire from bandits: Costs 5 ¤ upfront, 0.5 maintenance)§! \n §M(Hire from retinues: Costs 15 ¤ upfront, 0.6 maintenance)§! \n §M(Hire from mercenaries: Costs 10 ¤ upfront, 0.8 maintenance)§!;;;;;;;;;;;;;x
 EVTOPTArecruit_event.1;The local banditry tends to be cheap.;;;;;;;;;;;;;x
 EVTOPTBrecruit_event.1;Retinues tend to form more capable armies.;;;;;;;;;;;;;x
 EVTOPTCrecruit_event.1;I came for the best, and these mercenaries are battle-tested.;;;;;;;;;;;;;x
@@ -112,7 +112,7 @@ EVTOPTAforesthunting_events.5;I will do good by these great men!;;;;;;;;;;;;;x
 
 EVTDESforesthunting_events.6;While chasing a beastly looking rabbit, you notice your fellow hunter take a wrong turn and, in an instant, the poor man is now hanging for his life, holding onto a branch as he dangles over a concealed overhang. You are close enough to save him, but this man was never a favourite of yours... what will you do?;;;;;;;;;;;;;x
 EVTOPTAforesthunting_events.6;Let him fall! Let him fall!;;;;;;;;;;;;;x
-EVTOPTCforesthunting_events.6;The fate of this man doesnÂ´t lie with me.;;;;;;;;;;;;;x
+EVTOPTCforesthunting_events.6;The fate of this man doesn´t lie with me.;;;;;;;;;;;;;x
 saved_life_thankful;Thankful for his life.;;;;;;;;;;;;;x
 death_fallen;Fell to his death;;;;;;;;;;;;;x
 
@@ -149,7 +149,7 @@ EVTDESmoving_events.4;The journey has not been easy. \nIt seems as if [GetRandom
 EVTOPTAmoving_events.4;"I am a better man for it.";;;;;;;;;;;;;x
 
 EVTTITLEmoving_events.5;Company of Merchants;;;;;;;;;;;;;x
-EVTDESmoving_events.5;Travelling has been fun. \nAt some point in your journey, you meet a band of merchants who happen to be travelling to the same destination as yourself. This has made the journey a lot easier, and also allows you to enjoy conversation with this merry band of travellers. Some information you have keep to yourself as it seemed potentially useful for your future as a rulerâ€¦ if you so desire.;;;;;;;;;;;;;x
+EVTDESmoving_events.5;Travelling has been fun. \nAt some point in your journey, you meet a band of merchants who happen to be travelling to the same destination as yourself. This has made the journey a lot easier, and also allows you to enjoy conversation with this merry band of travellers. Some information you have keep to yourself as it seemed potentially useful for your future as a ruler€¦ if you so desire.;;;;;;;;;;;;;x
 EVTOPTAmoving_events.5;"I feel like I can handle finances a lot better now!";;;;;;;;;;;;;x
 
 EVTTITLEmoving_events.6;Religious Journey;;;;;;;;;;;;;x
@@ -175,6 +175,10 @@ EVTTITcourtiercountry_events.102;On Journey;;;;;;;;;;;;;x
 EVTDEScourtiercountry_events.102;A noble spends most of their life in their castle, but they must be willing to travel into the lands of their subjects not only to embolden them with the sight of their liege but also  to assess the situation of the realm from its tax revenues to its military capability. \nYou, as a simple courtier, are going as a representative of your liege, and will try to do these same actions as he would...;;;;;;;;;;;;;x
 EVTOPTAcourtiercountry_events.102;Off I go!;;;;;;;;;;;;;x
 
+EVTTITcourtiercountry_events.100;Journey Ends;;;;;;;;;;;;;x
+EVTDEScourtiercountry_events.100;With the beginning of a journey comes to the end of one, including matters that arose during your journey. You return to the comforts of your humble home and return to being a simple courtier.;;;;;;;;;;;;;x
+EVTOPTAcourtiercountry_events.100;Home sweet home!;;;;;;;;;;;;;x
+
 EVTDEScourtiercountry_events.1;Disease has ravaged this poor town... it was a beautiful journey at first, but then you arrived at [affected_city.GetName]. The streets are laden with the dead, and vermin skitter around boldly in the middle of the day whilst a masked man picks bodies up and places them in a wagon, asking for the dead. \nA priest comes rushing towards you, hope etched on his pained face. "Good [Root.GetTitle], we thought [Liege.GetDynName] had abandoned us! Have you come in [Root.Liege.GetHersHis] stead?";;;;;;;;;;;;;x
 EVTOPTAcourtiercountry_events.1;I will donate all I have to end this suffering!;;;;;;;;;;;;;x
 EVTOPTBcourtiercountry_events.1;I know I can handle this, I just have to put some work into it!;;;;;;;;;;;;;x
@@ -186,7 +190,7 @@ EVTOPTAcourtiercountry_events.2;"I tried my best, other chances will come....";;
 EVTTITcourtiercountry_events.2;Unsuccessful Containment;;;;;;;;;;;;;x
 
 EVTDEScourtiercountry_events.3;While your hard work was not entirely in vain, it wasn't enough to completely stop the epidemic. \nHowever, your valient efforts have enshrined you in the eyes of the townfolk as a local hero, and they beg for your return. \n Your liege seems slightly perturbed by your meteoric popularity, but nonetheless sends you a letter informing you of a raise in response to your great service.;;;;;;;;;;;;;x
-EVTOPTAcourtiercountry_events.3;"IÂ´ll inform him how grateful I am.";;;;;;;;;;;;;x
+EVTOPTAcourtiercountry_events.3;"I´ll inform him how grateful I am.";;;;;;;;;;;;;x
 EVTTITcourtiercountry_events.3;Successful Containment;;;;;;;;;;;;;x
 
 search_for_problems_in_realm_decision;Visit the countryside;;;;;;;;;;;;;x
@@ -371,18 +375,22 @@ start_cadet_branch;Start Cadet Branch;;;;;;;;;;;;;x
 start_cadet_branch_desc;As a courtier that ran away, maybe its time to make your successes your own!;;;;;;;;;;;;;x
 
 EVTTITrecruit_event.1;Recruiting Time;;;;;;;;;;;;;x
+EVTDESrecruit_event.8;The mercenary camp is decorated with the spoils of war, and you see men in well-worn armour walk around you as you approach their leader. These men offer their lives as a service, living and dying for the sword. Time to see what they are made of!;;;;;;;;;;;;;x
 EVTOPTArecruit_event.8;Recruit 150 pikemen and 100 heavy cavalry.;;;;;;;;;;;;;x
 EVTOPTBrecruit_event.8;Recruit 100 pikemen and 100 heavy infantry and 50 heavy cavalry.;;;;;;;;;;;;;x
 EVTOPTCrecruit_event.8;Recruit 125 light cavalry and 125 heavy cavalry.;;;;;;;;;;;;;x
-EVTDESrecruit_event.5; All know that in this world, one must be surrounded by loyal men to survive. However, men do not come without a monetary incentive. Luckily, there are various ways one can find an amenable band of men. Shall we get them from group of peasant bandits, from a group of specialised retinues, or from the expensive but very qualified mercenary groups. \n \n \n Â§M(Hire from bandits: Costs  25  Â¤ upfront)Â§! \n Â§M(Hire from retinues: Costs 75 Â¤ upfront)Â§! \n Â§M(Hire from mercenaries: Costs 50 Â¤ upfront)Â§!;;;;;;;;;;;;;x
+EVTTITrecruit_event.5;Recruiting Time;;;;;;;;;;;;;x
+EVTDESrecruit_event.5; All know that in this world, one must be surrounded by loyal men to survive. However, men do not come without a monetary incentive. Luckily, there are various ways one can find an amenable band of men. Shall we get them from group of peasant bandits, from a group of specialised retinues, or from the expensive but very qualified mercenary groups. \n \n \n §M(Hire from bandits: Costs  25  ¤ upfront)§! \n §M(Hire from retinues: Costs 75 ¤ upfront)§! \n §M(Hire from mercenaries: Costs 50 ¤ upfront)§!;;;;;;;;;;;;;x
 EVTOPTArecruit_event.5;The local banditry tends to be cheap.;;;;;;;;;;;;;x
 EVTOPTBrecruit_event.5;Retinues tend to form more capable armies.;;;;;;;;;;;;;x
 EVTOPTCrecruit_event.5;I came for the best, and these mercenaries are battle-tested.;;;;;;;;;;;;;x
 find_army_250_decision;Recruit an Army (v250);;;;;;;;;;;;;x
 find_army_250_decision_desc;Assemble a group of 250 men loyal to you.;;;;;;;;;;;;;x
+EVTDESrecruit_event.6;Bandits tend to think themselves sneaky, but with a bit of local knowledge, you know where to find the wretched hives of scum and villainy. Carefully, you enter their camp, surprising them with your arrival. They seem to be having bad luck with their raids... perhaps you can offer them better pay than what they are currently getting.;;;;;;;;;;;;;x
 EVTOPTArecruit_event.6;Recruit 250 light infantry.;;;;;;;;;;;;;x
 EVTOPTBrecruit_event.6;Recruit 250 archers.;;;;;;;;;;;;;x
 EVTOPTCrecruit_event.6;Recruit 125 light infantry and 125 archers.;;;;;;;;;;;;;x
+EVTDESrecruit_event.7;Unlike lowlife bandits, the troops down by the militia headquarters were much better outfitted and organised. Once you approach them, they inform you that they are looking for work. Time to make an offer!;;;;;;;;;;;;;x
 EVTOPTArecruit_event.7;Recruit 250 heavy infantry.;;;;;;;;;;;;;x
 EVTOPTBrecruit_event.7;Recruit 200 heavy infantry and 50 light cavalry.;;;;;;;;;;;;;x
 EVTOPTCrecruit_event.7;Recruit 150 heavy infantry and 100 pikemen.;;;;;;;;;;;;;x

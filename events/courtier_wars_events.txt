@@ -38,10 +38,7 @@ character_event = {
 			has_minor_title = title_commander
 		}
 	}
-	
-	immediate = { 	
-	}
-	
+
 	option = {
 		name = "EVTOPTAcourtierwar_events.2"
 		any_vassal = {
@@ -73,10 +70,7 @@ character_event = {
 			has_minor_title = title_commander
 		}
 	}
-	
-	immediate = { 	
-	}
-	
+
 	option = {
 		name = "EVTOPTAcourtierwar_events.2"
 		any_vassal = {
