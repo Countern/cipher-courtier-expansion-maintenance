@@ -1,9 +1,16 @@
 namespace = courtierwar_events
 
-#Reward for war won
+#Reward notifier
 character_event = {
 	id = courtierwar_events.1
-	desc = "EVTDESCcourtierwar_events.2"
+	desc = {
+		trigger = { has_character_flag = courtierwar_battle_won }
+		text = "EVTDESCAcourtierwar_events.1"
+	}
+	desc = {
+		trigger = { has_character_flag = courtierwar_war_won }
+		text = "EVTDESCBcourtierwar_events.1"
+	}
 	picture = "GFX_evt_gift"
 	is_triggered_only = yes
 	
@@ -15,53 +22,66 @@ character_event = {
 		}
 	}
 	
+	after = {
+		hidden_tooltip = {
+			clr_character_flag = courtierwar_battle_won
+			clr_character_flag = courtierwar_war_won
+		}
+	}
+	
 	option = {
-		name = "EVTOPTAcourtierwar_events.2"
-		custom_tooltip = { text = YouWilBePaid }
+		name = "EVTOPTAcourtierwar_events.1"
+		if = {
+			limit = { has_character_flag = courtierwar_battle_won }
+			wealth = 2
+		}
+		else_if = {
+			limit = { has_character_flag = courtierwar_war_won }
+			wealth = 5
+		}
+	}
+}
+
+#Reward for war won
+character_event = {
+	id = courtierwar_events.2
+	hide_window = yes
+	is_triggered_only = yes
+	
+	only_rulers = yes
+	ai = yes
+	trigger = {
+		any_vassal = {
+			has_character_modifier = homeless
+			trait = martial_trait
+			in_command = yes
+			has_minor_title = title_commander
+		}
+	}
+	
+	immediate = {
+		any_vassal = {
+			limit = {
+				has_character_modifier = homeless
+				trait = martial_trait
+				in_command = yes
+				has_minor_title = title_commander
+			}
+			set_character_flag = courtierwar_war_won
+			character_event = { id = courtierwar_events.1 }
+			#wealth = 5
+		}
 	}
 }
 
 #Reward for battle won
 character_event = {
-	id = courtierwar_events.2
-	desc = "EVTDESCcourtierwar_events.2"
-	picture = "GFX_evt_gift"
-	portrait = FROM
-	is_triggered_only = yes
-	
-	trigger = {
-		is_ruler = yes
-		any_vassal = {
-			has_character_modifier = homeless
-			trait = martial_trait
-			in_command = yes
-			has_minor_title = title_commander
-		}
-	}
-
-	option = {
-		name = "EVTOPTAcourtierwar_events.2"
-		any_vassal = {
-			limit = {
-				has_character_modifier = homeless
-				trait = martial_trait
-				in_command = yes
-				has_minor_title = title_commander
-			}
-			character_event = { id = courtierwar_events.1 }
-			wealth = 2
-		}
-	}
-}
-
-#Reward for battle won SMALL
-character_event = {
 	id = courtierwar_events.3
-	desc = "EVTDESCcourtierwar_events.3"
-	picture = "GFX_evt_gift"
-	portrait = event_target:warring_contractor
+	hide_window = yes
 	is_triggered_only = yes
 	
+	only_rulers = yes
+	ai = yes
 	trigger = {
 		any_vassal = {
 			has_character_modifier = homeless
@@ -70,9 +90,8 @@ character_event = {
 			has_minor_title = title_commander
 		}
 	}
-
-	option = {
-		name = "EVTOPTAcourtierwar_events.2"
+	
+	immediate = {
 		any_vassal = {
 			limit = {
 				has_character_modifier = homeless
@@ -80,13 +99,14 @@ character_event = {
 				in_command = yes
 				has_minor_title = title_commander
 			}
+			set_character_flag = courtierwar_battle_won
 			character_event = { id = courtierwar_events.1 }
-			wealth = 1
+			#wealth = 1
 		}
 	}
 }
 
-#Reward for battle won SMALL
+#Child of Pirate Courtier gets Pirate courtier trait
 character_event = {
 	id = courtierwar_events.4
 	is_triggered_only = yes

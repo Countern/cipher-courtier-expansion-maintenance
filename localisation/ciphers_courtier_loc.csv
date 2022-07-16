@@ -1,6 +1,8 @@
 #Code;English;French;German;;Spanish;;;;;;;;;x
 #Code;English;;;;;;;;;;;;;x
 
+bored;Bored;;;;;;;;;;;;;x
+
 EVTDEScourt_prom.1;One day whilst you are working, your employer excitedly approaches you. "Your performance has been outstanding [Root.GetDynName]! We have been hearing very good things about you, and I've decided to increase your salary. Have a small bonus on me.";;;;;;;;;;;;;x
 EVTOPTAcourt_prom.1;I have outdone myself.;;;;;;;;;;;;;x
 
@@ -293,7 +295,7 @@ sent_deg_letter;Sent Degrading Letter;;;;;;;;;;;;;x
 sent_diplo_letter;Sent Diplomatic Letter;;;;;;;;;;;;;x
 boring_letter;Didn't Bother Responding;;;;;;;;;;;;;x
 
-EVTDESCcourtierletter.13;Dear [Root.GetDynName], \n\n\nSeen [Root.GetDate] \n\n\nYours truly, ....;;;;;;;;;;;;;x
+EVTDESCcourtierletter.13;Dear [Root.GetDynName], \n\n\nSeen [GetDateText] \n\n\nYours truly, ....;;;;;;;;;;;;;x
 EVTOPTAcourtierletter.13;Did he just...!?;;;;;;;;;;;;;x
 
 EVTDESCcourtierletter.12;Filthy [Root.GetDynName], I have received your recent letters. You are a disgrace to all of humanity with your disgusting gods and your morally deplorable ideas. Truly you are the very spawn of [letter_person.Religion.GetRandomEvilGodName] and I swear I shall smite you with my very hands. \n\nYours truly, [letter_person.GetTitledName];;;;;;;;;;;;;x
@@ -319,6 +321,8 @@ spy_trait;Spy;;;;;;;;;;;;;x
 spy_trait_desc;This courtier is versed in the art of intrigue.;;;;;;;;;;;;;x
 scholar_trait;Scholar;;;;;;;;;;;;;x
 scholar_trait_desc;This courtier is versed in the art of seeking knowledge.;;;;;;;;;;;;;x
+experienced_merchant;Experience Merchant;;;;;;;;;;;;;x
+experienced_merchant_desc;This courtier is experienced in the arts of trade;;;;;;;;;;;;;x
 
 EVTDESCcourtierletter.18;[Root.GetDynName], I did not think it possible but you have sent me into a rage the likes of which even [letter_person.GetRandomGodName] would cower from. I want nothing more than to see you dead... I officially declare you my rival! \n\n Signed, [letter_person.GetTitledName].;;;;;;;;;;;;;x
 EVTOPTAcourtierletter.18;Good, good, let the hate flow through you.;;;;;;;;;;;;;x
@@ -336,11 +340,13 @@ nice_letter;Received a Nice Letter;;;;;;;;;;;;;x
 beautiful_poem;Sent a Masterpiece;;;;;;;;;;;;;x
 zelous_letter;Bonded over Faith;;;;;;;;;;;;;x
 #heretical_letter;Sent Heretical Letter;;;;;;;;;;;;;x
+incredible_letter;Received Incredible Letter;;;;;;;;;;;;;x
 family_offended;Offended Dynasty;;;;;;;;;;;;;x
 family_offended_rebound;Offended Dynasty;;;;;;;;;;;;;x
 lands_offended;Insulted my Lands;;;;;;;;;;;;;x
 lands_offended_rebound;Insulted my Homeland;;;;;;;;;;;;;x
 publicly_offended;Humiliated Me in Public;;;;;;;;;;;;;x
+religious_disagreements;Religious Disagreements;;;;;;;;;;;;;x
 
 publicly_offended_rebound;Had a Good Laugh;;;;;;;;;;;;;x
 degraded_offended;Insulted my Character;;;;;;;;;;;;;x
@@ -395,6 +401,7 @@ EVTOPTArecruit_event.7;Recruit 250 heavy infantry.;;;;;;;;;;;;;x
 EVTOPTBrecruit_event.7;Recruit 200 heavy infantry and 50 light cavalry.;;;;;;;;;;;;;x
 EVTOPTCrecruit_event.7;Recruit 150 heavy infantry and 100 pikemen.;;;;;;;;;;;;;x
 
-EVTDESCcourtierwar_events.2;A major war has been won, and your liege is very satisfied with your participation. He meets you after the battle and hands you a bag with your payment.;A major war has been won, and your liege is very satisfied with your participation. He meets you after the battle and hands you a bag with your payment.;A major war has been won, and your liege is very satisfied with your participation. He meets you after the battle and hands you a bag with your payment.;;A major war has been won, and your liege is very satisfied with your participation. He meets you after the battle and hands you a bag with your payment.;;;;;;;;;;;;;x
-EVTOPTAcourtierwar_events.2;Thank you Sire.;Thank you Sire.;Thank you Sire.;;Thank you Sire.;;;;;;;;;;;;;x
-EVTDESCcourtierwar_events.3;You managed to stomp a small retinue of your enemies. After counting heads, your liege pays you for your time.;You managed to stomp a small retinue of your enemies. After counting heads, your liege pays you for your time.;You managed to stomp a small retinue of your enemies. After counting heads, your liege pays you for your time.;;You managed to stomp a small retinue of your enemies. After counting heads, your liege pays you for your time.;;;;;;;;;;;;;x
+EVTDESCAcourtierwar_events.1;A major war has been won, and your liege is very satisfied with your participation. He meets you after the battle and hands you a bag with your payment.;;;;;;;;;;;;;x
+EVTDESCBcourtierwar_events.1;The war is over and the celebration begins. As you celebrate with your fellow comrades, your liege, satisfied with your participation in the war, summoned you to his war tent to reward you handsomely.;;;;;;;;;;;;;x
+EVTOPTAcourtierwar_events.1;Thank you Sire.;;;;;;;;;;;;;x
+#EVTDESCcourtierwar_events.3;You managed to stomp a small retinue of your enemies. After counting heads, your liege pays you for your time.;You managed to stomp a small retinue of your enemies. After counting heads, your liege pays you for your time.;You managed to stomp a small retinue of your enemies. After counting heads, your liege pays you for your time.;;You managed to stomp a small retinue of your enemies. After counting heads, your liege pays you for your time.;;;;;;;;;;;;;x

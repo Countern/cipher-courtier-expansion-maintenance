@@ -44,10 +44,6 @@ respecting_christians = {
 	christian_opinion = 5
 }
 
-troubles_province = {
-	icon = 17
-}
-
 charismatic_independence = {
 	icon = 106
 	local_revolt_risk = 0.5
@@ -83,4 +79,11 @@ favor_of_the_nobility = {
 
 province_troubles = {
 	icon = 106
+}
+
+mod_quarry_knowledge = {
+	icon = 4
+	stewardship = 2
+	build_cost_modifier = -0.1
+	build_time_modifier = -0.1
 }

@@ -42,6 +42,7 @@ EVTDESCtroublesevents.12;A Knight crosses you on the way to the nearby tornament
 EVTOPTAtroublesevents.12;I will duel for my honor!!!;I will duel for my honor!!!;I will duel for my honor!!!;;I will duel for my honor!!!;;;;;;;;;x
 EVTOPTBtroublesevents.12;I will accept this unfair punishment.;I will accept this unfair punishment.;I will accept this unfair punishment.;;I will accept this unfair punishment.;;;;;;;;;x
 EVTOPTCtroublesevents.12;He can't demands a man of god to kneel.;He can't demands a man of god to kneel.;He can't demands a man of god to kneel.;;He can't demands a man of god to kneel.;;;;;;;;;x
+CHALLENGED_TO_DUEL;[combatant_1.GetBestName] is challenged to a duel by [Root.GetBestName];;;;;;;;;;;;;x
 
 solve_trouble;Solve Trouble;Solve Trouble;Solve Trouble;Solve Trouble;Solve Trouble;Solve Trouble;x;;;;;;;
 solve_trouble_named;Solve a local trouble in [Root.GetName];Solve a local trouble in [Root.GetName];Solve a local trouble in [Root.GetName];;Solve a local trouble in [Root.GetName];;;;;;;;;x
@@ -70,4 +71,5 @@ EVTOPTAtroublesevents.1002;I'll head out!;I'll head out!;I'll head out!;;I'll he
 EVTOPTBtroublesevents.1002;I dont wanna hear more of these warnings with this character.;I dont wanna hear more of these warnings with this character.;I dont wanna hear more of these warnings with this character.;;I dont wanna hear more of these warnings with this character.;;;;;;;;;x
 betrayed_me;Betrayed Me!;Betrayed Me!;Betrayed Me!;;Betrayed Me!;;;;;;;;;x
 pirate_courtier;Pirate!;Pirate!;Pirate!;;Pirate!;;;;;;;;;x
+pirate_courtier_desc;This courtier has raised their black flag and became a pirate!;;;;;;;;;;;;;x
 A_Random_Encounter;A Random Encounter Will Occour.;A Random Encounter Will Occour.;A Random Encounter Will Occour.;;A Random Encounter Will Occour.;;;;;;;;;x

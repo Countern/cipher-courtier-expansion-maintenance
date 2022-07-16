@@ -25,10 +25,15 @@ court_jade;Jade Rock;;;;;;;;;;;;;x
 court_jade_desc;Such a small material cannot be unvalued when taken into account its usage in chinese ceremonies and other prestigious activities.;;;;;;;;;;;;;x
 
 court_corroded_chain_armor;Weak Chain Mail;;;;;;;;;;;;;x
+court_corroded_chain_armor_desc;This chain mail has seen the long years of its existence, with its corroding parts evidence of its old age. Though the chain mail has corroded, it can still be used albeit weaker than a normal chainmail.;;;;;;;;;;;;;x
 court_long_sword;Long Sword;;;;;;;;;;;;;x
-GFX_winged_spear;Winged Spear;;;;;;;;;;;;;x
-GFX_long_bow;Long Bow;;;;;;;;;;;;;x
-GFX_chain_armor;Refined Chain Armor;;;;;;;;;;;;;x
+court_long_sword_desc;Intended for users wearing full plate armors, this weapon has a much longer blade than the average sword capable of having a longer reach with the price of the need to use two hands.;;;;;;;;;;;;;x
+court_winged_spear;Winged Spear;;;;;;;;;;;;;x
+court_winged_spear_desc;This weapon has a long spear with a barbed point, increasing its lethality and damage on top of its already long reach. A devastating weapon.;;;;;;;;;;;;;x
+court_long_bow;Long Bow;;;;;;;;;;;;;x
+court_long_bow_desc;This ranged weapon is tall making the users able to have a long draw, and as such shoot an arrow at a much further range. Longbows were used a lot by the English and were known as warbows.;;;;;;;;;;;;;x
+court_chain_armor;Refined Chain Armor;;;;;;;;;;;;;x
+court_chain_armor_desc;This armor of interlocking chains is in good condition and is capable of protecting its wearer against slashing blows and provides some form protection against penetration.;;;;;;;;;;;;;x
 
 court_bundle_wood;Bundle of Wood;;;;;;;;;;;;;x
 court_bundle_wood_desc;This is a high ammount of quality wood, can be used to fabricate weaponry and others!;;;;;;;;;;;;;x

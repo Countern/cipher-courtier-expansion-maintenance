@@ -65,8 +65,8 @@ on_death = {
 	}
 }
 
-#on_war_ended_victory = {
-#	events = {
-#		courtierwar_events.2
-#	}
-#}
+on_war_ended_victory = {
+	events = {
+		courtierwar_events.2
+	}
+}

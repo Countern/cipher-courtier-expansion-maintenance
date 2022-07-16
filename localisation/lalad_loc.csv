@@ -138,3 +138,11 @@ NEWSALARYSTE;Your new job will now pay you based on your Stewardship! (0.05 * St
 NEWSALARYPROM;Your salary will be adjusted to your current stats!;;;;;;;;;;;;;x
 
 EVTOPTChomeless_event.1;All of you, leave me!;;;;;;;;;;;;;x
+
+province_troubles;Provincial Troubles;;;;;;;;;;;;;x
+province_troubles_desc;This province is having troubles that its ruler cannot resolve, requiring your presence to solve it.;;;;;;;;;;;;;x
+
+mod_quarry_knowledge;Quarry Knowledge;;;;;;;;;;;;;x
+mod_quarry_knowledge_desc;This character worked at a stone quarry and obtained knowledge about how quarries work.;;;;;;;;;;;;;x
+
+negative_money_desc;This character is bankrupt, which doesn't look well for their reputation.;;;;;;;;;;;;;x

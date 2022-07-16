@@ -424,8 +424,7 @@ character_event = {
 #Marriage events
 character_event = {
 	id = homeless_event.16
-	desc = "EVTDESChomeless_event.16"
-	picture = "GFX_evt_Marriage"
+	hide_window = yes
 	is_triggered_only = yes
 	trigger = {
 		ROOT = { 
@@ -438,8 +437,7 @@ character_event = {
 		}
 		new_character = { has_character_modifier = homeless }
 	}
-	option = {
-		name = "EVTOPTAhomeless_event.15"
+	immediate = {
 		FROM = { save_event_target_as = spouse_divorced }
 		ROOT = { save_event_target_as = parent_liege }
 		new_character = { character_event = { id = homeless_event.17 } }
@@ -449,7 +447,7 @@ character_event = {
 character_event = {
 	id = homeless_event.17
 	desc = "EVTDESChomeless_event.17"
-	picture = "GFX_evt_Marriage"
+	picture = "GX_evt_marriage"
 	is_triggered_only = yes
 	option = {
 		name = "EVTOPTAhomeless_event.17"
@@ -487,7 +485,7 @@ character_event = {
 character_event = {
 	id = homeless_event.20
 	desc = "EVTDESChomeless_event.17"
-	picture = "GFX_evt_Marriage"
+	picture = "GX_evt_marriage"
 	is_triggered_only = yes
 	option = {
 		name = "EVTOPTAhomeless_event.17"

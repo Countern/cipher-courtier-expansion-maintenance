@@ -372,7 +372,7 @@ long_character_event = {
 				save_event_target_as = combatant_1 
 			}
 		}
-		character_event = { id = HFP.10096 tooltip = Challenged_to_duel }
+		character_event = { id = HFP.10096 tooltip = CHALLENGED_TO_DUEL }
 	}
 	
 	option = {
