@@ -205,7 +205,7 @@ character_event = {
 }
 
 #Its delicious!
-character_event = {
+long_character_event = {
 	id = liegecap_events.6
 	desc = "EVTDESliegecap_events.6"
 	picture = "GFX_visiting_capital"
@@ -341,7 +341,7 @@ character_event = {
 									NOT = { has_character_flag = content_court_cap_event }
 								}
 							}
-							character_event = { id = liegecap_events.6 months = 3 } 
+							long_character_event = { id = liegecap_events.6 months = 3 } 
 						}
 						40 = { 
 							trigger = {

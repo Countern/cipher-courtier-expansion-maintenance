@@ -16,7 +16,7 @@ EVTOPTAlalad_events.100;One day, epics will be written of my exploits!;;;;;;;;;;
 EVTOPTBlalad_events.100;On second thought, I'd rather not.;;;;;;;;;;;;;x
 move_court_to;Move Here;;;;;;;;;;;;;x
 move_court_to_desc;The court of [Root.Holder.GetTitledFirstName] seems to be rife with opportunity. I will move there and offer them my service.;;;;;;;;;;;;;x
-EVTDESChomeless_event.1;ou' are now a courtier. To move to the anothers court and find a liege to serve, simply right-click on their title and select the "Move Here" option.;;;;;;;;;;;;;x
+EVTDESChomeless_event.1;You are now a courtier. To move to the anothers court and find a liege to serve, simply right-click on their title and select the "Move Here" option.;;;;;;;;;;;;;x
 EVTOPTAhomeless_event.1;I'm ready to strike out alone!;;;;;;;;;;;;;x
 EVTOPTBhomeless_event.1;I will bring my family with me!;;;;;;;;;;;;;x
 EVTDESChomeless_event.9;You finally have a reason and the means to begin gathering troops of your own. There are many ways you can go about doing this...;;;;;;;;;;;;;x
