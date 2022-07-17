@@ -30,6 +30,6 @@ CONSTRUCT_WARNING;A residence isnt in or has been recently constructed;;;;;;;;;;
 buy_residence;Buy a Residence;;;;;;;;;;;;;x
 buy_residence_desc;Buy a residence barony. This will build a castle in a free holding of your liege. This cannot terminate your courtier status but will phroibit you from moving courts for good.;;;;;;;;;;;;;x
 EVTDESmoving_events.10;The new residence you have ordered has begun construction. After so long, you finaly will have a place to call your own! This might be the start of your dynasties sucess, or where your dynasty recovers past glories, but now its time to gather man that will serve you!;;;;;;;;;;;;;x
-EVTOPTAmoving_events.10;This shall [ROOT.GetOnlyDynastyName]'s new home;;;;;;;;;;;;;x
-EVTDESmoving_events.11;[ROOT.GetOnlyDynastyName]'s new castle has finally finished construction! People from the realm line up to see the new residence, new peasants flock near to find new opportunities in your lands, and some lords are starting to notice your presence in the region. This is trully a new beggining.;;;;;;;;;;;;;x
+EVTOPTAmoving_events.10;This shall [Root.GetBestName]'s new home;;;;;;;;;;;;;x
+EVTDESmoving_events.11;[Root.GetBestName]'s new castle has finally finished construction! People from the realm line up to see the new residence, new peasants flock near to find new opportunities in your lands, and some lords are starting to notice your presence in the region. This is trully a new beggining.;;;;;;;;;;;;;x
 EVTOPTAmoving_events.11;This is the beggining of something new!;;;;;;;;;;;;;x

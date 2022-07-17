@@ -54,6 +54,7 @@ narrative_event = {
 					ruler = "LANDLESS_TITLE"
 					ruler_female = "LANDLESS_TITLE_FEMALE"
 				}
+				new_title = { set_preferred_capital = PREV }
 			}
 		}
 		clear_wealth = yes

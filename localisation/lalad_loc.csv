@@ -1,5 +1,5 @@
 #CODE;ENGLISH;FRENCH;GERMAN;;SPANISH;;;;;;;;;x
-COLLINS_SEAT;House [Root.GetOnlyDynastyName];Le Maison de [Root.GetOnlyDynastyName];;;;;;;;;;;;x
+COLLINS_SEAT;House [Root.GetBestName];Le Maison de [Root.GetBestName];;;;;;;;;;;;x
 raise_adventure_troops;Hire Troops;;;;;;;;;;;;;x
 raise_adventure_troops_desc;Begin gathering troops to your cause.;;;;;;;;;;;;;x
 become_LALAD;Become a Courtier;;;;;;;;;;;;;x

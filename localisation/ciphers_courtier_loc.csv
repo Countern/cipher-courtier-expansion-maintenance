@@ -302,7 +302,7 @@ EVTDESCcourtierletter.12;Filthy [Root.GetDynName], I have received your recent l
 EVTOPTAcourtierletter.12;Not the reaction I was expecting...;;;;;;;;;;;;;x
 heretical_letter;Sent me a Heretical Letter;;;;;;;;;;;;;x
 
-EVTDESCcourtierletter.14;[Root.GetDynName], we have received your words about our bloodline, and know that you have made a great enemy out of the House [letter_person.GetOnlyDynastyName]. Watch your back, and hope you don't end up dead in a ditch! \n\n Signed, [letter_person.GetTitledName].;;;;;;;;;;;;;x
+EVTDESCcourtierletter.14;[Root.GetDynName], we have received your words about our bloodline, and know that you have made a great enemy out of the House [letter_person.GetBestName]. Watch your back, and hope you don't end up dead in a ditch! \n\n Signed, [letter_person.GetTitledName].;;;;;;;;;;;;;x
 EVTOPTAcourtierletter.14;The message worked perfectly!;;;;;;;;;;;;;x
 EVTDESCcourtierletter.15;[Root.GetDynName], my accomplishments of five minutes of the day are greater than anything you will achieve in your lifetime! You are a [GetFromRootInsult] and an unlanded bastard, and I challenge you to again insult the greatness of my realm! You will pay! \n\n Signed, [letter_person.GetTitledName].;;;;;;;;;;;;;x
 EVTOPTAcourtierletter.15;The message worked perfectly!;;;;;;;;;;;;;x
@@ -375,7 +375,7 @@ EVTOPTAcourtiercountry_events.7;Thank you for your service. ;;;;;;;;;;;;;x
 EVTOPTBcourtiercountry_events.7;Thank you. I would also like to hire one of your assistants.;;;;;;;;;;;;;x
 EVTOPTCcourtiercountry_events.7;You seem a man of prodigious skill. Would you care to craft me something truly remarkable?;;;;;;;;;;;;;x
 
-set_out_as_character;Run away with [ROOT.GetDynName];;;;;;;;;;;;;x
+set_out_as_character;Run away with [Root.GetDynName];;;;;;;;;;;;;x
 set_out_as_character_desc;Sometimes a noble is unable to find his sucess in life easily. However, one can leave and search for his own glory!;;;;;;;;;;;;;x
 start_cadet_branch;Start Cadet Branch;;;;;;;;;;;;;x
 start_cadet_branch_desc;As a courtier that ran away, maybe its time to make your successes your own!;;;;;;;;;;;;;x
