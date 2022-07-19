@@ -4,4 +4,6 @@ dependencies = {
 	"A Game of Thrones"
 	"CK2Plus"
 	"CleanSlate"
+	"Warcraft: Guardians of Azeroth"
 }
+picture = "ccem_thumbnail.jpg"
