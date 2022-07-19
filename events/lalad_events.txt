@@ -9,39 +9,53 @@ narrative_event = {
 	picture = "GFX_evt_siege"
 	is_triggered_only = yes
 	immediate = {
-		if = { 
-			 limit = { is_nomadic = yes }
-			 set_government_type = tribal_government 
-		}
+		#if = { 
+		#	 limit = { is_nomadic = yes }
+		#	 set_government_type = tribal_government 
+		#}
 		any_demesne_title = {
 			set_title_flag = take_collins_seat
 		}
 		primary_title = { save_event_target_as = Primary_title }
 		if = {
 			limit = { independent = no }
-			liege = {
-				save_event_target_as = new_liege
-			}
+			liege = { save_event_target_as = new_liege }
 		}
 		else = {
-			top_liege = {
+			if = {
+				limit = { is_nomadic = yes }
+				random_vassal = {
+					limit = { is_landed = yes }
+					preferred_limit = { is_nomadic = yes is_powerful_vassal = yes }
+					preferred_limit = { is_nomadic = yes }
+					save_event_target_as = new_liege
+					save_event_target_as = chancellor_in_power
+				}
+			}
+			else = {
 				any_neighbor_independent_ruler = {
-					limit = {
-						higher_tier_than = COUNT 
-					}
+					limit = { higher_tier_than = COUNT }
 					save_event_target_as = new_liege
 				}
 			}
 		}
-		job_chancellor = { save_event_target_as = chancellor_in_power }
+		if = {
+			limit = { is_nomadic = no }
+			job_chancellor = { save_event_target_as = chancellor_in_power }
+		}
+		#job_chancellor = { save_event_target_as = chancellor_in_power }
 	}
 	option = {
 		name = "EVTOPTAlalad_events.100"
+		if = {
+			limit = { is_nomadic = yes }
+			set_character_flag = was_nomadic
+			clan_title = { destroy_landed_title = THIS }
+			capital_holding = { destroy_settlement = THIS }
+		}
 		any_demesne_title = {
-			if = {
-				limit = { is_landless_type_title = no }
-				grant_title = event_target:chancellor_in_power
-			}
+			limit = { is_landless_type_title = no }
+			grant_title = event_target:chancellor_in_power
 		}
 		event_target:new_liege = {
 			capital_scope = {
@@ -55,7 +69,22 @@ narrative_event = {
 						ruler = "LANDLESS_TITLE"
 						ruler_female = "LANDLESS_TITLE_FEMALE"
 					}
-					new_title = { set_preferred_capital = PREV }
+					new_title = {
+						set_preferred_capital = PREV
+						
+						if = {
+							limit = { has_character_flag = was_nomadic }
+							set_government_type = tribal_government
+							clr_character_flag = was_nomadic
+						}
+						
+						holder_scope = { set_defacto_liege = event_target:new_liege }
+						gender_succ = true_cognatic
+						succession = { base_type = feudal_elective voting_rules = courtier_election } 
+						set_title_flag = The_lonely_title
+						set_coa = event_target:Primary_title
+						set_title_flag = landless_adventurer
+					}
 				}
 			}
 		}
@@ -65,17 +94,17 @@ narrative_event = {
   			modifier = homeless
  			duration = -1
 		}
-		any_demesne_title = {
-			if = {
-				limit = { is_landless_type_title = yes }
-				holder_scope = { set_defacto_liege = event_target:new_liege }
-				gender_succ = true_cognatic
-				succession = { base_type = feudal_elective voting_rules = courtier_election } 
-				set_title_flag = The_lonely_title
-				set_coa = event_target:Primary_title
-				set_title_flag = landless_adventurer
-			}
-		}
+		#any_demesne_title = {
+		#	if = {
+		#		limit = { is_landless_type_title = yes }
+		#		holder_scope = { set_defacto_liege = event_target:new_liege }
+		#		gender_succ = true_cognatic
+		#		succession = { base_type = feudal_elective voting_rules = courtier_election } 
+		#		set_title_flag = The_lonely_title
+		#		set_coa = event_target:Primary_title
+		#		set_title_flag = landless_adventurer
+		#	}
+		#}
 		character_event = { id = lalad_events.1001 }
 	}
 	option = {

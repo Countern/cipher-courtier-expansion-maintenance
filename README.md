@@ -3,6 +3,14 @@ The original mod is created by "Magickarp" Cipher and can be [found here](https:
 
 As of 2022-7-12, I will be patching up Cipher's Courtier Expansion mod to fix any errors and obsolete/deprecated codes.
 
+## Branch Information
+Branch Name: nomad-optimization
+This branch will be used to test edited code for nomad compatiblity
+
+## Branch Notes
+* Work on hardcoded unlanded sons thing (succession_voting)
+   * Unlanded sons appear because succession is not Gravelkind or Elected Gravelkind
+
 ## Installation Instructions
 1. Click on the green `Clone` button located at the top right of the listed files
    * A drop menu should pop up
