@@ -175,7 +175,7 @@ character_event = {
 	immediate = {
 		clr_character_flag = archer_joins_courtier_flag
 		set_character_flag = archer_joins_courtier_flag
-		liege = { 
+		liege = {
 			capital_scope = {
 				save_event_target_as = spawn_location
 			}
@@ -257,7 +257,7 @@ character_event = {
 	immediate = {
 		clr_character_flag = saint_spotted_event
 		set_character_flag = saint_spotted_event
-		liege = { 
+		liege = {
 			capital_scope = {
 				save_event_target_as = spawn_location
 			}
@@ -337,7 +337,7 @@ character_event = {
 							}
 							character_event = { id = foresthunting_events.3 months = 3 }
 						}
-						40 = { 
+						40 = {
 							trigger = {
 								OR = {
 									had_character_flag = { flag = lady_in_forest_eventflag days = 1825 }
@@ -346,7 +346,7 @@ character_event = {
 							}
 							character_event = { id = foresthunting_events.4 months = 3 } 
 						}
-						40 = { 
+						40 = {
 							trigger = {
 								OR = {	
 									martial = 10
@@ -356,7 +356,7 @@ character_event = {
 							}
 							character_event = { id = foresthunting_events.5 months = 3 } 
 						}
-						40 = { 
+						40 = {
 							trigger = {
 								OR = {
 									had_character_flag = { flag = content_court_cap_event days = 1825 }
@@ -372,7 +372,7 @@ character_event = {
 							}
 							character_event = { id = foresthunting_events.6 months = 3 } 
 						}
-						40 = { 
+						40 = {
 							trigger = {
 								# Audax Validator "." Ignore_1002
 								OR = {

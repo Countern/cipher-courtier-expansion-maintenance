@@ -23,7 +23,7 @@ targetted_decisions = {
 		effect = {
 			ROOT = { save_event_target_as = blacksmith } 
 			FROM = {
-				character_event = { 
+				character_event = {
 					id = crafty_crafting.1
 				}
 			}
@@ -163,7 +163,7 @@ targetted_decisions = {
 				FROMFROM = { transfer_artifact = { from = FROM to = ROOT } }
 			}
 			if = {
-				limit = { 
+				limit = {
 					FROMFROM = {
 						has_artifact_flag = gold
 					}
@@ -224,7 +224,7 @@ targetted_decisions = {
 				FROMFROM = { transfer_artifact = { from = FROM to = ROOT } }
 			}
 			if = {
-				limit = { 
+				limit = {
 					FROMFROM = {
 						has_artifact_flag = silk_thread
 					}
@@ -288,7 +288,7 @@ targetted_decisions = {
 				FROMFROM = { transfer_artifact = { from = FROM to = ROOT } }
 			}
 			if = {
-				limit = { 
+				limit = {
 					FROMFROM = {
 						has_artifact_flag = jade
 					}
@@ -333,7 +333,7 @@ targetted_decisions = {
 				FROMFROM = { transfer_artifact = { from = FROM to = ROOT } }
 			}
 			if = {
-				limit = { 
+				limit = {
 					FROMFROM = {
 						NOT = { has_artifact_flag = exotic }
 					}

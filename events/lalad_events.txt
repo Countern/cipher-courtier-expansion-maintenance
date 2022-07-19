@@ -9,7 +9,7 @@ narrative_event = {
 	picture = "GFX_evt_siege"
 	is_triggered_only = yes
 	immediate = {
-		if = { 
+		if = {
 			 limit = { is_nomadic = yes }
 			 set_government_type = tribal_government 
 		}
@@ -411,7 +411,7 @@ character_event = {
 	hide_window = yes
 	is_triggered_only = yes
 	trigger = {
-		ROOT = { 
+		ROOT = {
 			ai = yes 
 			NOT = { is_friend = new_character }
 		}

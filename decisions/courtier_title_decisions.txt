@@ -50,7 +50,7 @@ targetted_decisions = {
 			
 		}
 		effect = {
-			FROM = { 
+			FROM = {
 				liege = { opinion = { modifier = betrayed_me who = FROM years = 60 } add_rival = FROM }
 				top_liege = { opinion = { modifier = betrayed_me who = FROM years = 60 } add_rival = FROM }
 				set_defacto_liege = THIS 
