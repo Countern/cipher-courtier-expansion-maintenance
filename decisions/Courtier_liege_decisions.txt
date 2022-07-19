@@ -83,7 +83,7 @@ targetted_decisions = {
 						FROM = { character_event = { id = liege_land_events.3 } }
 					}
 					50 = { FROM = { character_event  = { id = liege_land_events.2 } } }
-					90 = { 
+					90 = {
 						modifier = {
 							factor = 0.4
 							FROM = { opinion = { who = FROM value = 20 } }

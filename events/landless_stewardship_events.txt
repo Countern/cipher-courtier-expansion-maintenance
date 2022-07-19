@@ -33,21 +33,21 @@ character_event = { #Gaining event from target
 			5 = { add_artifact = court_silk_thread }
 			5 = { add_artifact = court_gold }
 		}
-		random = { 
+		random = {
 			chance = 10 
 			random_list = {
 				60 = { add_artifact = court_iron_ingot }
 				60 = { add_artifact = court_crafting_thread }
 				60 = { add_artifact = court_assorted_leather }
 				60 = { add_artifact = court_bundle_wood }
-				5 = { 
+				5 = {
 					modifier = {
 					  factor = 45
 					  liege = { capital_scope = { region = world_india } }
 					}
 					add_artifact = court_spices 
 				}
-				5 = { 
+				5 = {
 					modifier = {
 					  factor = 35
 					  OR = {
@@ -59,7 +59,7 @@ character_event = { #Gaining event from target
 					}
 					add_artifact = court_jade 
 				}
-				5 = { 
+				5 = {
 					modifier = {
 					  factor = 35
 					  OR = {
@@ -71,7 +71,7 @@ character_event = { #Gaining event from target
 					}
 					add_artifact = court_silk_thread 
 				}
-				5 = { 
+				5 = {
 					modifier = {
 					  factor = 35
 					  liege = { capital_scope = { region = world_africa } }
@@ -122,7 +122,7 @@ character_event = { #Trader job European sand
 	
 	option = {
 		name = "EVTOPTIONBtrader_events.2"
-		trigger = { 
+		trigger = {
 			OR = {
 				trait = zealous
 				learning = 6
@@ -137,7 +137,7 @@ character_event = { #Trader job European sand
 	
 	option = {
 		name = "EVTOPTIONCtrader_events.2"
-		trigger = { 
+		trigger = {
 			any_dynasty_member_even_if_dead = {
 				OR = {
 					culture_group = arabic
@@ -153,7 +153,7 @@ character_event = { #Trader job European sand
 	
 	option = {
 		name = "EVTOPTIONDtrader_events.2"
-		trigger = { 
+		trigger = {
 			NOT = { learning = 6 }
 		}
 		event_target:trader_storyhearer = {
@@ -186,7 +186,7 @@ character_event = { #Foreigner in india
 	
 	option = {#secret religion
 		name = "EVTOPTIONBtrader_events.3"
-		trigger = { 
+		trigger = {
 			liege = { religion_group = indian_group }			
 		}
 		liege = {}
@@ -324,21 +324,21 @@ character_event = { #Gaining event from target
 			2 = { add_artifact = court_silk_thread }
 			2 = { add_artifact = court_gold }
 		}
-		random = { 
+		random = {
 			chance = 10 
 			random_list = {
 				60 = { add_artifact = court_iron_ingot }
 				60 = { add_artifact = court_crafting_thread }
 				60 = { add_artifact = court_assorted_leather }
 				60 = { add_artifact = court_bundle_wood }
-				2 = { 
+				2 = {
 					modifier = {
 					  factor = 45
 					  liege = { capital_scope = { region = world_india } }
 					}
 					add_artifact = court_spices 
 				}
-				2 = { 
+				2 = {
 					modifier = {
 					  factor = 35
 					  OR = {
@@ -350,7 +350,7 @@ character_event = { #Gaining event from target
 					}
 					add_artifact = court_jade 
 				}
-				2 = { 
+				2 = {
 					modifier = {
 					  factor = 35
 					  OR = {
@@ -362,7 +362,7 @@ character_event = { #Gaining event from target
 					}
 					add_artifact = court_silk_thread 
 				}
-				2 = { 
+				2 = {
 					modifier = {
 					  factor = 35
 					  liege = { capital_scope = { region = world_africa } }
@@ -393,21 +393,21 @@ character_event = { #Gaining event from target
 	
 	immediate = {
 		random_list = {
-			50 = { 
+			50 = {
 				modifier = {
 					factor = 0
 					NOT = { has_artifact = court_iron_ingot }
 				}
 				destroy_artifact = court_iron_ingot 
 			}
-			50 = { 
+			50 = {
 				modifier = {
 					factor = 0
 					NOT = { has_artifact = court_crafting_thread }
 				}
 				destroy_artifact = court_crafting_thread 
 			}
-			50 = { 
+			50 = {
 				modifier = {
 					factor = 0
 					NOT = { has_artifact = court_assorted_leather }
@@ -421,21 +421,21 @@ character_event = { #Gaining event from target
 				}
 				destroy_artifact = court_bundle_wood 
 			}
-			50 = { 
+			50 = {
 				modifier = {
 					factor = 0
 					NOT = { has_artifact = court_spices }
 				}
 				destroy_artifact = court_spices 
 			}
-			50 = { 
+			50 = {
 				modifier = {
 					factor = 0
 					NOT = { has_artifact = court_jade }
 				}
 				destroy_artifact = court_jade 
 			}
-			50 = { 
+			50 = {
 				modifier = {
 					factor = 0
 					NOT = { has_artifact = court_silk_thread }

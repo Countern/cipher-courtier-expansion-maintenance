@@ -113,7 +113,7 @@ character_event = {
 	}
 
 	#ATTEMPT POET DONE
-	option = { 
+	option = {
 		trigger = {
 			NOT = { trait = poet } 
 		}
@@ -181,7 +181,7 @@ character_event = {
 	}
 	
 	#diplomacy maxed letter Done
-	option = { 
+	option = {
 		trigger = { diplomacy = 20 NOT = { event_target:letter_person = { has_opinion_modifier = { who = ROOT  modifier = sent_diplo_letter } } } }
 		tooltip_info = diplomacy
 		name = "EVTOPTCcourtierletter.2"
@@ -365,7 +365,7 @@ character_event = {
 				modifier = {
 					factor = 2 diplomacy = 25
 				}
-				modifier = { 
+				modifier = {
 					factor = 0.2
 					event_target:letter_person = { has_opinion_modifier = { who = ROOT modifier = sent_diplo_letter } }
 				}
@@ -465,7 +465,7 @@ letter_event = {
 	
 	option = {
 		name = "EVTOPTAcourtierletter.9"
-		event_target:letter_person = { 
+		event_target:letter_person = {
 			random = { chance = 10 set_secret_religion = ROOT }
 			opinion = { modifier = zelous_letter who = ROOT years = 6 } 
 		}
@@ -481,7 +481,7 @@ letter_event = {
 	
 	option = {
 		name = "EVTOPTAcourtierletter.10"
-		event_target:letter_person = { 
+		event_target:letter_person = {
 			opinion = { modifier = nice_letter who = ROOT years = 4 } 
 		}
 	}
@@ -492,7 +492,7 @@ letter_event = {
 		}
 		tooltip_info = diplomacy #opinion
 		name = "EVTOPTBcourtierletter.10"
-		event_target:letter_person = { 
+		event_target:letter_person = {
 			add_friend = ROOT
 			opinion = { modifier = nice_letter who = ROOT years = 4 } 
 		}
@@ -508,7 +508,7 @@ letter_event = {
 	
 	option = {
 		name = "EVTOPTAcourtierletter.13"
-		event_target:letter_person = { 
+		event_target:letter_person = {
 			opinion = { modifier = boring_letter who = ROOT months = 6 } 
 		}
 	}
@@ -523,7 +523,7 @@ letter_event = {
 	
 	option = {
 		name = "EVTOPTAcourtierletter.12"
-		event_target:letter_person = { 
+		event_target:letter_person = {
 			opinion = { modifier = heretical_letter who = ROOT years = 2 } 
 		}
 	}
@@ -538,7 +538,7 @@ letter_event = {
 	
 	option = {
 		name = "EVTOPTAcourtierletter.13"
-		event_target:letter_person = { 
+		event_target:letter_person = {
 			opinion = { modifier = boring_letter who = ROOT months = 6 } 
 		}
 	}
@@ -638,7 +638,7 @@ character_event = {
 	}
 
 	#Insult Lands
-	option = { 
+	option = {
 		trigger = {
 			event_target:letter_person = { is_landed = yes }
 		}
@@ -910,7 +910,7 @@ letter_event = {
 	
 	option = {
 		name = "EVTOPTAcourtierletter.14"
-		event_target:letter_person = { 
+		event_target:letter_person = {
 			opinion = { modifier = family_offended who = ROOT years = 6 } 
 			any_dynasty_member = {
 					opinion = { modifier = family_offended_rebound who = ROOT years = 6 } 
@@ -928,7 +928,7 @@ letter_event = {
 	
 	option = {
 		name = "EVTOPTAcourtierletter.15"
-		event_target:letter_person = { 
+		event_target:letter_person = {
 			opinion = { modifier = lands_offended who = ROOT years = 6 } 
 			any_courtier = {
 					opinion = { modifier = lands_offended_rebound who = ROOT years = 6 } 
@@ -946,7 +946,7 @@ letter_event = {
 	
 	option = {
 		name = "EVTOPTAcourtierletter.16"
-		event_target:letter_person = { 
+		event_target:letter_person = {
 			opinion = { modifier = publicly_offended who = ROOT years = 2 } 
 			any_rival = {
 				opinion = { modifier = publicly_offended_rebound who = ROOT years = 2 } 
@@ -964,7 +964,7 @@ letter_event = {
 	
 	option = {
 		name = "EVTOPTAcourtierletter.17"
-		event_target:letter_person = { 
+		event_target:letter_person = {
 			add_favor = ROOT
 			opinion = { modifier = degraded_offended who = ROOT years = 2 } 
 		}
@@ -980,7 +980,7 @@ letter_event = {
 	
 	option = {
 		name = "EVTOPTAcourtierletter.18"
-		event_target:letter_person = { 
+		event_target:letter_person = {
 			add_rival = ROOT
 		}
 	}
@@ -995,7 +995,7 @@ letter_event = {
 	
 	option = {
 		name = "EVTOPTAcourtierletter.19"
-		event_target:letter_person = { 
+		event_target:letter_person = {
 			opinion = { modifier = slightly_annoyed who = ROOT months = 6 } 
 		}
 	}

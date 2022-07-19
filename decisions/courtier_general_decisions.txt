@@ -90,7 +90,7 @@ targetted_decisions = {
 					duration = -1
 				}
 				any_child = {
-					limit = { 
+					limit = {
 						is_landed = no
 					}
 					add_character_modifier = {

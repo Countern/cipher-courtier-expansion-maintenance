@@ -440,7 +440,7 @@ character_event = {
 	hide_window = yes
 	is_triggered_only = yes
 	trigger = {
-		ROOT = { 
+		ROOT = {
 			ai = yes 
 			NOT = { is_friend = new_character }
 		}

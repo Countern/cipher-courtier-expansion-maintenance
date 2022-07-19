@@ -316,7 +316,7 @@ character_event = {
 							}
 							character_event = { id = liegecap_events.3 months = 3 }
 						}
-						40 = { 
+						40 = {
 							trigger = {
 								OR = {
 									had_character_flag = { flag = rage_duel_event days = 1825 }
@@ -325,7 +325,7 @@ character_event = {
 							}
 							character_event = { id = liegecap_events.4 months = 3 } 
 						}
-						40 = { 
+						40 = {
 							trigger = {
 								OR = {
 									had_character_flag = { flag = unexpected_meeting days = 1825 }
@@ -334,7 +334,7 @@ character_event = {
 							}
 							character_event = { id = liegecap_events.5 months = 3 } 
 						}
-						40 = { 
+						40 = {
 							trigger = {
 								OR = {
 									had_character_flag = { flag = content_court_cap_event days = 1825 }
@@ -343,7 +343,7 @@ character_event = {
 							}
 							long_character_event = { id = liegecap_events.6 months = 3 } 
 						}
-						40 = { 
+						40 = {
 							trigger = {
 								OR = {
 									had_character_flag = { flag = party_court_cap_event days = 1825 }

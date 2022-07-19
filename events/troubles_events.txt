@@ -37,7 +37,7 @@ long_character_event = {
 	option = {
 		name = "EVTOPTCtroublesevents.1"
 		random_list = {
-			20 = { 
+			20 = {
 				modifier = { factor = 1.4 diplomacy = 5 }
 				modifier = { factor = 1.6 diplomacy = 10 }
 				modifier = { factor = 1.8 diplomacy = 14 }
@@ -91,7 +91,7 @@ long_character_event = {
 	option = {
 		name = "EVTOPTCtroublesevents.2"
 		random_list = {
-			20 = { 
+			20 = {
 				modifier = { factor = 1.2 diplomacy = 5 }
 				modifier = { factor = 1.4 diplomacy = 10 }
 				modifier = { factor = 1.6 diplomacy = 14 }
@@ -162,7 +162,7 @@ long_character_event = {
 	option = {
 		name = "EVTOPTDtroublesevents.3"
 		random_list = {
-			10 = { 
+			10 = {
 				modifier = { factor = 1.2 diplomacy = 5 }
 				modifier = { factor = 1.4 diplomacy = 10 }
 				modifier = { factor = 1.6 diplomacy = 14 }
@@ -222,7 +222,7 @@ long_character_event = {
 	option = {
 		name = "EVTOPTCtroublesevents.4"
 		random_list = {
-			10 = { 
+			10 = {
 				modifier = { factor = 1.2 diplomacy = 5 }
 				modifier = { factor = 1.4 diplomacy = 10 }
 				modifier = { factor = 1.6 diplomacy = 14 }
@@ -298,7 +298,7 @@ long_character_event = {
 	option = {
 		name = "EVTOPTCtroublesevents.10"
 		random_list = {
-			20 = { 
+			20 = {
 				modifier = { factor = 1.4 martial = 5 }
 				modifier = { factor = 1.6 martial = 10 }
 				modifier = { factor = 1.8 martial = 14 }
@@ -401,7 +401,7 @@ long_character_event = {
 	option = {
 		name = "EVTOPTAtroublesevents.13"
 		tooltip_info = martial
-		trigger = { 
+		trigger = {
 			martial = 10
 		}
 		prestige = 20
