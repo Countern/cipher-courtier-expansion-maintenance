@@ -72,12 +72,6 @@ narrative_event = {
 					new_title = {
 						set_preferred_capital = PREV
 						
-						if = {
-							limit = { has_character_flag = was_nomadic }
-							set_government_type = tribal_government
-							clr_character_flag = was_nomadic
-						}
-						
 						holder_scope = { set_defacto_liege = event_target:new_liege }
 						gender_succ = true_cognatic
 						succession = { base_type = feudal_elective voting_rules = courtier_election } 
@@ -87,6 +81,11 @@ narrative_event = {
 					}
 				}
 			}
+		}
+		if = {
+			limit = { has_character_flag = was_nomadic }
+			set_government_type = tribal_government
+			clr_character_flag = was_nomadic
 		}
 		clear_wealth = yes
 		wealth = 50
@@ -138,6 +137,7 @@ character_event = {
 	}
 	option = { # Solo courtier
 		name = "EVTOPTAhomeless_event.1"
+		remove_spouse = yes
 		any_courtier = {
 			limit = { dynasty = ROOT }
 			death = { death_reason = death_vanish }
