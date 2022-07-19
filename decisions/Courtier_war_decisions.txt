@@ -1,0 +1,12 @@
+targetted_decisions = {
+	courtierwar_unmute = {
+		filter = self
+		potential = {
+			ai = no
+			has_character_modifier = homeless
+			has_character_flag = courtierwar_silent
+		}
+		allow = { always = yes }
+		effect = { clr_character_flag = courtierwar_silent }
+	}
+}

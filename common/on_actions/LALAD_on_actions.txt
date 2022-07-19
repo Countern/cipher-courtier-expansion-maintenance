@@ -43,7 +43,7 @@ on_marriage = {
 
 on_major_battle_won = {
 	events = {
-		courtierwar_events.2
+		courtierwar_events.31
 	}
 }
 

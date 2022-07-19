@@ -401,7 +401,9 @@ EVTOPTArecruit_event.7;Recruit 250 heavy infantry.;;;;;;;;;;;;;x
 EVTOPTBrecruit_event.7;Recruit 200 heavy infantry and 50 light cavalry.;;;;;;;;;;;;;x
 EVTOPTCrecruit_event.7;Recruit 150 heavy infantry and 100 pikemen.;;;;;;;;;;;;;x
 
-EVTDESCAcourtierwar_events.1;A major war has been won, and your liege is very satisfied with your participation. He meets you after the battle and hands you a bag with your payment.;;;;;;;;;;;;;x
-EVTDESCBcourtierwar_events.1;The war is over and the celebration begins. As you celebrate with your fellow comrades, your liege, satisfied with your participation in the war, summoned you to his war tent to reward you handsomely.;;;;;;;;;;;;;x
+EVTDESCAcourtierwar_events.1;A battle has been won, and your liege is very satisfied with your participation. He meets you after the battle and hands you a bag with your payment.;;;;;;;;;;;;;x
+EVTDESCBcourtierwar_events.1;A major battle has been won, and your liege is very satisfied with your participation. He meets you after the battle and hands you a bag with your payment.;;;;;;;;;;;;;x
+EVTDESCCcourtierwar_events.1;The war is over and the celebration begins. As you celebrate with your fellow comrades, your liege, satisfied with your participation in the war, summoned you to his war tent to reward you handsomely.;;;;;;;;;;;;;x
 EVTOPTAcourtierwar_events.1;Thank you Sire.;;;;;;;;;;;;;x
+EVTOPTBcourtierwar_events.1;Do not disturb me of these messages.;;;;;;;;;;;;;x
 #EVTDESCcourtierwar_events.3;You managed to stomp a small retinue of your enemies. After counting heads, your liege pays you for your time.;You managed to stomp a small retinue of your enemies. After counting heads, your liege pays you for your time.;You managed to stomp a small retinue of your enemies. After counting heads, your liege pays you for your time.;;You managed to stomp a small retinue of your enemies. After counting heads, your liege pays you for your time.;;;;;;;;;;;;;x

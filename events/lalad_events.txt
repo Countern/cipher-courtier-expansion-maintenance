@@ -45,16 +45,18 @@ narrative_event = {
 		}
 		event_target:new_liege = {
 			capital_scope = {
-				create_title = {
-					tier = COUNT
-					landless = yes
-					name = "COLLINS_SEAT"
-					holder = ROOT
-					culture = ROOT
-					ruler = "LANDLESS_TITLE"
-					ruler_female = "LANDLESS_TITLE_FEMALE"
+				county = {
+					create_title = {
+						tier = COUNT
+						landless = yes
+						name = "COLLINS_SEAT"
+						holder = ROOT
+						culture = ROOT
+						ruler = "LANDLESS_TITLE"
+						ruler_female = "LANDLESS_TITLE_FEMALE"
+					}
+					new_title = { set_preferred_capital = PREV }
 				}
-				new_title = { set_preferred_capital = PREV }
 			}
 		}
 		clear_wealth = yes
@@ -62,13 +64,6 @@ narrative_event = {
 		add_character_modifier = {
   			modifier = homeless
  			duration = -1
-		}
-		any_dynasty_member = {
-			limit = { is_landed = no }
-			add_character_modifier = {
-				modifier = homeless
-				duration = -1
-			}	
 		}
 		any_demesne_title = {
 			if = {
@@ -96,48 +91,36 @@ character_event = {
 	picture = "GFX_evt_siege"
 	is_triggered_only = yes
 	
-	option = {
+	option = { # Courtier with family
 		name = "EVTOPTBhomeless_event.1"
 		hidden_tooltip = {
-			any_character = {
-				limit = { 
-					NOT = { dynasty = ROOT } 
-					NOT= { opinion = { who = ROOT value = 0 } }
-					is_landed = no
-					liege = { character = ROOT }
-				} 
+			any_courtier = {
+				limit = { NOT = { dynasty = ROOT } }
 				move_character = event_target:chancellor_in_power
 			}
+			any_courtier = {
+				limit = { is_landed = no }
+				add_character_modifier = {
+					modifier = homeless
+					duration = -1
+				}
+			}
 		}
 	}
-	option = {
+	option = { # Solo courtier
 		name = "EVTOPTAhomeless_event.1"
-		any_dynasty_member = {
-			limit = { 
-				is_landed = no
-				ai = yes
-			}
-			death = { death_reason = death_execution }
+		any_courtier = {
+			limit = { dynasty = ROOT }
+			death = { death_reason = death_vanish }
 		}
-		hidden_tooltip = {
-			ROOT = {
-				any_character = {
-					limit = { liege = { character = ROOT } }
-					move_character = event_target:chancellor_in_power
-				}
-			}
-		}
+		any_courtier = { move_character = event_target:chancellor_in_power }
 	}
-	option = {
+	option = { # Lone courtier
 		name = "EVTOPTChomeless_event.1"
-			ROOT = {
-				any_character = {
-					limit = { liege = { character = ROOT } }
-					move_character = event_target:chancellor_in_power
-				}
-			}
+		any_courtier = {
+			move_character = event_target:chancellor_in_power
+		}
 	}
-
 }
 
 #TO kill or not to kill
