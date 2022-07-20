@@ -5,6 +5,7 @@ The original mod is created by "Magickarp" Cipher and can be [found here](https:
 So far, this mod is not yet ready to be released on Steam Workshop and other mod hosting websites since I still need to patch some stuff up. 
 
 As of 2022-7-12, I will be patching up Cipher's Courtier Expansion mod to fix any errors and obsolete/deprecated codes.
+Starting from 2022-7-20, I will be maintaining Cipher's Courtier Expansion mod while at the same time making adding my own expansion in another branch (sometime later).
 
 ## Installation Instructions
 
@@ -18,11 +19,12 @@ As of 2022-7-12, I will be patching up Cipher's Courtier Expansion mod to fix an
 5. Move the `cipher-courtier-expansion-maintenance.mod` file into the `mods` folder where all the other `.mod` files are located
 6. Done!
 
-## Important Note
+## Branches Information
 
-I am stumped on how I should proceed with filling in the missing localisation for the `trader_events.2` event since every single localisation keys do not exist. 
-
-I also do not fully know what this event specifically does so I'm just going to leave it blank and hope someone knows what to fill in.
+* `maintenance`
+   * This branch holds the mod files of Cipher's Courtier Expansion maintained by me
+* `counter-expansion
+   * This branch contains my own edits and changes that further expands Cipher's Courtier Expansion, with my own tastes
 
 ## Important References
 

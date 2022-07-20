@@ -23,6 +23,10 @@
    * `courtier_title.txt` - **title_courtier** - A lot of missing code for a minor title instance
 
 ## Notes on missing stuff that's part of the mod
+
+* Missing localisation keys for **trader_events.2** event
+   * I am stumped on how I should proceed with filling in the missing localisation since I don't know what's going on in the event
+   * I'm going to leave it empty for now until I fully know what's happening in the event (or if someone else does)
 * Something about "aspiring_business_owner" char modifier
    * Missing modifier
    * Only tied to action_manage_business instance in `/common/job_actions/`
