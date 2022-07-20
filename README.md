@@ -24,7 +24,7 @@ Starting from 2022-7-20, I will be maintaining Cipher's Courtier Expansion mod w
 
 * `maintenance`
    * This branch holds the mod files of Cipher's Courtier Expansion maintained by me
-* `counter-expansion
+* `counter-expansion`
    * This branch contains my own edits and changes that further expands Cipher's Courtier Expansion, with my own tastes
 
 ## Important References
