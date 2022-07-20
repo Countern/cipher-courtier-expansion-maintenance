@@ -5,6 +5,7 @@ The original mod is created by "Magickarp" Cipher and can be [found here](https:
 So far, this mod is not yet ready to be released on Steam Workshop and other mod hosting websites since I still need to patch some stuff up. 
 
 As of 2022-7-12, I will be patching up Cipher's Courtier Expansion mod to fix any errors and obsolete/deprecated codes.
+
 Starting from 2022-7-20, I will be maintaining Cipher's Courtier Expansion mod while at the same time making adding my own expansion in another branch (sometime later).
 
 ## Installation Instructions
