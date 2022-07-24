@@ -57,7 +57,7 @@ narrative_event = {
 		}
 		any_demesne_title = {
 			limit = { is_landless_type_title = no }
-			grant_title = event_target:chancellor_in_power
+			grant_title_no_opinion = event_target:chancellor_in_power
 		}
 		event_target:new_liege = {
 			capital_scope = {
