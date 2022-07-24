@@ -60,27 +60,25 @@ narrative_event = {
 			grant_title_no_opinion = event_target:chancellor_in_power
 		}
 		event_target:new_liege = {
-			capital_scope = {
-				county = {
-					create_title = {
-						tier = COUNT
-						landless = yes
-						name = "COLLINS_SEAT"
-						holder = ROOT
-						culture = ROOT
-						ruler = "LANDLESS_TITLE"
-						ruler_female = "LANDLESS_TITLE_FEMALE"
-					}
-					new_title = {
-						set_preferred_capital = PREV
-						
-						holder_scope = { set_defacto_liege = event_target:new_liege }
-						gender_succ = true_cognatic
-						succession = { base_type = feudal_elective voting_rules = courtier_election } 
-						set_title_flag = The_lonely_title
-						set_coa = event_target:Primary_title
-						set_title_flag = landless_adventurer
-					}
+			capital_holding = {
+				create_title = {
+					tier = COUNT
+					landless = yes
+					name = "COLLINS_SEAT"
+					holder = ROOT
+					culture = ROOT
+					ruler = "LANDLESS_TITLE"
+					ruler_female = "LANDLESS_TITLE_FEMALE"
+				}
+				new_title = {
+					set_preferred_capital = PREV
+					
+					holder_scope = { set_defacto_liege = event_target:new_liege }
+					gender_succ = true_cognatic
+					succession = { base_type = feudal_elective voting_rules = courtier_election } 
+					set_title_flag = The_lonely_title
+					set_coa = event_target:Primary_title
+					set_title_flag = landless_adventurer
 				}
 			}
 		}
