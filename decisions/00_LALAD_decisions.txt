@@ -131,23 +131,21 @@ title_decisions = {
 					wealth = 15
 					independent = yes
 				}
-			}
-			FROM = { NOT = { trait = on_journey } }
-			custom_tooltip = {
-				text = ALREADYMOVING
-				FROM = {
+				NOT = { trait = on_journey }
+				custom_tooltip = {
+					text = ALREADYMOVING
 					OR = {
 						had_character_flag = { flag = already_moved days = 1820 }
 						NOT = { has_character_flag = already_moved }
 						independent = yes
 					}
 				}
-			}
-			custom_tooltip  = {
-				text = DIPLODISTANCE
-				OR = {
-					FROM = { liege = { distance = { where = ROOT distance < 1500 } } }	
-					FROM = { independent = yes }
+				custom_tooltip  = {
+					text = DIPLODISTANCE
+					OR = {
+						liege = { distance = { where = ROOT distance < 1500 } }
+						independent = yes
+					}
 				}
 			}
 		}
@@ -164,11 +162,6 @@ title_decisions = {
 				save_event_target_as = newLiege
 				FROM = { character_event = { id = moving_events.101 } }
 			}
-			#FROM = {
-			#	set_defacto_liege = ROOT
-			#	set_character_flag = travelled_recently
-			#	give_minor_title = title_courtier
-			#}
 		}
 		# Audax Validator "." Ignore_1007
 		revoke_allowed = {

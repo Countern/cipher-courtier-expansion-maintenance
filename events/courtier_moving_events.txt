@@ -34,14 +34,6 @@ narrative_event  = {
 	picture = "GFX_arrival_court"
 	is_triggered_only = yes
 	
-	trigger = {}
-	
-	immediate = {
-		#liege = {
-		#	save_event_target_as = newLiege
-		#}
-	}
-	
 	option = {
 		name = "EVTOPTDmoving_events.2"
 		trigger = {
