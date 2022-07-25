@@ -1,6 +1,6 @@
 court_long_sword = {
 	quality = 2
-	flags = { material long_sword }
+	flags = { material long_sword greatsword }
 	active = {
 		is_adult = yes
 	}
@@ -14,7 +14,7 @@ court_long_sword = {
 
 court_winged_spear = {
 	quality = 2
-	flags = { material winged_spear }
+	flags = { material winged_spear spear }
 	active = {
 		is_adult = yes
 	}
@@ -28,7 +28,7 @@ court_winged_spear = {
 
 court_long_bow = {
 	quality = 2
-	flags = { material long_bow }
+	flags = { material long_bow bow }
 	active = {
 		is_adult = yes
 	}

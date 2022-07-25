@@ -1,6 +1,6 @@
 court_common_sword = {
 	quality = 1
-	flags = { common_sword }
+	flags = { common_sword sword }
 	active = {
 		is_adult = yes
 	}
@@ -13,7 +13,7 @@ court_common_sword = {
 
 court_common_spear = {
 	quality = 1
-	flags = { common_spear }
+	flags = { common_spear spear }
 	active = {
 		is_adult = yes
 	}
@@ -26,7 +26,7 @@ court_common_spear = {
 
 court_common_axe = {
 	quality = 1
-	flags = { common_axe }
+	flags = { common_axe axe }
 	active = {
 		is_adult = yes
 	}
@@ -39,7 +39,7 @@ court_common_axe = {
 
 court_common_bow = {
 	quality = 1
-	flags = { common_bow }
+	flags = { common_bow bow }
 	active = {
 		is_adult = yes
 	}
@@ -51,7 +51,7 @@ court_common_bow = {
 
 court_low_quality_gear = {
 	quality = 1
-	flags = {  common_axe }
+	flags = {  low_quality_gear }
 	active = {
 		is_adult = yes
 	}
