@@ -21,6 +21,9 @@
    * ~~`courtier_wars_events.txt` - **courtierwar_events.3** - No need for AI ruler to have an option that rewards the player martial courtier, just reference the player courtier themselves in an immediate block~~
 6. Minor titles files to take note of:
    * `courtier_title.txt` - **title_courtier** - A lot of missing code for a minor title instance
+7. Others:
+   * When a ruler overthrows the player's liege (if playing as courtier), the Courtier minor title is lost
+   * Missing jobs for: Stewardship and Intrigue
 
 ## Notes on missing stuff that's part of the mod
 
