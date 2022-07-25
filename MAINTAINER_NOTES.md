@@ -14,6 +14,7 @@
    * `00_LALAD_decisions.txt` - **quit_job** - Decision not removing job traits and character flags after quitting
    * `00_LALAD_decisions.txt` - **move_court_to** - Players being able to move to their own liege's court
       * Might add another decision to pay homage or swear an oath to player's current liege as a courtier
+	  * Or make player pledge oath to their new liege upon becoming a courtier
    * `Courtier_troubles_decisions.txt` - **solve_trouble** - Immediate_Revolt province modifier still active once a rebellion start
       * Might add an on_action instance to solve the problem above
 5. Events to take note of:
@@ -24,6 +25,7 @@
 7. Others:
    * When a ruler overthrows the player's liege (if playing as courtier), the Courtier minor title is lost
    * Missing jobs for: Stewardship and Intrigue
+   * When player loses its last county holding from usurption, player does not become courtier
 
 ## Notes on missing stuff that's part of the mod
 
